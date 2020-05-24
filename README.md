@@ -20,12 +20,11 @@ AIM : build a generic computer vision model.
 ├── configs // store networks configuration parameters
 │ └── cifar10_config.json
 ├── data // raw or processed data
-├── dataset // the data loader
+├── infdata // initialize and fetch dataset
 │ ├── dataset // defining custom dataset class
 │ ├── transformation // custom transformation class
-│ └── dataloader.py
+│ └── loader // data loader
 │   └── cifar10_dl.py
-├── images // save model metrics analysis images
 ├── logger.py // define the logger
 ├── losses // custom network losses
 ├── networks // define our network
