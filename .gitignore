@@ -4,5 +4,6 @@ checkpoints
 data
 
 __pycache__
+experiments
 
 
