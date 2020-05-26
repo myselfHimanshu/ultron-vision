@@ -19,16 +19,16 @@ curr_dir = os.path.dirname(__file__)
 
 class MNISTAgent(BaseAgent):
 
-    def __init__(self, config, use_cuda):
+    def __init__(self, config):
         super().__init__(config)
         self.config = config
-        self.use_cuda = use_cuda
+        self.use_cuda = self.config['use_cuda']
 
         # create network instance
         self.model = Net()
 
         # define data loader
-        self.dataloader = mnist_dl(config=self.config, use_cuda=use_cuda)
+        self.dataloader = mnist_dl(config=self.config)
 
         # define loss
         self.loss = nn.NLLLoss()
@@ -231,16 +231,3 @@ class MNISTAgent(BaseAgent):
                 self.logger.info("Saved Best Model")
             except Exception as e:
                 self.logger.info(e)
-
-
-
-
-
-
-
-
-
-
-        
-
-    

@@ -16,10 +16,10 @@ AIM : build a generic computer vision model.
 ├── agents // define training and testing
 │ ├── base.py
 │ └── cifar10_agent.py
-├── checkpoints // store trained models
 ├── configs // store networks configuration parameters
 │ └── cifar10_config.json
 ├── data // raw or processed data
+├── experiments // store checkpoints, logs and outputs for experiment
 ├── infdata // initialize and fetch dataset
 │ ├── dataset // defining custom dataset class
 │ ├── transformation // custom transformation class
