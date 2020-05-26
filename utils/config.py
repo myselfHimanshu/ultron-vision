@@ -3,6 +3,9 @@ import pprint
 import os
 import logging
 
+from logging import Formatter
+from logging.handlers import RotatingFileHandler
+
 def setup_logging(log_dir):
     log_file_format = "[%(levelname)s] - %(asctime)s - %(name)s - : %(message)s in %(pathname)s:%(lineno)d"
     log_console_format = "[%(levelname)s]: %(message)s"
@@ -67,7 +70,7 @@ def process_config(json_file):
 
     config, _ = get_config_from_json(json_file)
     print("CONFIGURATION OF THIS EXPERIMENT")
-    pprint(config)
+    print(config)
 
     try:
         print("****************************")
