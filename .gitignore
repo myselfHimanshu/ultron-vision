@@ -3,4 +3,6 @@ myenv
 checkpoints
 data
 
+__pycache__
+
 
