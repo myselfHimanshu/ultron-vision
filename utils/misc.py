@@ -1,4 +1,4 @@
-import logger
+import logging
 import torch
 
 def regularize_loss(model, loss, decay, norm_value):
@@ -17,15 +17,15 @@ def regularize_loss(model, loss, decay, norm_value):
     return loss
 
 def print_cuda_statistics():
-    logger = logger.getLogger("Cuda Statistics")
+    logger = logging.getLogger("Cuda Statistics")
 
     import sys
     from subprocess import call
 
     logger.info(f'__Python VERSION : {sys.version}')
     logger.info(f'__pytorch VERSION : {torch.__version__}')
-    logger.info(f'__CUDA VERSION')
-    call(["nvcc","--version"])
+    # logger.info(f'__CUDA VERSION')
+    # call(["nvcc","--version"])
     logger.info(f'__CUDNN VERSION : {torch.backends.cudnn.version()}')
     logger.info(f'__Number CUDA Devices : {torch.cuda.device_count()}')
     logger.info('__Devices')
