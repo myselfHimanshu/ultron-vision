@@ -99,7 +99,7 @@ class MNISTAgent(BaseAgent):
         :param file_name: name of checkpoint file
         :return:
         """
-        file_name = os.path.join(curr_dir, "../checkpoints", file_name)
+        file_name = os.path.join("experiments", self.config['exp_name'], "checkpoints", file_name)
         checkpoint = torch.load(file_name)
 
         self.model = torch.load_state_dict(checkpoint['model'])
@@ -127,7 +127,7 @@ class MNISTAgent(BaseAgent):
             'is_best' : is_best
         }
 
-        file_name = os.path.join(curr_dir, "../checkpoints/mnist", file_name)
+        file_name = os.path.join("experiments", self.config['exp_name'], "checkpoints", file_name)
         torch.save(checkpoint, file_name)
 
     def run(self):
