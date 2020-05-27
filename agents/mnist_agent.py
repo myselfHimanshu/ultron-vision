@@ -69,9 +69,9 @@ class MNISTAgent(BaseAgent):
         self.save_checkpoint = self.config['save_checkpoint']
 
         # set cuda flag
-        self.use_cuda = use_cuda
+        self.use_cuda = self.use_cuda
 
-        if self.use_cuda and self.config['cuda']:
+        if self.use_cuda:
             self.logger.info('WARNING : You have CUDA device, you should probably enable CUDA.')
 
         # set manual seed
@@ -79,7 +79,7 @@ class MNISTAgent(BaseAgent):
         if self.use_cuda:
             torch.cuda.manual_seed(self.manual_seed)
             self.device = torch.device('cuda')
-            torch.cuda.set_device(self.config.gpu_device)
+            torch.cuda.set_device(self.config['gpu_device'])
             self.model = self.model.to(self.device)
             self.loss = self.model.to(self.device)
             
@@ -224,10 +224,15 @@ class MNISTAgent(BaseAgent):
             total_loss = running_loss/len(self.dataloader.test_loader.dataset)
             total_acc = 100. * running_correct/len(self.dataloader.test_loader.dataset)
 
-        if(save_checkpoint and total_acc>self.max_accuracy):
+        if(self.config['save_checkpoint'] and total_acc>self.max_accuracy):
             self.max_accuracy = total_acc
             try:
                 self.save_checkpoint()
                 self.logger.info("Saved Best Model")
             except Exception as e:
                 self.logger.info(e)
+
+        self.test_losses.append(total_loss)
+        self.test_acc.append(total_acc)
+        self.logger.info(f"VAL EPOCH : {self.current_epoch}\tLOSS : {total_loss:.4f}\tACC : {total_acc:.4f}")
+
