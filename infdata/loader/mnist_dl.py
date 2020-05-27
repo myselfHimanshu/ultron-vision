@@ -13,10 +13,11 @@ class DataLoader(object):
         self.batch_size = self.config["batch_size"]
         self.kwargs = {'num_workers':self.num_workers, "pin_memory":self.pin_memory} if self.config['use_cuda'] else {}
 
-        self.train_loader = torch.utils.data.DataLoader(DownloadData.mnist_traindata, batch_size=self.batch_size,
+        ddata = DownloadData()
+        self.train_loader = torch.utils.data.DataLoader(ddata.mnist_traindata, batch_size=self.batch_size,
                                                         shuffle=True, **self.kwargs)
         
-        self.test_loader = torch.utils.data.DataLoader(DownloadData.mnist_testdata, batch_size=self.batch_size,
+        self.test_loader = torch.utils.data.DataLoader(ddata.mnist_testdata, batch_size=self.batch_size,
                                                         shuffle=True, **self.kwargs)
         
 

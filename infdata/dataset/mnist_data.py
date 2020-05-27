@@ -10,9 +10,11 @@ curr_dir = os.path.dirname(__file__)
 
 class DownloadData(object):
     def __init__(self):
-        self.data_path = os.path.join(curr_dir,"../","data")
-        self.mnist_traindata = datasets.MNIST(self.data_path, train=True, 
-                                                transform=Transforms.train_transforms)
+        self.data_path = os.path.join(curr_dir,"../../","data")
+
+        transf = Transforms()
+        self.mnist_traindata = datasets.MNIST(self.data_path, train=True, download=True,
+                                                transform=transf.train_transforms)
         
-        self.mnist_testdata = datasets.MNIST(self.data_path, train=False, 
-                                                transform=Transforms.test_transforms)
+        self.mnist_testdata = datasets.MNIST(self.data_path, train=False, download=True,
+                                                transform=transf.test_transforms)
