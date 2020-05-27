@@ -1,0 +1,8 @@
+[INFO] - 2020-05-27 20:48:52,317 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:95
+[INFO] - 2020-05-27 20:48:52,318 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-27 20:48:52,318 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-27 20:53:10,934 - Agent - : Program will RUN on ****CPU****
+ in /Users/legend/Work/Github/ultron-vision/agents/cifar10_agent.py:97
+[INFO] - 2020-05-27 21:03:49,902 - Agent - : TRAIN EPOCH : 0	LOSS : 0.0663	ACC : 52.0900 in /Users/legend/Work/Github/ultron-vision/agents/cifar10_agent.py:209
+[INFO] - 2020-05-27 21:04:20,708 - Agent - : VALID EPOCH : 0	LOSS : 0.0177	ACC : 58.4600 in /Users/legend/Work/Github/ultron-vision/agents/cifar10_agent.py:254
+[INFO] - 2020-05-27 21:04:20,708 - Agent - : Please wait while finalizing the operations.. Thank you in /Users/legend/Work/Github/ultron-vision/agents/cifar10_agent.py:261
