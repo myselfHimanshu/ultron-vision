@@ -57,3 +57,10 @@ class BaseAgent:
         :return:
         """
         raise NotImplementedError
+
+    def predict(self):
+        """
+        Prediction on test dataset
+        :return:
+        """
+        pass
