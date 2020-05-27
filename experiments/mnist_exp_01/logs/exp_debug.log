@@ -1,0 +1,40 @@
+[INFO] - 2020-05-27 10:07:19,442 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:93
+[INFO] - 2020-05-27 10:07:19,442 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:94
+[INFO] - 2020-05-27 10:07:19,442 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:95
+[INFO] - 2020-05-27 10:07:19,725 - Agent - : Program will RUN on ****CPU****
+ in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:97
+[INFO] - 2020-05-27 10:08:21,925 - Agent - : TRAIN EPOCH : 0	LOSS : 0.0087	ACC : 93.1200 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:202
+[INFO] - 2020-05-27 10:08:25,348 - Agent - : VALID EPOCH : 0	LOSS : 0.0008	ACC : 98.5000 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:247
+[INFO] - 2020-05-27 10:08:25,349 - Agent - : Please wait while finalizing the operation.. Thank you in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:254
+[INFO] - 2020-05-27 10:09:37,869 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:93
+[INFO] - 2020-05-27 10:09:37,869 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:94
+[INFO] - 2020-05-27 10:09:37,869 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:95
+[INFO] - 2020-05-27 10:09:37,992 - Agent - : Program will RUN on ****CPU****
+ in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:99
+[INFO] - 2020-05-27 10:10:34,955 - Agent - : TRAIN EPOCH : 0	LOSS : 0.0082	ACC : 93.7467 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:204
+[INFO] - 2020-05-27 10:10:37,593 - Agent - : VALID EPOCH : 0	LOSS : 0.0010	ACC : 98.1700 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:249
+[INFO] - 2020-05-27 10:10:37,593 - Agent - : Please wait while finalizing the operation.. Thank you in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:256
+[INFO] - 2020-05-27 10:13:21,375 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:93
+[INFO] - 2020-05-27 10:13:21,375 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:94
+[INFO] - 2020-05-27 10:13:21,375 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:95
+[INFO] - 2020-05-27 10:13:21,495 - Agent - : Program will RUN on ****CPU****
+ in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:99
+[INFO] - 2020-05-27 10:14:18,305 - Agent - : TRAIN EPOCH : 0	LOSS : 0.0085	ACC : 93.3333 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:204
+[INFO] - 2020-05-27 10:14:20,959 - Agent - : VALID EPOCH : 0	LOSS : 0.0008	ACC : 98.6700 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:249
+[INFO] - 2020-05-27 10:14:20,959 - Agent - : Please wait while finalizing the operation.. Thank you in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:256
+[INFO] - 2020-05-27 10:15:01,634 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:93
+[INFO] - 2020-05-27 10:15:01,634 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:94
+[INFO] - 2020-05-27 10:15:01,634 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:95
+[INFO] - 2020-05-27 10:15:01,812 - Agent - : Program will RUN on ****CPU****
+ in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:99
+[INFO] - 2020-05-27 10:16:01,576 - Agent - : TRAIN EPOCH : 0	LOSS : 0.0080	ACC : 93.7233 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:204
+[INFO] - 2020-05-27 10:16:05,062 - Agent - : VALID EPOCH : 0	LOSS : 0.0009	ACC : 98.3400 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:249
+[INFO] - 2020-05-27 10:16:05,063 - Agent - : Please wait while finalizing the operation.. Thank you in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:256
+[INFO] - 2020-05-27 10:20:38,284 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:93
+[INFO] - 2020-05-27 10:20:38,284 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:94
+[INFO] - 2020-05-27 10:20:38,284 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:95
+[INFO] - 2020-05-27 10:20:38,413 - Agent - : Program will RUN on ****CPU****
+ in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:99
+[INFO] - 2020-05-27 10:21:40,384 - Agent - : TRAIN EPOCH : 0	LOSS : 0.0087	ACC : 93.2883 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:204
+[INFO] - 2020-05-27 10:21:43,507 - Agent - : VALID EPOCH : 0	LOSS : 0.0008	ACC : 98.5800 in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:249
+[INFO] - 2020-05-27 10:21:43,507 - Agent - : Please wait while finalizing the operation.. Thank you in /Users/legend/Work/Github/ultron-vision/agents/mnist_agent.py:256
