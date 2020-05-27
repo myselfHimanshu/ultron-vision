@@ -6,6 +6,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
+import torch.nn.functional as F
 
 from tqdm import tqdm
 
@@ -31,17 +32,11 @@ class MNISTAgent(BaseAgent):
         # create network instance
         self.model = Net()
 
-        # summary of network
-        print("****************************")
-        print("**********NETWORK SUMMARY**********")
-        summary(self.model, input_size=tuple(self.config['input_size']))
-        print("****************************")
-
         # define data loader
         self.dataloader = mnist_dl(config=self.config)
 
         # define loss
-        self.loss = nn.NLLLoss()
+        # self.loss = nn.NLLLoss()
 
         # define optimizer
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
@@ -82,7 +77,7 @@ class MNISTAgent(BaseAgent):
         # set cuda flag
         self.use_cuda = self.use_cuda
 
-        if self.use_cuda:
+        if not self.use_cuda and torch.cuda.is_available():
             self.logger.info('WARNING : You have CUDA device, you should probably enable CUDA.')
 
         # set manual seed
@@ -100,6 +95,13 @@ class MNISTAgent(BaseAgent):
             torch.manual_seed(self.manual_seed)
             self.device = torch.device('cpu')
             self.logger.info("Program will RUN on ****CPU****\n")
+
+        # summary of network
+        print("****************************")
+        print("**********NETWORK SUMMARY**********")
+        summary(self.model, input_size=tuple(self.config['input_size']))
+        print("****************************")
+
 
         if self.config["load_checkpoint"]:
             self.load_checkpoint(self.config['checkpoint_file'])
@@ -182,8 +184,8 @@ class MNISTAgent(BaseAgent):
             data, target = data.to(self.device), target.to(self.device)
             self.optimizer.zero_grad()
             output = self.model(data)
-            loss = self.loss(output, target)
-
+            loss = F.nll_loss(output, target)
+            
             if self.l1_decay>0.0:
                 loss += regularize_loss(self.model, loss, self.l1_decay, 1)
             if self.l2_decay>0.0:
@@ -220,7 +222,7 @@ class MNISTAgent(BaseAgent):
             for data, target in self.dataloader.valid_loader:
                 data, target = data.to(self.device), target.to(self.device)
                 output = self.model(data)
-                running_loss += self.loss(output, target).sum().item()
+                running_loss += F.nll_loss(output, target).sum().item()
                 pred = output.argmax(dim=1, keepdim=True)
                 running_correct += pred.eq(target.view_as(pred)).sum().item()
 
