@@ -234,5 +234,8 @@ class MNISTAgent(BaseAgent):
 
         self.test_losses.append(total_loss)
         self.test_acc.append(total_acc)
-        self.logger.info(f"VAL EPOCH : {self.current_epoch}\tLOSS : {total_loss:.4f}\tACC : {total_acc:.4f}")
+        self.logger.info(f"VALID EPOCH : {self.current_epoch}\tLOSS : {total_loss:.4f}\tACC : {total_acc:.4f}")
+
+    
+
 

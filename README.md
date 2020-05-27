@@ -1,6 +1,12 @@
 # ULTRON VISION API
 
-This repo contains vision deep learning models.
+<p align="center">
+
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)&nbsp;&nbsp;&nbsp;[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)&nbsp;&nbsp;&nbsp;[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)&nbsp;&nbsp;&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+</p>
+
+This repo contains deep learning vision models.
 
 AIM : build a generic computer vision model.
 
@@ -65,6 +71,15 @@ $ deactivate
 ```
 
 
+## TRAINING NETOWORKS
 
+In `ultron.sh` provide `ultron.py` and `path-to-config-file`.
 
+```
+// make ultron.sh executable file
+$ chmod +x ultron.sh
+
+// train ultron
+$./ultron.sh
+```
 
