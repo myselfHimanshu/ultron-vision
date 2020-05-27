@@ -14,6 +14,10 @@ from networks.mnist_net import Net
 from infdata.loader.mnist_dl import DataLoader as mnist_dl
 from utils.misc import *
 
+from torchsummary import summary
+import json
+import matplotlib.pyplot as plt
+
 import os
 curr_dir = os.path.dirname(__file__)
 
@@ -26,6 +30,12 @@ class MNISTAgent(BaseAgent):
 
         # create network instance
         self.model = Net()
+
+        # summary of network
+        print("****************************")
+        print("**********NETWORK SUMMARY**********")
+        summary(self.model, input_size=tuple(self.config['input_size']))
+        print("****************************")
 
         # define data loader
         self.dataloader = mnist_dl(config=self.config)
@@ -52,12 +62,13 @@ class MNISTAgent(BaseAgent):
         self.current_epoch = 0
         self.current_iteration = 0
         self.best_metric = 0
+        self.best_epoch = 0
 
         # initialize loss and accuray arrays
         self.train_losses = []
-        self.test_losses = []
+        self.valid_losses = []
         self.train_acc = []
-        self.test_acc = []
+        self.valid_acc = []
 
         # initialize misclassified data
         self.misclassified = {}
@@ -93,13 +104,16 @@ class MNISTAgent(BaseAgent):
         if self.config["load_checkpoint"]:
             self.load_checkpoint(self.config['checkpoint_file'])
 
+        self.stats_file_name = os.path.join(self.config["stats_dir"], self.config["model_stats_file"])
+
+
     def load_checkpoint(self, file_name):
         """
         Latest Checkpoint loader
         :param file_name: name of checkpoint file
         :return:
         """
-        file_name = os.path.join("experiments", self.config['exp_name'], "checkpoints", file_name)
+        file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         checkpoint = torch.load(file_name)
 
         self.model = torch.load_state_dict(checkpoint['model'])
@@ -107,9 +121,9 @@ class MNISTAgent(BaseAgent):
         
         is_best = checkpoint["is_best"]
         if is_best:
-            self.max_accuracy = checkpoint['test_accuracy']
+            self.max_accuracy = checkpoint['valid_accuracy']
         
-        self.misclassified_data = checkpoint['misclassified_data']
+        self.misclassified = checkpoint['misclassified_data']
         
     def save_checkpoint(self, file_name='checkpoint.pth.tar', is_best=1):
         """
@@ -120,14 +134,14 @@ class MNISTAgent(BaseAgent):
         """
         checkpoint = {
             'epoch' : self.current_epoch,
-            'test_accuracy' : self.max_accuracy,
+            'valid_accuracy' : self.max_accuracy,
             'misclassified_data' : self.misclassified,
             'state_dict' : self.model.state_dict(),
             'optimizer' : self.optimizer.state_dict(),
             'is_best' : is_best
         }
 
-        file_name = os.path.join("experiments", self.config['exp_name'], "checkpoints", file_name)
+        file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         torch.save(checkpoint, file_name)
 
     def run(self):
@@ -203,7 +217,7 @@ class MNISTAgent(BaseAgent):
         running_correct = 0
 
         with torch.no_grad():
-            for data, target in self.dataloader.test_loader:
+            for data, target in self.dataloader.valid_loader:
                 data, target = data.to(self.device), target.to(self.device)
                 output = self.model(data)
                 running_loss += self.loss(output, target).sum().item()
@@ -221,21 +235,117 @@ class MNISTAgent(BaseAgent):
                         "img" : data[idx]
                     })
                 
-            total_loss = running_loss/len(self.dataloader.test_loader.dataset)
-            total_acc = 100. * running_correct/len(self.dataloader.test_loader.dataset)
+            total_loss = running_loss/len(self.dataloader.valid_loader.dataset)
+            total_acc = 100. * running_correct/len(self.dataloader.valid_loader.dataset)
 
         if(self.config['save_checkpoint'] and total_acc>self.max_accuracy):
             self.max_accuracy = total_acc
+            self.best_epoch = self.current_epoch
             try:
                 self.save_checkpoint()
                 self.logger.info("Saved Best Model")
             except Exception as e:
                 self.logger.info(e)
 
-        self.test_losses.append(total_loss)
-        self.test_acc.append(total_acc)
+        self.valid_losses.append(total_loss)
+        self.valid_acc.append(total_acc)
         self.logger.info(f"VALID EPOCH : {self.current_epoch}\tLOSS : {total_loss:.4f}\tACC : {total_acc:.4f}")
 
+    def finalize(self):
+        """
+        Finalize operations
+        :return:
+        """
+        self.logger.info("Please wait while finalizing the operations.. Thank you")
+        
+        result = {"train_loss" : self.train_losses, "train_acc" : self.train_acc,
+                    "valid_loss" : self.valid_losses, "valid_acc" : self.valid_acc}
+        
+        with open(self.stats_file_name, "w") as f:
+            json.dump(result, f)
+
     
+    def predict(self):
+        try:
+            if(self.dataloader.test_loader==None):
+                self.logger.info("Test Loader is NOT DEFINED!!!")
 
+            self.load_checkpoint(self.config['checkpoint_file'])
+            self.model.eval()
+            predictions = []
 
+            with torch.no_grad():
+                for data in test_loader:
+                    data = data.to(self.device)
+                    output = self.model(data)
+                    pred = output.argmax(dim=1, keepdim=True)
+                    predictions.extend(pred.cpu().numpy())
+            
+            return predictions
+        except Exception as e:
+            self.logger.info("Test loader prediction FAILED!!!")
+            self.logger.info(e)
+            return []
+
+    def plot_accuracy_graph(self):
+        """
+        Plot accuracy graph for train and valid dataset
+        :return:
+        """
+        with open(self.stats_file_name) as f:
+            data = json.load(f)
+
+        train_acc = data["train_acc"]
+        valid_acc = data["valid_acc"]
+
+        epoch_count = range(1, self.config["epochs"]+1)
+        fig = plt.figure(figsize=(10,10))
+        
+        plt.plot(epoch_count, train_acc)
+        plt.plot(epoch_count, valid_acc)
+        plt.legend(["train_acc","valid_acc"])
+        plt.xlabel('Epoch')
+        plt.ylabel("Accuracy")
+        # plt.show();
+
+        fig.savefig(os.path.join(self.config["stats_dir"], 'accuracy.png'))
+
+    def plot_loss_graph(self):
+        """
+        Plot loss graph for train and valid dataset
+        :return:
+        """
+        with open(self.stats_file_name) as f:
+            data = json.load(f)
+
+        train_loss = data["train_loss"]
+        valid_loss = data["valid_loss"]
+
+        epoch_count = range(1, self.config["epochs"]+1)
+        fig = plt.figure(figsize=(10,10))
+        
+        plt.plot(epoch_count, train_loss)
+        plt.plot(epoch_count, valid_loss)
+        plt.legend(["train_loss","valid_loss"])
+        plt.xlabel('Epoch')
+        plt.ylabel("Loss")
+        # plt.show();
+
+        fig.savefig(os.path.join(self.config["stats_dir"], 'loss.png'))
+
+    def show_misclassified_images(self, n=25):
+        """
+        Show misclassified images
+        :return:
+        """
+        fig = plt.figure(figsize=(10,10))
+
+        images = self.misclassified[str(self.best_epoch)][:n]
+        for i in range(1, n+1):
+            plt.subplot(5,5,i)
+            plt.axis('off')
+            plt.imshow(images[i-1]["img"].cpu().numpy()[0], cmap='gray_r')
+            plt.title("Predicted : {} \nActual : {}".format(images[i-1]["pred"][0].cpu().numpy(), images[i-1]["target"].cpu().numpy()))
+
+        plt.tight_layout()
+        fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))

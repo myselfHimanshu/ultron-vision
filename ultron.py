@@ -19,7 +19,12 @@ def main():
     agent_class = globals()[config["agent"]]
     agent = agent_class(config)
     agent.run()
-    # agent.finalize()
+    agent.finalize()
+    # agent.predict()
+    
+    agent.plot_accuracy_graph()
+    agent.plot_loss_graph()
+    agent.show_misclassified_images()
 
 if __name__=="__main__":
     main()

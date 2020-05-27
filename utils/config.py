@@ -1,5 +1,5 @@
 import json
-import pprint
+from pprint import pprint
 import os
 import logging
 
@@ -69,8 +69,10 @@ def process_config(json_file):
     """
 
     config, _ = get_config_from_json(json_file)
+    print("****************************")
     print("CONFIGURATION OF THIS EXPERIMENT")
-    print(config)
+    print("****************************")
+    pprint(config)
 
     try:
         print("****************************")
@@ -82,9 +84,10 @@ def process_config(json_file):
 
     config["summary_dir"] = os.path.join("experiments", config["exp_name"], "summaries/")
     config["checkpoint_dir"] = os.path.join("experiments", config["exp_name"], "checkpoints/")
+    config["stats_dir"] = os.path.join("experiments", config["exp_name"], "stats/")
     config["out_dir"] = os.path.join("experiments", config["exp_name"], "out/")
     config["log_dir"] = os.path.join("experiments", config["exp_name"], "logs/")
-    create_dirs([config["summary_dir"], config["checkpoint_dir"], config["out_dir"], config["log_dir"]])
+    create_dirs([config["summary_dir"], config["checkpoint_dir"], config["stats_dir"], config["out_dir"], config["log_dir"]])
 
     # setup logging in the project
     setup_logging(config["log_dir"])

@@ -134,6 +134,7 @@ myenv/
 checkpoints/
 data/
 experiments/
+.DS_Store
 
 
 

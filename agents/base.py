@@ -64,3 +64,24 @@ class BaseAgent:
         :return:
         """
         pass
+
+    def finalize(self):
+        """
+        Finalize operations
+        :return:
+        """
+        raise NotImplementedError
+
+    def plot_accuracy_graph(self):
+        """
+        Plot accuracy graph for train and valid dataset
+        :return:
+        """
+        pass
+
+    def plot_loss_graph(self):
+        """
+        Plot loss graph for train and valid dataset
+        :return:
+        """
+        pass

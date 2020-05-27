@@ -1,6 +1,8 @@
 {
     "exp_name" : "mnist_exp_01",
     "agent" : "MNISTAgent",
+
+    "input_size" : [1,28,28],
     
     "use_cuda" : false,
     "gpu_device" : 0,
@@ -21,8 +23,9 @@
     "save_checkpoint" : false,
     "load_checkpoint" : false,
     "checkpoint_file": "checkpoint.pth.tar",
+    "model_stats_file" : "stats.json",
 
-    "epochs" : 25,
+    "epochs" : 1,
 
     "num_workers" : 4,
     "pin_memory" : true

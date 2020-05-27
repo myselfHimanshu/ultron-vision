@@ -17,8 +17,10 @@ class DataLoader(object):
         self.train_loader = torch.utils.data.DataLoader(ddata.mnist_traindata, batch_size=self.batch_size,
                                                         shuffle=True, **self.kwargs)
         
-        self.test_loader = torch.utils.data.DataLoader(ddata.mnist_testdata, batch_size=self.batch_size,
+        self.valid_loader = torch.utils.data.DataLoader(ddata.mnist_validdata, batch_size=self.batch_size,
                                                         shuffle=True, **self.kwargs)
+
+        self.test_loader = None
         
 
     
