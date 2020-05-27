@@ -71,7 +71,7 @@ $ deactivate
 ```
 
 
-## TRAINING NETOWORKS
+## TRAINING ULTRON
 
 In `ultron.sh` provide `ultron.py` and `path-to-config-file`.
 
