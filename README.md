@@ -80,6 +80,6 @@ In `ultron.sh` provide `ultron.py` and `path-to-config-file`.
 $ chmod +x ultron.sh
 
 // train ultron
-$./ultron.sh
+$ ./ultron.sh
 ```
 
