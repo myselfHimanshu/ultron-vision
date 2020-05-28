@@ -74,9 +74,6 @@ class MNISTAgent(BaseAgent):
         # save checkpoint
         self.save_checkpoint = self.config['save_checkpoint']
 
-        # set cuda flag
-        self.use_cuda = self.use_cuda
-
         if not self.use_cuda and torch.cuda.is_available():
             self.logger.info('WARNING : You have CUDA device, you should probably enable CUDA.')
 
@@ -87,7 +84,7 @@ class MNISTAgent(BaseAgent):
             self.device = torch.device('cuda')
             torch.cuda.set_device(self.config['gpu_device'])
             self.model = self.model.to(self.device)
-            self.loss = self.model.to(self.device)
+            # self.loss = self.loss.to(self.device)
             
             self.logger.info("Program will RUN on ****GPU-CUDA****\n")
             print_cuda_statistics()

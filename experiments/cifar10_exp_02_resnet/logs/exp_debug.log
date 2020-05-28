@@ -1,0 +1,115 @@
+[INFO] - 2020-05-28 15:16:20,975 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:95
+[INFO] - 2020-05-28 15:16:20,975 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-28 15:16:20,975 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-28 15:16:25,316 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:94
+[INFO] - 2020-05-28 15:16:25,316 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-28 15:16:25,322 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-28 15:16:25,322 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-28 15:16:25,322 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-28 15:16:25,322 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-28 15:16:25,373 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-28 15:16:25,374 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-28 15:16:25,374 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-28 15:17:02,556 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1125	ACC : 46.9220 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:17:04,641 - Agent - : VALID EPOCH : 0	LOSS : 0.0207	ACC : 55.4500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:17:41,221 - Agent - : TRAIN EPOCH : 1	LOSS : 0.0832	ACC : 64.8700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:17:43,309 - Agent - : VALID EPOCH : 1	LOSS : 0.0194	ACC : 61.9600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:18:20,434 - Agent - : TRAIN EPOCH : 2	LOSS : 0.0707	ACC : 72.3100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:18:22,348 - Agent - : VALID EPOCH : 2	LOSS : 0.0103	ACC : 78.1400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:18:59,727 - Agent - : TRAIN EPOCH : 3	LOSS : 0.0636	ACC : 76.5780 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:19:01,642 - Agent - : VALID EPOCH : 3	LOSS : 0.0100	ACC : 78.4800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:19:38,939 - Agent - : TRAIN EPOCH : 4	LOSS : 0.0590	ACC : 79.1520 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:19:40,841 - Agent - : VALID EPOCH : 4	LOSS : 0.0089	ACC : 81.1900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:20:18,691 - Agent - : TRAIN EPOCH : 5	LOSS : 0.0557	ACC : 80.9880 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:20:20,675 - Agent - : VALID EPOCH : 5	LOSS : 0.0091	ACC : 80.5000 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:20:57,338 - Agent - : TRAIN EPOCH : 6	LOSS : 0.0527	ACC : 82.7100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:20:59,266 - Agent - : VALID EPOCH : 6	LOSS : 0.0073	ACC : 84.4800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:21:37,743 - Agent - : TRAIN EPOCH : 7	LOSS : 0.0505	ACC : 83.9220 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:21:39,623 - Agent - : VALID EPOCH : 7	LOSS : 0.0071	ACC : 84.6500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:22:16,453 - Agent - : TRAIN EPOCH : 8	LOSS : 0.0483	ACC : 85.2820 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:22:18,464 - Agent - : VALID EPOCH : 8	LOSS : 0.0082	ACC : 82.5300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:22:56,858 - Agent - : TRAIN EPOCH : 9	LOSS : 0.0467	ACC : 86.1400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:22:58,755 - Agent - : VALID EPOCH : 9	LOSS : 0.0078	ACC : 84.3800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:23:36,770 - Agent - : TRAIN EPOCH : 10	LOSS : 0.0456	ACC : 86.7120 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:23:38,644 - Agent - : VALID EPOCH : 10	LOSS : 0.0061	ACC : 87.2100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:24:17,353 - Agent - : TRAIN EPOCH : 11	LOSS : 0.0441	ACC : 87.4460 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:24:19,204 - Agent - : VALID EPOCH : 11	LOSS : 0.0060	ACC : 87.4800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:24:57,272 - Agent - : TRAIN EPOCH : 12	LOSS : 0.0428	ACC : 88.0220 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:24:59,139 - Agent - : VALID EPOCH : 12	LOSS : 0.0058	ACC : 87.9900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:25:36,252 - Agent - : TRAIN EPOCH : 13	LOSS : 0.0421	ACC : 88.5760 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:25:38,125 - Agent - : VALID EPOCH : 13	LOSS : 0.0063	ACC : 86.9700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:26:16,629 - Agent - : TRAIN EPOCH : 14	LOSS : 0.0411	ACC : 89.1720 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:26:18,477 - Agent - : VALID EPOCH : 14	LOSS : 0.0066	ACC : 86.6900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:26:55,328 - Agent - : TRAIN EPOCH : 15	LOSS : 0.0405	ACC : 89.5160 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:26:57,182 - Agent - : VALID EPOCH : 15	LOSS : 0.0058	ACC : 87.9700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:27:35,415 - Agent - : TRAIN EPOCH : 16	LOSS : 0.0396	ACC : 89.9560 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:27:37,246 - Agent - : VALID EPOCH : 16	LOSS : 0.0057	ACC : 88.4200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:28:15,984 - Agent - : TRAIN EPOCH : 17	LOSS : 0.0386	ACC : 90.6500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:28:17,866 - Agent - : VALID EPOCH : 17	LOSS : 0.0069	ACC : 87.2100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:28:55,481 - Agent - : TRAIN EPOCH : 18	LOSS : 0.0378	ACC : 91.1480 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:28:57,347 - Agent - : VALID EPOCH : 18	LOSS : 0.0055	ACC : 88.8000 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:29:35,191 - Agent - : TRAIN EPOCH : 19	LOSS : 0.0373	ACC : 91.2300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:29:37,090 - Agent - : VALID EPOCH : 19	LOSS : 0.0064	ACC : 87.8200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:30:14,995 - Agent - : TRAIN EPOCH : 20	LOSS : 0.0366	ACC : 91.6820 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:30:16,868 - Agent - : VALID EPOCH : 20	LOSS : 0.0054	ACC : 89.2700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:30:55,607 - Agent - : TRAIN EPOCH : 21	LOSS : 0.0362	ACC : 92.0180 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:30:57,452 - Agent - : VALID EPOCH : 21	LOSS : 0.0052	ACC : 89.8700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:31:35,163 - Agent - : TRAIN EPOCH : 22	LOSS : 0.0359	ACC : 92.1960 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:31:37,033 - Agent - : VALID EPOCH : 22	LOSS : 0.0056	ACC : 88.6000 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:32:14,375 - Agent - : TRAIN EPOCH : 23	LOSS : 0.0355	ACC : 92.2780 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:32:16,514 - Agent - : VALID EPOCH : 23	LOSS : 0.0054	ACC : 89.4300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:32:55,297 - Agent - : TRAIN EPOCH : 24	LOSS : 0.0346	ACC : 92.9200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:32:57,125 - Agent - : VALID EPOCH : 24	LOSS : 0.0057	ACC : 89.1600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:33:34,252 - Agent - : TRAIN EPOCH : 25	LOSS : 0.0345	ACC : 93.0260 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:33:36,064 - Agent - : VALID EPOCH : 25	LOSS : 0.0062	ACC : 88.3100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:34:13,364 - Agent - : TRAIN EPOCH : 26	LOSS : 0.0337	ACC : 93.3260 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:34:15,219 - Agent - : VALID EPOCH : 26	LOSS : 0.0053	ACC : 89.8800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:34:54,529 - Agent - : TRAIN EPOCH : 27	LOSS : 0.0333	ACC : 93.5980 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:34:56,403 - Agent - : VALID EPOCH : 27	LOSS : 0.0061	ACC : 88.8100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:35:35,116 - Agent - : TRAIN EPOCH : 28	LOSS : 0.0331	ACC : 93.7140 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:35:36,994 - Agent - : VALID EPOCH : 28	LOSS : 0.0051	ACC : 90.1700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:36:15,995 - Agent - : TRAIN EPOCH : 29	LOSS : 0.0327	ACC : 93.8540 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:36:17,893 - Agent - : VALID EPOCH : 29	LOSS : 0.0062	ACC : 89.1700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:36:56,649 - Agent - : TRAIN EPOCH : 30	LOSS : 0.0324	ACC : 94.0900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:36:58,510 - Agent - : VALID EPOCH : 30	LOSS : 0.0060	ACC : 89.3600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:37:37,775 - Agent - : TRAIN EPOCH : 31	LOSS : 0.0320	ACC : 94.1520 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:37:39,621 - Agent - : VALID EPOCH : 31	LOSS : 0.0056	ACC : 89.6400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:38:17,498 - Agent - : TRAIN EPOCH : 32	LOSS : 0.0319	ACC : 94.3760 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:38:19,414 - Agent - : VALID EPOCH : 32	LOSS : 0.0051	ACC : 90.9500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:38:56,015 - Agent - : TRAIN EPOCH : 33	LOSS : 0.0316	ACC : 94.4600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:38:57,809 - Agent - : VALID EPOCH : 33	LOSS : 0.0056	ACC : 90.0300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:39:36,921 - Agent - : TRAIN EPOCH : 34	LOSS : 0.0315	ACC : 94.5420 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:39:38,792 - Agent - : VALID EPOCH : 34	LOSS : 0.0053	ACC : 90.4100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:40:15,568 - Agent - : TRAIN EPOCH : 35	LOSS : 0.0284	ACC : 96.4560 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:40:17,409 - Agent - : VALID EPOCH : 35	LOSS : 0.0041	ACC : 92.3900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:40:54,342 - Agent - : TRAIN EPOCH : 36	LOSS : 0.0274	ACC : 96.9320 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:40:56,197 - Agent - : VALID EPOCH : 36	LOSS : 0.0041	ACC : 92.5900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:41:34,959 - Agent - : TRAIN EPOCH : 37	LOSS : 0.0268	ACC : 97.2960 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:41:36,799 - Agent - : VALID EPOCH : 37	LOSS : 0.0042	ACC : 92.7300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:42:13,312 - Agent - : TRAIN EPOCH : 38	LOSS : 0.0267	ACC : 97.3840 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:42:15,122 - Agent - : VALID EPOCH : 38	LOSS : 0.0042	ACC : 92.6800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:42:54,466 - Agent - : TRAIN EPOCH : 39	LOSS : 0.0264	ACC : 97.5280 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:42:56,339 - Agent - : VALID EPOCH : 39	LOSS : 0.0042	ACC : 92.7900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:43:35,265 - Agent - : TRAIN EPOCH : 40	LOSS : 0.0264	ACC : 97.5280 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:43:37,127 - Agent - : VALID EPOCH : 40	LOSS : 0.0043	ACC : 92.8600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:44:16,435 - Agent - : TRAIN EPOCH : 41	LOSS : 0.0264	ACC : 97.5980 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:44:18,325 - Agent - : VALID EPOCH : 41	LOSS : 0.0042	ACC : 92.8300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:44:57,337 - Agent - : TRAIN EPOCH : 42	LOSS : 0.0263	ACC : 97.6160 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:44:59,277 - Agent - : VALID EPOCH : 42	LOSS : 0.0043	ACC : 92.9000 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:45:36,604 - Agent - : TRAIN EPOCH : 43	LOSS : 0.0258	ACC : 97.9100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:45:38,434 - Agent - : VALID EPOCH : 43	LOSS : 0.0042	ACC : 92.8700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:46:14,079 - Agent - : TRAIN EPOCH : 44	LOSS : 0.0260	ACC : 97.7600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:46:15,954 - Agent - : VALID EPOCH : 44	LOSS : 0.0042	ACC : 92.8900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:46:55,432 - Agent - : TRAIN EPOCH : 45	LOSS : 0.0259	ACC : 97.8600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:46:57,328 - Agent - : VALID EPOCH : 45	LOSS : 0.0043	ACC : 92.8400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:47:36,703 - Agent - : TRAIN EPOCH : 46	LOSS : 0.0258	ACC : 97.8860 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:47:38,608 - Agent - : VALID EPOCH : 46	LOSS : 0.0043	ACC : 92.8800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:48:17,276 - Agent - : TRAIN EPOCH : 47	LOSS : 0.0257	ACC : 97.9540 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:48:19,159 - Agent - : VALID EPOCH : 47	LOSS : 0.0043	ACC : 92.8500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:48:56,566 - Agent - : TRAIN EPOCH : 48	LOSS : 0.0257	ACC : 97.9080 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:48:58,584 - Agent - : VALID EPOCH : 48	LOSS : 0.0043	ACC : 93.0200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:49:37,985 - Agent - : TRAIN EPOCH : 49	LOSS : 0.0254	ACC : 98.0960 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:211
+[INFO] - 2020-05-28 15:49:39,801 - Agent - : VALID EPOCH : 49	LOSS : 0.0044	ACC : 92.9400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:256
+[INFO] - 2020-05-28 15:49:39,802 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:263
