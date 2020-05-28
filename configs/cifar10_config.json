@@ -1,23 +1,23 @@
 {
-    "exp_name" : "cifar10_exp_01",
+    "exp_name" : "cifar10_exp_02_resnet",
     "agent" : "Cifar10Agent",
 
     "input_size" : [3,32,32],
     
-    "use_cuda" : false,
+    "use_cuda" : true,
     "gpu_device" : 0,
     "seed" : 1,
 
     "batch_size" : 64,
 
-    "learning_rate" : 0.01,
+    "learning_rate" : 0.001,
     "momentum" : 0.9,
 
-    "l1_decay" : 0.0,
-    "l2_decay" : 0.005,
+    "l1_decay" : 1e-6,
+    "l2_decay" : 1e-3,
 
     "use_step_lr" : true,
-    "step_size" : 6,
+    "step_size" : 35,
     "step_gamma" : 0.1,
 
     "save_checkpoint" : false,
@@ -25,7 +25,7 @@
     "checkpoint_file": "checkpoint.pth.tar",
     "model_stats_file" : "stats.json",
 
-    "epochs" : 1,
+    "epochs" : 50,
 
     "num_workers" : 4,
     "pin_memory" : true

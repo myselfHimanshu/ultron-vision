@@ -11,8 +11,8 @@ import torch.nn.functional as F
 from tqdm import tqdm
 
 from agents.base import BaseAgent
-from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
-# from networks.resnet_net import ResNet18 as Net
+# from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
+from networks.resnet_net import ResNet18 as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
 from utils.misc import *
 
@@ -89,7 +89,7 @@ class Cifar10Agent(BaseAgent):
             self.device = torch.device('cuda')
             torch.cuda.set_device(self.config['gpu_device'])
             self.model = self.model.to(self.device)
-            self.loss = self.model.to(self.device)
+            self.loss = self.loss.to(self.device)
             
             self.logger.info("Program will RUN on ****GPU-CUDA****\n")
             print_cuda_statistics()
@@ -348,9 +348,10 @@ class Cifar10Agent(BaseAgent):
         for i in range(1, n+1):
             plt.subplot(5,5,i)
             plt.axis('off')
-            plt.imshow(images[i-1]["img"].cpu().numpy()[0], cmap='gray_r')
-            plt.title("Predicted : {} \nActual : {}".format(self.id2classes[images[i-1]["pred"][0].cpu().numpy()], 
-                                                self.id2classes[images[i-1]["target"].cpu().numpy()]))
+            plt.imshow(images[i-1]["img"].cpu().numpy()[0])
+            plt.title("Predicted : {} \nActual : {}".format(self.id2classes[int(images[i-1]["pred"].cpu().numpy()[0])], 
+                                                self.id2classes[int(images[i-1]["target"].cpu().numpy())]
+                                            ))
 
         plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
