@@ -273,6 +273,7 @@ class Cifar10Agent(BaseAgent):
         try:
             if(self.dataloader.test_loader==None):
                 self.logger.info("Test Loader is NOT DEFINED!!!")
+                return []
 
             self.load_checkpoint(self.config['checkpoint_file'])
             self.model.eval()
