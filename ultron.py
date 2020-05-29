@@ -20,11 +20,14 @@ def main():
     agent = agent_class(config)
     agent.run()
     agent.finalize()
-    # agent.predict()
     
     agent.plot_accuracy_graph()
     agent.plot_loss_graph()
     agent.show_misclassified_images()
+
+    agent.predict(config["test_image_name"])
+    # agent.interpret_image(config["test_image_name"])
+
 
 if __name__=="__main__":
     main()

@@ -2,6 +2,8 @@ import torch
 import cv2
 import numpy as np
 
+from torch.nn import Variable
+
 def visualize_cam(mask, img):
     """Make heatmap from mask and synthesize GradCAM result image using heatmap and img.
     Args:
@@ -86,5 +88,4 @@ class Normalize(object):
 
     def __repr__(self):
         return self.__class__.__name__ + '(mean={0}, std={1})'.format(self.mean, self.std)
-        
             

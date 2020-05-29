@@ -9,16 +9,23 @@ from torch.optim.lr_scheduler import StepLR
 import torch.nn.functional as F
 
 from tqdm import tqdm
+import PIL
 
 from agents.base import BaseAgent
 # from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
 from networks.resnet_net import ResNet18 as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
+from infdata.transformation.cifar10_tf import Transforms
+
+# utils function
 from utils.misc import *
+from utils.gradcam import GradCam
+from utils.grad_misc import visualize_cam, Normalize
 
 from torchsummary import summary
 import json
 import matplotlib.pyplot as plt
+import numpy as np
 
 import os
 curr_dir = os.path.dirname(__file__)
@@ -109,7 +116,6 @@ class Cifar10Agent(BaseAgent):
             self.load_checkpoint(self.config['checkpoint_file'])
 
         self.stats_file_name = os.path.join(self.config["stats_dir"], self.config["model_stats_file"])
-
 
     def load_checkpoint(self, file_name):
         """
@@ -268,30 +274,6 @@ class Cifar10Agent(BaseAgent):
         with open(self.stats_file_name, "w") as f:
             json.dump(result, f)
 
-    
-    def predict(self):
-        try:
-            if(self.dataloader.test_loader==None):
-                self.logger.info("Test Loader is NOT DEFINED!!!")
-                return []
-
-            self.load_checkpoint(self.config['checkpoint_file'])
-            self.model.eval()
-            predictions = []
-
-            with torch.no_grad():
-                for data in test_loader:
-                    data = data.to(self.device)
-                    output = self.model(data)
-                    pred = output.argmax(dim=1, keepdim=True)
-                    predictions.extend(pred.cpu().numpy())
-            
-            return predictions
-        except Exception as e:
-            self.logger.info("Test loader prediction FAILED!!!")
-            self.logger.info(e)
-            return []
-
     def plot_accuracy_graph(self):
         """
         Plot accuracy graph for train and valid dataset
@@ -356,3 +338,69 @@ class Cifar10Agent(BaseAgent):
 
         plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
+
+    def _load_image(self, image_name):
+        """
+        load single image
+        :param image_name: image file name
+        :return (tensor, tensor): torch image, normalized torch images
+        """
+        normalizer = Normalize(mean=self.config['mean'], std=self.config['std'])
+        pil_img = PIL.image.open(os.path.join(self.config["test_images_dir"], image_name))
+        torch_img = torch.from_numpy(np.asarray(pil_img)).permute(2, 0, 1).unsqueeze(0).float().div(255)
+        torch_img = F.upsample(torch_img, size=(224, 224), mode='bilinear', align_corners=False)
+        normed_torch_img = normalizer(torch_img)
+
+        return torch_img, normed_torch_img
+
+    def predict(self, image_name):
+        """
+        predict image class
+        :param image_name: image file name
+        :return (str): class name
+        """
+        try:
+            data, _ = self._load_image(image_name)
+            
+            self.load_checkpoint(self.config['checkpoint_file'])
+            self.model.eval()
+            prediction = None
+
+            with torch.no_grad():
+                data = data.to(self.device)
+                output = self.model(data)
+                prediction = output.argmax(dim=1, keepdim=True).cpu().numpy()
+            self.logger.info("Test Image Prediction : " + str(self.id2classes[prediction[0]]))
+        except Exception as e:
+            self.logger.info("Test image prediction FAILED!!!")
+            self.logger.info(e)
+
+    def interpret_image(self, image_name):
+        """
+        Grad Cam for interpreting and prediting class of image
+        """
+        self.load_checkpoint(self.config['checkpoint_file'])
+        self.model.eval()
+        self.model.to(self.device)
+        torch_img, normed_torch_img = self._load_image(image_name)
+        torch_img, normed_torch_img = torch_img.to(self.device), normed_torch_img.to(self.device)
+
+        model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(224, 224))
+        gradcam = GradCAM(model_dict)
+
+        mask, _ = gradcam(normed_torch_img)
+        heatmap, result = visualize_cam(mask, torch_img)
+
+        image = [torch.stack([torch_img.squeeze().cpu(), heatmap, result], 0)]
+        image = make_grid(torch.cat(image, 0), nrow=1)
+
+        grad_output = os.path.join(self.config["stats_dir"], 'grad_output.png')
+        save_image(image, output_path)
+
+
+        
+        
+
+        
+
+
