@@ -27,6 +27,8 @@ This repo contains deep learning vision models.
 - [x] predict single image
 - [x] interpret prediction using gradcam on single image
 - [x] logger
+- [x] save model checkpoint
+- [x] load model checkpoint
 - [ ] custom dataset implementation
 - [ ] custom loss function
 
