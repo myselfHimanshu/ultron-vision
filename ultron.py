@@ -18,15 +18,14 @@ def main():
     # Create the agent and pass all the configuration to it and run
     agent_class = globals()[config["agent"]]
     agent = agent_class(config)
-    # agent.run()
-    # agent.finalize()
+    agent.run()
+    agent.finalize()
     
-    # agent.plot_accuracy_graph()
-    # agent.plot_loss_graph()
-    # agent.show_misclassified_images()
+    agent.plot_accuracy_graph()
+    agent.plot_loss_graph()
+    agent.show_misclassified_images()
 
     agent.predict(config["test_image_name"])
-    agent.interpret_image(config["test_image_name"])
 
 
 if __name__=="__main__":

@@ -124,6 +124,8 @@ class Cifar10Agent(BaseAgent):
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         checkpoint = torch.load(file_name)
 
+        self.model = Net()
+        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
         self.model.load_state_dict(checkpoint['state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer'])
         
@@ -373,7 +375,7 @@ class Cifar10Agent(BaseAgent):
             self.logger.info("Test image prediction FAILED!!!")
             self.logger.info(e)
 
-    def interpret_image(self, image_name):
+    def _interpret_image(self, image_name):
         """
         Grad Cam for interpreting and prediting class of image
         """
