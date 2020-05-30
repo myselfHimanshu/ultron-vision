@@ -13,7 +13,7 @@ This repo contains deep learning vision models.
 |Model|Data|Best Validation Accuracy|Total Epochs|Parameters|
 |--|--|--|--|--|
 |mnist_custom_model|MNIST|99.49%|20|7,808|
-|custom_atrous_model|CIFAR-10|93.02%|50|220,778|
+|custom_atrous_model|CIFAR-10|85.91%|20|220,778|
 |resnet-18|CIFAR-10|93.44%|50|11,173,962|
 |resnet-18(albumentation)|CIFAR-10|92.17%|50|11,173,962|
 
