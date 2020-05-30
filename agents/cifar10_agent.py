@@ -21,7 +21,7 @@ from infdata.loader.cifar10_dl import DataLoader as dl
 # utils function
 from utils.misc import *
 from utils.gradcam import GradCam
-from utils.grad_misc import visualize_cam, Normalize
+from utils.grad_misc import visualize_cam
 
 from torchsummary import summary
 import json
@@ -126,8 +126,8 @@ class Cifar10Agent(BaseAgent):
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         checkpoint = torch.load(file_name)
 
-        self.model = Net()
-        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
+        # self.model = Net()
+        # self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
         self.model.load_state_dict(checkpoint['state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer'])
         
@@ -338,20 +338,6 @@ class Cifar10Agent(BaseAgent):
         plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
 
-    # def _load_image(self, image_name):
-    #     """
-    #     load single image
-    #     :param image_name: image file name
-    #     :return (tensor, tensor): torch image, normalized torch images
-    #     """
-    #     normalizer = Normalize(mean=self.config['mean'], std=self.config['std'])
-    #     pil_img = PIL.Image.open(os.path.join(self.config["test_images_dir"], image_name))
-    #     torch_img = torch.from_numpy(np.asarray(pil_img).copy()).permute(2, 0, 1).unsqueeze(0).float().div(255)
-    #     torch_img = F.interpolate(torch_img, size=(32, 32), mode='bilinear', align_corners=False)
-    #     normed_torch_img = normalizer(torch_img)
-
-    #     return torch_img, normed_torch_img
-
     def predict(self):
         """
         predict image class
@@ -362,12 +348,11 @@ class Cifar10Agent(BaseAgent):
             # _, data = self._load_image(image_name)
             
             self.load_checkpoint(self.config['checkpoint_file'])
-            self.model.to(self.device)
+            # self.model.to(self.device)
             self.model.eval()
             predictions = []
             trues = []
 
-            #with torch.no_grad():
             for data, target in self.dataloader.test_loader:
                 data = data.to(self.device)
                 output = self.model(data)
@@ -381,35 +366,33 @@ class Cifar10Agent(BaseAgent):
             self.logger.info("GRADCAM images saved successfully.")
         except Exception as e:
             self.logger.info("Test image prediction FAILED!!!")
+            self.logger.info("GradCam visualization FAILED!!!")
             self.logger.info(e)
 
     def _interpret_image(self, image_data, image_label):
         """
         Grad Cam for interpreting and prediting class of image
         """
-        try:
-            model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
-            gradcam = GradCam(model_dict)
+        
+        model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
+        gradcam = GradCam(model_dict)
 
-            std = np.array(self.config['std'])
-            mean = np.array(self.config['mean'])
+        std = np.array(self.config['std'])
+        mean = np.array(self.config['mean'])
 
-            mask, _ = gradcam(image_data)
-            
-            denormalize = transforms.Normalize((-1 * mean / std), (1.0 / std))
+        mask, _ = gradcam(image_data)
+        
+        denormalize = transforms.Normalize((-1 * mean / std), (1.0 / std))
+        res = image_data.squeeze(0)
+        res = denormalize(res)
 
-            heatmap, result = visualize_cam(mask, image_data)
-            res = image_data.squeeze(0)
-            res = denormalize(res).permute((2,0,1))
+        heatmap, result = visualize_cam(mask, res.unsqueeze(0))
 
-            image = [torch.stack([res.cpu(), heatmap, result], 0)]
-            image = make_grid(torch.cat(image, 0), nrow=1)
+        image = [torch.stack([res.cpu(), heatmap, result], 0)]
+        image = make_grid(torch.cat(image, 0), nrow=1)
 
-            grad_output = os.path.join(self.config["stats_dir"], f'grad_output_{image_label}.png')
-            save_image(image, grad_output)
-        except Exception as e:
-            self.logger.info(str(e))
-
+        grad_output = os.path.join(self.config["stats_dir"], f'grad_output_{image_label}.png')
+        save_image(image, grad_output)
 
 
         
