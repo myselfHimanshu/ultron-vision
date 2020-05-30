@@ -17,6 +17,15 @@ This repo contains deep learning vision models.
 |resnet-18|CIFAR-10|93.44%|50|11,173,962|
 |resnet-18(albumentation)|CIFAR-10|92.17%|50|11,173,962|
 
+## HARDWARE CONFIGURATION
+
+- GPUs : NVIDIA® GeForce® GTX 1080Ti
+- vCPUs : 4
+- Memory : 12 GiB
+- Disk : 80 GiB
+- [Genesis Cloud](https://gnsiscld.co/496pv5j) offers GPU cloud computing at unbeatable cost efficiency.
+
+
 ## FUNCTIONS IMPLEMENTED
 
 - [x] pytorch-transformation
@@ -31,6 +40,7 @@ This repo contains deep learning vision models.
 - [x] load model checkpoint
 - [ ] custom dataset implementation
 - [ ] custom loss function
+- [ ] using weights and biases for logging experiments
 
 
 ## INSTALLATION
@@ -96,7 +106,6 @@ $ deactivate
 └── ultron.sh
 ```
 
-
 ## TRAINING ULTRON
 
 In `ultron.sh` provide `ultron.py` and `path-to-config-file`.
@@ -109,3 +118,4 @@ $ chmod +x ultron.sh
 $ ./ultron.sh
 ```
 
+<hr>
