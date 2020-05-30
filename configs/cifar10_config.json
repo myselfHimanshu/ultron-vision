@@ -1,5 +1,5 @@
 {
-    "exp_name" : "cifar10_exp_02_resnet",
+    "exp_name" : "cifar10_exp_03_resnet",
     "agent" : "Cifar10Agent",
 
     "input_size" : [3,32,32],

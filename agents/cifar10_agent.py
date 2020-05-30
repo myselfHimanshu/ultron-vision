@@ -7,6 +7,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 import torch.nn.functional as F
+from torchvision.utils import make_grid, save_image
 
 from tqdm import tqdm
 import PIL
@@ -83,9 +84,6 @@ class Cifar10Agent(BaseAgent):
         # initialize maximum accuracy
         self.max_accuracy = 0.0
 
-        # save checkpoint
-        self.save_checkpoint = self.config['save_checkpoint']
-
         if not self.use_cuda and torch.cuda.is_available():
             self.logger.info('WARNING : You have CUDA device, you should probably enable CUDA.')
 
@@ -112,8 +110,8 @@ class Cifar10Agent(BaseAgent):
         print("****************************")
 
 
-        if self.config["load_checkpoint"]:
-            self.load_checkpoint(self.config['checkpoint_file'])
+        # if self.config["load_checkpoint"]:
+        #     self.load_checkpoint(self.config['checkpoint_file'])
 
         self.stats_file_name = os.path.join(self.config["stats_dir"], self.config["model_stats_file"])
 
@@ -126,13 +124,10 @@ class Cifar10Agent(BaseAgent):
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         checkpoint = torch.load(file_name)
 
-        self.model = torch.load_state_dict(checkpoint['model'])
-        self.optimizer = torch.load_state_dict(checkpoint['optimizer'])
+        self.model.load_state_dict(checkpoint['state_dict'])
+        self.optimizer.load_state_dict(checkpoint['optimizer'])
         
         is_best = checkpoint["is_best"]
-        if is_best:
-            self.max_accuracy = checkpoint['valid_accuracy']
-        
         self.misclassified = checkpoint['misclassified_data']
         
     def save_checkpoint(self, file_name='checkpoint.pth.tar', is_best=1):
@@ -346,9 +341,9 @@ class Cifar10Agent(BaseAgent):
         :return (tensor, tensor): torch image, normalized torch images
         """
         normalizer = Normalize(mean=self.config['mean'], std=self.config['std'])
-        pil_img = PIL.image.open(os.path.join(self.config["test_images_dir"], image_name))
-        torch_img = torch.from_numpy(np.asarray(pil_img)).permute(2, 0, 1).unsqueeze(0).float().div(255)
-        torch_img = F.upsample(torch_img, size=(224, 224), mode='bilinear', align_corners=False)
+        pil_img = PIL.Image.open(os.path.join(self.config["test_images_dir"], image_name))
+        torch_img = torch.from_numpy(np.asarray(pil_img).copy()).permute(2, 0, 1).unsqueeze(0).float().div(255)
+        torch_img = F.interpolate(torch_img, size=(32, 32), mode='bilinear', align_corners=False)
         normed_torch_img = normalizer(torch_img)
 
         return torch_img, normed_torch_img
@@ -360,17 +355,20 @@ class Cifar10Agent(BaseAgent):
         :return (str): class name
         """
         try:
-            data, _ = self._load_image(image_name)
+            _, data = self._load_image(image_name)
             
             self.load_checkpoint(self.config['checkpoint_file'])
+            self.model.to(self.device)
+            
             self.model.eval()
             prediction = None
 
             with torch.no_grad():
                 data = data.to(self.device)
                 output = self.model(data)
-                prediction = output.argmax(dim=1, keepdim=True).cpu().numpy()
-            self.logger.info("Test Image Prediction : " + str(self.id2classes[prediction[0]]))
+                prediction = int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0])
+                
+            self.logger.info("Test Image Prediction : " + str(self.id2classes[prediction]))
         except Exception as e:
             self.logger.info("Test image prediction FAILED!!!")
             self.logger.info(e)
@@ -379,14 +377,14 @@ class Cifar10Agent(BaseAgent):
         """
         Grad Cam for interpreting and prediting class of image
         """
-        self.load_checkpoint(self.config['checkpoint_file'])
+        # self.load_checkpoint(self.config['checkpoint_file'])
         self.model.eval()
-        self.model.to(self.device)
+        # self.model.to(self.device)
         torch_img, normed_torch_img = self._load_image(image_name)
         torch_img, normed_torch_img = torch_img.to(self.device), normed_torch_img.to(self.device)
 
-        model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(224, 224))
-        gradcam = GradCAM(model_dict)
+        model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
+        gradcam = GradCam(model_dict)
 
         mask, _ = gradcam(normed_torch_img)
         heatmap, result = visualize_cam(mask, torch_img)
@@ -395,7 +393,8 @@ class Cifar10Agent(BaseAgent):
         image = make_grid(torch.cat(image, 0), nrow=1)
 
         grad_output = os.path.join(self.config["stats_dir"], 'grad_output.png')
-        save_image(image, output_path)
+        save_image(image, grad_output)
+        self.logger.info("GRADCAM image saved successfully.")
 
 
         
