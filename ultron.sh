@@ -4,4 +4,6 @@
 #python3 ultron.py PATH_OF_THE_CONFIG_FILE
 
 # python ultron.py configs/mnist_config.json
-python ultron.py configs/cifar10_config.json
+# python ultron.py configs/cifar10_config.json
+python ultron.py configs/cifar10_quizdnn_config.json
+

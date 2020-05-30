@@ -29,7 +29,7 @@ def main():
     agent.show_misclassified_images()
 
     # predict and show grad cam images
-    agent.predict()
+    # agent.predict()
 
 
 if __name__=="__main__":

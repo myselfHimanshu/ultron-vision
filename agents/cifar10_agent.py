@@ -15,7 +15,8 @@ import PIL
 
 from agents.base import BaseAgent
 # from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
-from networks.resnet_net import ResNet18 as Net
+# from networks.resnet_net import ResNet18 as Net
+from networks.quizz_net import QuizDNN as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
 
 # utils function
@@ -27,6 +28,7 @@ from torchsummary import summary
 import json
 import matplotlib.pyplot as plt
 import numpy as np
+from datetime import datetime
 
 import os
 curr_dir = os.path.dirname(__file__)
@@ -35,6 +37,7 @@ class Cifar10Agent(BaseAgent):
 
     def __init__(self, config):
         super().__init__(config)
+        self.logger.info("QUIZ DNN Current Datetime " + str(datetime.now()))
         self.config = config
         self.use_cuda = self.config['use_cuda']
 
