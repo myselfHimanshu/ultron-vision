@@ -1,5 +1,5 @@
 {
-    "exp_name" : "cifar10_exp_03_resnet",
+    "exp_name" : "cifar10_exp_05_resnet_album",
     "agent" : "Cifar10Agent",
 
     "input_size" : [3,32,32],
@@ -12,14 +12,14 @@
 
     "batch_size" : 64,
 
-    "learning_rate" : 0.001,
+    "learning_rate" : 0.01,
     "momentum" : 0.9,
 
     "l1_decay" : 1e-6,
-    "l2_decay" : 1e-3,
+    "l2_decay" : 0.005,
 
     "use_step_lr" : true,
-    "step_size" : 35,
+    "step_size" : 15,
     "step_gamma" : 0.1,
 
     "save_checkpoint" : true,
