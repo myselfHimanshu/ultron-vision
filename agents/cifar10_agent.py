@@ -397,11 +397,10 @@ class Cifar10Agent(BaseAgent):
             mask, _ = gradcam(image_data)
             
             denormalize = transforms.Normalize((-1 * mean / std), (1.0 / std))
-            
+
+            heatmap, result = visualize_cam(mask, image_data)
             res = image_data.squeeze(0)
             res = denormalize(res).permute((2,0,1))
-
-            heatmap, result = visualize_cam(mask, res)
 
             image = [torch.stack([res.cpu(), heatmap, result], 0)]
             image = make_grid(torch.cat(image, 0), nrow=1)
