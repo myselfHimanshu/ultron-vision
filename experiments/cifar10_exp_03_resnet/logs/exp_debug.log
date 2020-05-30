@@ -434,3 +434,20 @@
 [INFO] - 2020-05-30 09:28:50,161 - Agent - : Test Image trueValues : ['frog', 'bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:364
 [INFO] - 2020-05-30 09:28:50,161 - Agent - : Test Image Prediction : ['bird', 'bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:365
 [INFO] - 2020-05-30 09:28:50,161 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:366
+[INFO] - 2020-05-30 09:32:39,764 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 09:32:39,764 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 09:32:39,765 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 09:32:44,542 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 09:32:44,543 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 09:32:44,543 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 09:32:44,543 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 09:32:44,543 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 09:32:44,543 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 09:32:44,607 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 09:32:44,607 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 09:32:44,607 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 09:32:52,529 - Agent - : Test Image trueValues : ['bird', 'frog', 'dog', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:364
+[INFO] - 2020-05-30 09:32:52,530 - Agent - : Test Image Prediction : ['bird', 'bird', 'dog', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:365
+[INFO] - 2020-05-30 09:32:52,530 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:366
