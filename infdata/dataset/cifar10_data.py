@@ -18,3 +18,6 @@ class DownloadData(object):
         
         self.cifar10_validdata = datasets.CIFAR10(self.data_path, train=False, download=True,
                                                 transform=transf.valid_transforms)
+
+        self.cifar10_testdata = datasets.ImageFolder(root=os.path.join(self.data_path, "test_images"), 
+                                                transform=transf.test_transforms)

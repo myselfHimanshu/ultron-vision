@@ -336,60 +336,55 @@ class Cifar10Agent(BaseAgent):
         plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
 
-    def _load_image(self, image_name):
-        """
-        load single image
-        :param image_name: image file name
-        :return (tensor, tensor): torch image, normalized torch images
-        """
-        normalizer = Normalize(mean=self.config['mean'], std=self.config['std'])
-        pil_img = PIL.Image.open(os.path.join(self.config["test_images_dir"], image_name))
-        torch_img = torch.from_numpy(np.asarray(pil_img).copy()).permute(2, 0, 1).unsqueeze(0).float().div(255)
-        torch_img = F.interpolate(torch_img, size=(32, 32), mode='bilinear', align_corners=False)
-        normed_torch_img = normalizer(torch_img)
+    # def _load_image(self, image_name):
+    #     """
+    #     load single image
+    #     :param image_name: image file name
+    #     :return (tensor, tensor): torch image, normalized torch images
+    #     """
+    #     normalizer = Normalize(mean=self.config['mean'], std=self.config['std'])
+    #     pil_img = PIL.Image.open(os.path.join(self.config["test_images_dir"], image_name))
+    #     torch_img = torch.from_numpy(np.asarray(pil_img).copy()).permute(2, 0, 1).unsqueeze(0).float().div(255)
+    #     torch_img = F.interpolate(torch_img, size=(32, 32), mode='bilinear', align_corners=False)
+    #     normed_torch_img = normalizer(torch_img)
 
-        return torch_img, normed_torch_img
+    #     return torch_img, normed_torch_img
 
-    def predict(self, image_name):
+    def predict(self):
         """
         predict image class
         :param image_name: image file name
         :return (str): class name
         """
         try:
-            _, data = self._load_image(image_name)
+            # _, data = self._load_image(image_name)
             
             self.load_checkpoint(self.config['checkpoint_file'])
             self.model.to(self.device)
-            
             self.model.eval()
-            prediction = None
+            predictions = []
 
             with torch.no_grad():
-                data = data.to(self.device)
-                output = self.model(data)
-                prediction = int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0])
+                for data in self.dataloader.test_loader:
+                    data = data.to(self.device)
+                    output = self.model(data)
+                    predictions.append(int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0]))
+                    self._interpret_image(data)
                 
-            self.logger.info("Test Image Prediction : " + str(self.id2classes[prediction]))
+            self.logger.info("Test Image Prediction : " + str([self.id2classes[pred] for pred in predictions]))
         except Exception as e:
             self.logger.info("Test image prediction FAILED!!!")
             self.logger.info(e)
 
-    def _interpret_image(self, image_name):
+    def _interpret_image(self, image_data):
         """
         Grad Cam for interpreting and prediting class of image
         """
-        # self.load_checkpoint(self.config['checkpoint_file'])
-        self.model.eval()
-        # self.model.to(self.device)
-        torch_img, normed_torch_img = self._load_image(image_name)
-        torch_img, normed_torch_img = torch_img.to(self.device), normed_torch_img.to(self.device)
-
         model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
         gradcam = GradCam(model_dict)
 
-        mask, _ = gradcam(normed_torch_img)
-        heatmap, result = visualize_cam(mask, torch_img)
+        mask, _ = gradcam(image_data)
+        heatmap, result = visualize_cam(mask, image_data)
 
         image = [torch.stack([torch_img.squeeze().cpu(), heatmap, result], 0)]
         image = make_grid(torch.cat(image, 0), nrow=1)

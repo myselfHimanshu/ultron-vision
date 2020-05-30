@@ -30,8 +30,6 @@
     "epochs" : 50,
 
     "num_workers" : 4,
-    "pin_memory" : true,
-
-    "test_image_name" : "water-bird.jpg"
+    "pin_memory" : true
 
 }

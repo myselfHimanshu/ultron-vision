@@ -25,7 +25,7 @@ def main():
     agent.plot_loss_graph()
     agent.show_misclassified_images()
 
-    agent.predict(config["test_image_name"])
+    agent.predict()
 
 
 if __name__=="__main__":
