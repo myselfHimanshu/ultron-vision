@@ -35,7 +35,7 @@ This repo contains deep learning vision models.
 
 ## INSTALLATION
 
-```
+```bash
 // install virtualenv
 $ python3 -m pip install --user virtualenv
 
@@ -54,7 +54,7 @@ $ deactivate
 
 ## FOLDER STRUCTURE
 
-```
+```java
 .
 ├── agents // define training and testing
 │ ├── base.py
@@ -101,7 +101,7 @@ $ deactivate
 
 In `ultron.sh` provide `ultron.py` and `path-to-config-file`.
 
-```
+```bash
 // make ultron.sh executable file
 $ chmod +x ultron.sh
 
