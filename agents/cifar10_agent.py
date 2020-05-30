@@ -8,6 +8,7 @@ import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 import torch.nn.functional as F
 from torchvision.utils import make_grid, save_image
+from torchvision import transforms
 
 from tqdm import tqdm
 import PIL
@@ -16,7 +17,6 @@ from agents.base import BaseAgent
 # from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
 from networks.resnet_net import ResNet18 as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
-from infdata.transformation.cifar10_tf import Transforms
 
 # utils function
 from utils.misc import *
@@ -46,7 +46,9 @@ class Cifar10Agent(BaseAgent):
 
         # intitalize classes
         self.classes = self.dataloader.classes
+        self.testclasses = self.dataloader.testclasses
         self.id2classes = {i:y for i,y in enumerate(self.classes)}
+        self.id2tclasses = {i:y for i,y in enumerate(self.testclasses)}
 
         # define loss
         self.loss = nn.CrossEntropyLoss()
@@ -363,35 +365,52 @@ class Cifar10Agent(BaseAgent):
             self.model.to(self.device)
             self.model.eval()
             predictions = []
+            trues = []
 
-            with torch.no_grad():
-                for data in self.dataloader.test_loader:
-                    data = data.to(self.device)
-                    output = self.model(data)
-                    predictions.append(int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0]))
-                    self._interpret_image(data)
+            #with torch.no_grad():
+            for data, target in self.dataloader.test_loader:
+                data = data.to(self.device)
+                output = self.model(data)
+                predictions.append(int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0]))
+                trues.append(int(target.cpu().numpy()[0]))
+
+                self._interpret_image(data, self.id2tclasses[int(target.cpu().numpy()[0])])
                 
+            self.logger.info("Test Image trueValues : " + str([self.id2tclasses[true] for true in trues]))    
             self.logger.info("Test Image Prediction : " + str([self.id2classes[pred] for pred in predictions]))
+            self.logger.info("GRADCAM images saved successfully.")
         except Exception as e:
             self.logger.info("Test image prediction FAILED!!!")
             self.logger.info(e)
 
-    def _interpret_image(self, image_data):
+    def _interpret_image(self, image_data, image_label):
         """
         Grad Cam for interpreting and prediting class of image
         """
-        model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
-        gradcam = GradCam(model_dict)
+        try:
+            model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
+            gradcam = GradCam(model_dict)
 
-        mask, _ = gradcam(image_data)
-        heatmap, result = visualize_cam(mask, image_data)
+            std = np.array(self.config['std'])
+            mean = np.array(self.config['mean'])
 
-        image = [torch.stack([torch_img.squeeze().cpu(), heatmap, result], 0)]
-        image = make_grid(torch.cat(image, 0), nrow=1)
+            mask, _ = gradcam(image_data)
+            
+            denormalize = transforms.Normalize((-1 * mean / std), (1.0 / std))
+            
+            res = image_data.squeeze(0)
+            res = denormalize(res).permute((2,0,1))
 
-        grad_output = os.path.join(self.config["stats_dir"], 'grad_output.png')
-        save_image(image, grad_output)
-        self.logger.info("GRADCAM image saved successfully.")
+            heatmap, result = visualize_cam(mask, res)
+
+            image = [torch.stack([res.cpu(), heatmap, result], 0)]
+            image = make_grid(torch.cat(image, 0), nrow=1)
+
+            grad_output = os.path.join(self.config["stats_dir"], f'grad_output_{image_label}.png')
+            save_image(image, grad_output)
+        except Exception as e:
+            self.logger.info(str(e))
+
 
 
         

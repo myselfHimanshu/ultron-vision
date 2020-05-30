@@ -12,7 +12,7 @@ def visualize_cam(mask, img):
         result (torch.tensor): synthesized GradCAM result of same shape with heatmap.
     """
     import cv2
-    heatmap = cv2.applyColorMap(np.uint8(255 * mask.squeeze()), cv2.COLORMAP_JET)
+    heatmap = cv2.applyColorMap(np.uint8(255 * mask.squeeze().cpu().numpy()), cv2.COLORMAP_JET)
     heatmap = torch.from_numpy(heatmap).permute(2, 0, 1).float().div(255)
     b, g, r = heatmap.split(1)
     heatmap = torch.cat([r, g, b])

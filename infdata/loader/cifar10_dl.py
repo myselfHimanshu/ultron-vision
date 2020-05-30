@@ -23,6 +23,6 @@ class DataLoader(object):
         self.test_loader = torch.utils.data.DataLoader(ddata.cifar10_testdata, batch_size=1, shuffle=True, **self.kwargs)
 
         self.classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
-        
+        self.testclasses = tuple(ddata.testdata_classes.keys())
 
     

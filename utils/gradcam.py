@@ -53,7 +53,7 @@ class GradCam(object):
 
         fmap = (weights*activations).sum(1, keepdim=True)
         fmap = F.relu(fmap)
-        fmap = F.upsample(fmap, size=(h, w), mode='bilinear', align_corners=False)
+        fmap = F.interpolate(fmap, size=(h, w), mode='bilinear', align_corners=False)
         fmap_min, fmap_max = fmap.min(), fmap.max()
         fmap = (fmap - fmap_min).div(fmap_max - fmap_min).data
 
