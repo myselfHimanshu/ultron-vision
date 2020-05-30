@@ -29,7 +29,7 @@ This repo contains deep learning vision models.
 ## FUNCTIONS IMPLEMENTED
 
 - [x] pytorch-transformation
-- [x] albumentation-transformation
+- [x] [albumentation-transformation](https://albumentations.readthedocs.io/en/latest/index.html)
 - [x] data loader
 - [x] training
 - [x] validation
@@ -40,7 +40,7 @@ This repo contains deep learning vision models.
 - [x] load model checkpoint
 - [ ] custom dataset implementation
 - [ ] custom loss function
-- [ ] using weights and biases for logging experiments
+- [ ] using [weights and biases](https://www.wandb.com/) for logging experiments
 
 
 ## INSTALLATION
