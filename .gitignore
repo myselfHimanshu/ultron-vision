@@ -133,7 +133,8 @@ myenv/
 checkpoints/
 out/
 summaries/
-data/
+data/cifar*
+data/mnist*
 .DS_Store
 
 
