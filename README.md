@@ -117,5 +117,3 @@ $ chmod +x ultron.sh
 // train ultron
 $ ./ultron.sh
 ```
-
-<hr>
