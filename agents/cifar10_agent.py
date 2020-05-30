@@ -8,6 +8,7 @@ import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 import torch.nn.functional as F
 from torchvision.utils import make_grid, save_image
+from torchvision import transforms
 
 from tqdm import tqdm
 import PIL
@@ -16,7 +17,6 @@ from agents.base import BaseAgent
 # from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
 from networks.resnet_net import ResNet18 as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
-from infdata.transformation.cifar10_tf import Transforms
 
 # utils function
 from utils.misc import *
@@ -46,7 +46,9 @@ class Cifar10Agent(BaseAgent):
 
         # intitalize classes
         self.classes = self.dataloader.classes
+        self.testclasses = self.dataloader.testclasses
         self.id2classes = {i:y for i,y in enumerate(self.classes)}
+        self.id2tclasses = {i:y for i,y in enumerate(self.testclasses)}
 
         # define loss
         self.loss = nn.CrossEntropyLoss()
@@ -336,67 +338,79 @@ class Cifar10Agent(BaseAgent):
         plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
 
-    def _load_image(self, image_name):
-        """
-        load single image
-        :param image_name: image file name
-        :return (tensor, tensor): torch image, normalized torch images
-        """
-        normalizer = Normalize(mean=self.config['mean'], std=self.config['std'])
-        pil_img = PIL.Image.open(os.path.join(self.config["test_images_dir"], image_name))
-        torch_img = torch.from_numpy(np.asarray(pil_img).copy()).permute(2, 0, 1).unsqueeze(0).float().div(255)
-        torch_img = F.interpolate(torch_img, size=(32, 32), mode='bilinear', align_corners=False)
-        normed_torch_img = normalizer(torch_img)
+    # def _load_image(self, image_name):
+    #     """
+    #     load single image
+    #     :param image_name: image file name
+    #     :return (tensor, tensor): torch image, normalized torch images
+    #     """
+    #     normalizer = Normalize(mean=self.config['mean'], std=self.config['std'])
+    #     pil_img = PIL.Image.open(os.path.join(self.config["test_images_dir"], image_name))
+    #     torch_img = torch.from_numpy(np.asarray(pil_img).copy()).permute(2, 0, 1).unsqueeze(0).float().div(255)
+    #     torch_img = F.interpolate(torch_img, size=(32, 32), mode='bilinear', align_corners=False)
+    #     normed_torch_img = normalizer(torch_img)
 
-        return torch_img, normed_torch_img
+    #     return torch_img, normed_torch_img
 
-    def predict(self, image_name):
+    def predict(self):
         """
         predict image class
         :param image_name: image file name
         :return (str): class name
         """
         try:
-            _, data = self._load_image(image_name)
+            # _, data = self._load_image(image_name)
             
             self.load_checkpoint(self.config['checkpoint_file'])
             self.model.to(self.device)
-            
             self.model.eval()
-            prediction = None
+            predictions = []
+            trues = []
 
-            with torch.no_grad():
+            #with torch.no_grad():
+            for data, target in self.dataloader.test_loader:
                 data = data.to(self.device)
                 output = self.model(data)
-                prediction = int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0])
+                predictions.append(int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0]))
+                trues.append(int(target.cpu().numpy()[0]))
+
+                self._interpret_image(data, self.id2tclasses[int(target.cpu().numpy()[0])])
                 
-            self.logger.info("Test Image Prediction : " + str(self.id2classes[prediction]))
+            self.logger.info("Test Image trueValues : " + str([self.id2tclasses[true] for true in trues]))    
+            self.logger.info("Test Image Prediction : " + str([self.id2classes[pred] for pred in predictions]))
+            self.logger.info("GRADCAM images saved successfully.")
         except Exception as e:
             self.logger.info("Test image prediction FAILED!!!")
             self.logger.info(e)
 
-    def _interpret_image(self, image_name):
+    def _interpret_image(self, image_data, image_label):
         """
         Grad Cam for interpreting and prediting class of image
         """
-        # self.load_checkpoint(self.config['checkpoint_file'])
-        self.model.eval()
-        # self.model.to(self.device)
-        torch_img, normed_torch_img = self._load_image(image_name)
-        torch_img, normed_torch_img = torch_img.to(self.device), normed_torch_img.to(self.device)
+        try:
+            model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
+            gradcam = GradCam(model_dict)
 
-        model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
-        gradcam = GradCam(model_dict)
+            std = np.array(self.config['std'])
+            mean = np.array(self.config['mean'])
 
-        mask, _ = gradcam(normed_torch_img)
-        heatmap, result = visualize_cam(mask, torch_img)
+            mask, _ = gradcam(image_data)
+            
+            denormalize = transforms.Normalize((-1 * mean / std), (1.0 / std))
+            
+            res = image_data.squeeze(0)
+            res = denormalize(res).permute((2,0,1))
 
-        image = [torch.stack([torch_img.squeeze().cpu(), heatmap, result], 0)]
-        image = make_grid(torch.cat(image, 0), nrow=1)
+            heatmap, result = visualize_cam(mask, res)
 
-        grad_output = os.path.join(self.config["stats_dir"], 'grad_output.png')
-        save_image(image, grad_output)
-        self.logger.info("GRADCAM image saved successfully.")
+            image = [torch.stack([res.cpu(), heatmap, result], 0)]
+            image = make_grid(torch.cat(image, 0), nrow=1)
+
+            grad_output = os.path.join(self.config["stats_dir"], f'grad_output_{image_label}.png')
+            save_image(image, grad_output)
+        except Exception as e:
+            self.logger.info(str(e))
+
 
 
         

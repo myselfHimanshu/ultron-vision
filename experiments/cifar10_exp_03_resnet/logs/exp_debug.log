@@ -170,3 +170,1087 @@
 [INFO] - 2020-05-29 18:09:04,861 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
 [INFO] - 2020-05-29 18:09:12,938 - Agent - : Test Image Prediction : bird in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:371
 [INFO] - 2020-05-29 18:09:12,964 - Agent - : GRADCAM image saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:397
+[INFO] - 2020-05-30 04:06:05,456 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:06:05,457 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:06:05,457 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:06:42,565 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:06:42,566 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:06:42,566 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:07:57,658 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:07:57,658 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:07:57,658 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:08:06,814 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:08:06,816 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:08:06,816 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:08:06,816 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:08:06,816 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:08:06,816 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:08:06,873 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:08:06,873 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:08:06,873 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:08:46,907 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1122	ACC : 46.8920 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:08:49,522 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:08:49,523 - Agent - : VALID EPOCH : 0	LOSS : 0.0206	ACC : 55.8900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:09:27,266 - Agent - : TRAIN EPOCH : 1	LOSS : 0.0836	ACC : 64.8720 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:09:31,401 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:09:31,403 - Agent - : VALID EPOCH : 1	LOSS : 0.0140	ACC : 68.7900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:09:31,404 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:09:33,488 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:376
+[INFO] - 2020-05-30 04:09:33,489 - Agent - : Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ubuntu/github/ultron-vision/myenv/lib/python3.7/site-packages/torch/utils/data/_utils/worker.py", line 178, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/ubuntu/github/ultron-vision/myenv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/ubuntu/github/ultron-vision/myenv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/ubuntu/github/ultron-vision/myenv/lib/python3.7/site-packages/torchvision/datasets/folder.py", line 137, in __getitem__
+    sample = self.transform(sample)
+  File "/home/ubuntu/github/ultron-vision/myenv/lib/python3.7/site-packages/torchvision/transforms/transforms.py", line 61, in __call__
+    img = t(img)
+  File "/home/ubuntu/github/ultron-vision/myenv/lib/python3.7/site-packages/torchvision/transforms/transforms.py", line 127, in __call__
+    return F.to_pil_image(pic, self.mode)
+  File "/home/ubuntu/github/ultron-vision/myenv/lib/python3.7/site-packages/torchvision/transforms/functional.py", line 100, in to_pil_image
+    raise TypeError('pic should be Tensor or ndarray. Got {}.'.format(type(pic)))
+TypeError: pic should be Tensor or ndarray. Got <class 'PIL.Image.Image'>.
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:377
+[INFO] - 2020-05-30 04:10:10,489 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:10:10,489 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:10:10,489 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:10:14,956 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:10:14,957 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:10:14,958 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:10:14,958 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:10:14,958 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:10:14,958 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:10:15,011 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:10:15,012 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:10:15,012 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:10:58,995 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1111	ACC : 47.5980 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:11:02,566 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:11:02,573 - Agent - : VALID EPOCH : 0	LOSS : 0.0187	ACC : 59.3300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:11:42,741 - Agent - : TRAIN EPOCH : 1	LOSS : 0.0830	ACC : 65.0640 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:11:47,033 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:11:47,035 - Agent - : VALID EPOCH : 1	LOSS : 0.0166	ACC : 65.9800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:11:47,035 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:11:49,175 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:376
+[INFO] - 2020-05-30 04:11:49,176 - Agent - : 'list' object has no attribute 'to' in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:377
+[INFO] - 2020-05-30 04:14:08,844 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:14:08,844 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:14:08,844 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:14:13,354 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:14:13,354 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:14:13,355 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:14:13,355 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:14:13,355 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:14:13,355 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:14:13,408 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:14:13,408 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:14:13,408 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:14:55,922 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1127	ACC : 46.6280 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:14:59,338 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:14:59,339 - Agent - : VALID EPOCH : 0	LOSS : 0.0192	ACC : 59.3200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:15:38,779 - Agent - : TRAIN EPOCH : 1	LOSS : 0.0835	ACC : 64.7640 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:15:42,828 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:15:42,828 - Agent - : VALID EPOCH : 1	LOSS : 0.0157	ACC : 67.3000 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:15:42,829 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:15:44,922 - Agent - : I am here in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:369
+[INFO] - 2020-05-30 04:15:45,027 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:378
+[INFO] - 2020-05-30 04:15:45,028 - Agent - : size mismatch, m1: [1 x 25088], m2: [512 x 10] at /pytorch/aten/src/THC/generic/THCTensorMathBlas.cu:283 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 04:17:57,709 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:17:57,709 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:17:57,709 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:18:02,189 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:18:02,190 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:18:02,191 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:18:02,191 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:18:02,191 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:18:02,191 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:18:02,244 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:18:02,244 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:18:02,245 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:18:41,171 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1119	ACC : 47.1520 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:18:44,712 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:18:44,713 - Agent - : VALID EPOCH : 0	LOSS : 0.0173	ACC : 61.0400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:18:44,713 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:18:46,377 - Agent - : I am here in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:369
+[INFO] - 2020-05-30 04:18:46,425 - Agent - : tensor([[ -0.2382,  -9.7673,  -1.9322,  -7.4401,  -4.5333,  -9.2455,  -8.9816,
+         -10.3234,  -2.8924, -10.9811]], device='cuda:0') in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:373
+[INFO] - 2020-05-30 04:18:46,479 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 04:18:46,479 - Agent - : element 0 of tensors does not require grad and does not have a grad_fn in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 04:21:30,105 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:21:30,106 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:21:30,106 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:21:34,547 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:21:34,548 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:21:34,552 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:21:34,552 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:21:34,552 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:21:34,553 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:21:34,605 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:21:34,606 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:21:34,606 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:22:17,473 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1126	ACC : 46.6520 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:22:20,986 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:22:20,987 - Agent - : VALID EPOCH : 0	LOSS : 0.0207	ACC : 54.2300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:22:20,988 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:22:22,773 - Agent - : tensor([[ -2.1977, -10.4350,  -4.4578,  -8.4758,  -5.6282,  -8.1639,  -8.2536,
+         -10.3419,  -0.1362,  -8.1739]], device='cuda:0') in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:371
+[INFO] - 2020-05-30 04:22:22,817 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:377
+[INFO] - 2020-05-30 04:22:22,817 - Agent - : element 0 of tensors does not require grad and does not have a grad_fn in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:378
+[INFO] - 2020-05-30 04:22:53,936 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:22:53,936 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:22:53,936 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:22:58,430 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:22:58,431 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:22:58,434 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:22:58,435 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:22:58,435 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:22:58,435 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:22:58,489 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:22:58,489 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:22:58,489 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:23:38,102 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1131	ACC : 46.3920 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:23:41,715 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:23:41,720 - Agent - : VALID EPOCH : 0	LOSS : 0.0206	ACC : 55.6800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:23:41,721 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:23:43,449 - Agent - : tensor([[-6.4356, -4.6639, -4.3435, -2.8890, -4.1396, -1.8465, -6.7705, -1.2450,
+         -6.8641, -0.7842]], device='cuda:0') in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:371
+[INFO] - 2020-05-30 04:23:43,454 - Agent - : tensor([[-2.6622, -8.7963, -3.7639, -5.6995, -3.5538, -6.0397, -6.0791, -8.2478,
+         -0.1398, -7.7948]], device='cuda:0') in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:371
+[INFO] - 2020-05-30 04:23:43,497 - Agent - : Test Image Prediction : ['truck', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:375
+[INFO] - 2020-05-30 04:25:47,286 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:25:47,286 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:25:47,287 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:25:51,693 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:25:51,693 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:25:51,696 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:25:51,697 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:25:51,697 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:25:51,697 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:25:51,747 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:25:51,748 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:25:51,748 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:26:34,408 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1125	ACC : 46.6840 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:26:38,096 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:26:38,097 - Agent - : VALID EPOCH : 0	LOSS : 0.0186	ACC : 58.8400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:26:38,097 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:26:39,869 - Agent - : element 0 of tensors does not require grad and does not have a grad_fn in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:397
+[INFO] - 2020-05-30 04:26:39,877 - Agent - : element 0 of tensors does not require grad and does not have a grad_fn in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:397
+[INFO] - 2020-05-30 04:26:39,918 - Agent - : Test Image Prediction : ['plane', 'horse'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:374
+[INFO] - 2020-05-30 04:30:01,535 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:30:01,535 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:30:01,535 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:30:06,055 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:30:06,056 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:30:06,056 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:30:06,057 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:30:06,057 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:30:06,057 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:30:06,109 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:30:06,110 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:30:06,111 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:30:48,507 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1129	ACC : 46.5180 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:30:52,135 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:30:52,136 - Agent - : VALID EPOCH : 0	LOSS : 0.0204	ACC : 55.4300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:30:52,136 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:30:53,864 - Agent - : torch.Size([1, 3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:369
+[INFO] - 2020-05-30 04:30:53,998 - Agent - : libXrender.so.1: cannot open shared object file: No such file or directory in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:398
+[INFO] - 2020-05-30 04:30:54,000 - Agent - : torch.Size([1, 3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:369
+[INFO] - 2020-05-30 04:30:54,027 - Agent - : libXrender.so.1: cannot open shared object file: No such file or directory in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:398
+[INFO] - 2020-05-30 04:30:54,069 - Agent - : Test Image Prediction : ['ship', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:375
+[INFO] - 2020-05-30 04:33:13,951 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:33:13,951 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:33:13,951 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:33:18,488 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:33:18,489 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:33:18,489 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:33:18,490 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:33:18,490 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:33:18,490 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:33:18,541 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:33:18,542 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:33:18,542 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:33:58,993 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1118	ACC : 47.3160 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:34:02,362 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:34:02,363 - Agent - : VALID EPOCH : 0	LOSS : 0.0165	ACC : 62.5400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:34:02,363 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:34:04,109 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:376
+[INFO] - 2020-05-30 04:34:04,110 - Agent - : size mismatch, m1: [1 x 25088], m2: [512 x 10] at /pytorch/aten/src/THC/generic/THCTensorMathBlas.cu:283 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:377
+[INFO] - 2020-05-30 04:35:17,496 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:35:17,497 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:35:17,497 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:35:21,994 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:35:21,995 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:35:21,998 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:35:21,999 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:35:21,999 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:35:21,999 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:35:22,054 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:35:22,055 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:35:22,055 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:36:00,365 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1130	ACC : 46.5000 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:36:04,255 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:36:04,256 - Agent - : VALID EPOCH : 0	LOSS : 0.0223	ACC : 54.5500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:36:04,257 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:36:06,004 - Agent - : libXrender.so.1: cannot open shared object file: No such file or directory in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:397
+[INFO] - 2020-05-30 04:36:06,021 - Agent - : libXrender.so.1: cannot open shared object file: No such file or directory in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:397
+[INFO] - 2020-05-30 04:36:06,065 - Agent - : Test Image Prediction : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:374
+[INFO] - 2020-05-30 04:37:57,117 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:37:57,117 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:37:57,118 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:38:01,592 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:38:01,593 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:38:01,596 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:38:01,596 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:38:01,596 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:38:01,597 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:38:01,651 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:38:01,651 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:38:01,651 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:38:40,978 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1128	ACC : 46.4880 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:38:44,471 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:38:44,472 - Agent - : VALID EPOCH : 0	LOSS : 0.0173	ACC : 60.9200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:38:44,472 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:38:46,211 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 04:38:46,211 - Agent - : invalid index to scalar variable. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:382
+[INFO] - 2020-05-30 04:39:18,100 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:39:18,100 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:39:18,100 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:39:22,557 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:39:22,558 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:39:22,561 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:39:22,562 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:39:22,562 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:39:22,562 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:39:22,618 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:39:22,618 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:39:22,619 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:40:00,952 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1114	ACC : 47.5600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:40:04,728 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:40:04,730 - Agent - : VALID EPOCH : 0	LOSS : 0.0220	ACC : 53.4200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:40:04,731 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:40:06,437 - Agent - : [0] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:373
+[INFO] - 2020-05-30 04:40:06,482 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:382
+[INFO] - 2020-05-30 04:40:06,482 - Agent - : invalid index to scalar variable. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:383
+[INFO] - 2020-05-30 04:41:53,164 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:41:53,164 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:41:53,164 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:41:57,706 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:41:57,707 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:41:57,710 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:41:57,710 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:41:57,711 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:41:57,711 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:41:57,766 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:41:57,767 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:41:57,767 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:42:36,967 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1119	ACC : 47.1960 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:42:40,579 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:42:40,579 - Agent - : VALID EPOCH : 0	LOSS : 0.0192	ACC : 57.7700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:42:40,580 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:42:42,604 - Agent - : can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 04:42:42,623 - Agent - : can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 04:42:42,666 - Agent - : Test Image Prediction : ['cat', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:375
+[INFO] - 2020-05-30 04:43:28,217 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:43:28,217 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:43:28,217 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:43:32,655 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:43:32,656 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:43:32,731 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:43:32,731 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:43:32,732 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:43:32,732 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:43:32,776 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:43:32,777 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:43:32,777 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:44:11,016 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1127	ACC : 46.4580 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:44:14,764 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:44:14,765 - Agent - : VALID EPOCH : 0	LOSS : 0.0182	ACC : 58.3100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:44:14,766 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:44:16,591 - Agent - : 'Tensor' object has no attribute 'nump' in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 04:44:16,605 - Agent - : 'Tensor' object has no attribute 'nump' in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 04:44:16,657 - Agent - : Test Image Prediction : ['dog', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:375
+[INFO] - 2020-05-30 04:46:08,100 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:46:08,100 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:46:08,101 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:46:12,591 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:99
+[INFO] - 2020-05-30 04:46:12,591 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:46:12,596 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:46:12,596 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:46:12,596 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:46:12,596 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:46:12,650 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:46:12,651 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:46:12,651 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:46:51,197 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1124	ACC : 46.4140 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:214
+[INFO] - 2020-05-30 04:46:54,592 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:253
+[INFO] - 2020-05-30 04:46:54,593 - Agent - : VALID EPOCH : 0	LOSS : 0.0188	ACC : 57.5800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:259
+[INFO] - 2020-05-30 04:46:54,593 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:266
+[INFO] - 2020-05-30 04:46:56,361 - Agent - : name 'torch_img' is not defined in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 04:46:56,383 - Agent - : name 'torch_img' is not defined in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 04:46:56,424 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:375
+[INFO] - 2020-05-30 04:51:59,746 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 04:51:59,746 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 04:51:59,746 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 04:52:04,209 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 04:52:04,209 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 04:52:04,210 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 04:52:04,210 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 04:52:04,210 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 04:52:04,210 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 04:52:04,262 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 04:52:04,263 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 04:52:04,263 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 04:52:47,099 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1112	ACC : 47.3920 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 04:52:50,392 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 04:52:50,393 - Agent - : VALID EPOCH : 0	LOSS : 0.0189	ACC : 59.1300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 04:52:50,394 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 04:52:52,155 - Agent - : GRADCAM image saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:402
+[INFO] - 2020-05-30 04:52:52,172 - Agent - : GRADCAM image saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:402
+[INFO] - 2020-05-30 04:52:52,218 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 04:52:52,218 - Agent - : Test image prediction FAILED!!! in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:383
+[INFO] - 2020-05-30 04:52:52,219 - Agent - : 7 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:384
+[INFO] - 2020-05-30 05:02:03,076 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:02:03,077 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:02:03,077 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:02:07,583 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:02:07,584 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:02:07,587 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:02:07,588 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:02:07,588 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:02:07,588 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:02:07,643 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:02:07,644 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:02:07,645 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:02:44,144 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1113	ACC : 47.5940 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:02:47,319 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:02:47,321 - Agent - : VALID EPOCH : 0	LOSS : 0.0171	ACC : 61.2100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:02:47,321 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:02:49,182 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:02:49,183 - Agent - : Test Image Prediction : ['plane', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:02:49,183 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:14:01,418 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:14:01,418 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:14:01,418 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:14:05,877 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:14:05,878 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:14:05,882 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:14:05,883 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:14:05,883 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:14:05,883 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:14:05,935 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:14:05,935 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:14:05,936 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:14:45,283 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1116	ACC : 47.0820 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:14:48,477 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:14:48,478 - Agent - : VALID EPOCH : 0	LOSS : 0.0169	ACC : 61.2800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:14:48,479 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:14:50,192 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:14:50,208 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:14:50,252 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:14:50,253 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:14:50,253 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:18:26,299 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:18:26,300 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:18:26,300 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:18:30,768 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:18:30,769 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:18:30,774 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:18:30,774 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:18:30,774 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:18:30,774 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:18:30,826 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:18:30,826 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:18:30,826 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:19:08,540 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1117	ACC : 47.1280 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:19:11,804 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:19:11,804 - Agent - : VALID EPOCH : 0	LOSS : 0.0194	ACC : 58.2200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:19:11,804 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:19:13,575 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:410
+[INFO] - 2020-05-30 05:19:13,594 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:410
+[INFO] - 2020-05-30 05:19:13,635 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:19:13,636 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:19:13,636 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:22:24,952 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:22:24,952 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:22:24,952 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:22:29,440 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:22:29,441 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:22:29,441 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:22:29,442 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:22:29,442 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:22:29,442 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:22:29,496 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:22:29,496 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:22:29,497 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:23:08,234 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1140	ACC : 45.8820 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:23:11,498 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:23:11,499 - Agent - : VALID EPOCH : 0	LOSS : 0.0190	ACC : 57.3700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:23:11,500 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:23:13,202 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:413
+[INFO] - 2020-05-30 05:23:13,220 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:413
+[INFO] - 2020-05-30 05:23:13,261 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:23:13,261 - Agent - : Test Image Prediction : ['plane', 'horse'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:23:13,262 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:25:15,906 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:25:15,907 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:25:15,907 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:25:20,441 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:25:20,441 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:25:20,446 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:25:20,446 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:25:20,446 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:25:20,446 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:25:20,501 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:25:20,502 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:25:20,502 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:26:00,372 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1124	ACC : 46.6360 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:26:03,542 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:26:03,543 - Agent - : VALID EPOCH : 0	LOSS : 0.0172	ACC : 61.3600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:26:03,544 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:26:05,228 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:26:05,247 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:26:05,291 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:26:05,291 - Agent - : Test Image Prediction : ['horse', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:26:05,292 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:28:12,050 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:28:12,050 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:28:12,050 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:28:16,599 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:28:16,600 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:28:16,600 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:28:16,601 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:28:16,601 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:28:16,601 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:28:16,651 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:28:16,651 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:28:16,651 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:28:55,405 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1125	ACC : 46.5960 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:28:58,689 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:28:58,690 - Agent - : VALID EPOCH : 0	LOSS : 0.0178	ACC : 61.0200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:28:58,690 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:29:00,481 - Agent - : torch.Size([1, 3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 05:29:00,482 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 05:29:00,496 - Agent - : torch.Size([1, 3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 05:29:00,496 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 05:29:00,550 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:29:00,550 - Agent - : Test Image Prediction : ['plane', 'truck'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:29:00,550 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:30:08,986 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:30:08,986 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:30:08,986 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:30:13,477 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:30:13,478 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:30:13,482 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:30:13,482 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:30:13,483 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:30:13,483 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:30:13,537 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:30:13,538 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:30:13,539 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:30:51,569 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1124	ACC : 47.0620 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:30:54,838 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:30:54,839 - Agent - : VALID EPOCH : 0	LOSS : 0.0186	ACC : 58.2600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:30:54,840 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:30:56,547 - Agent - : torch.Size([3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 05:30:56,548 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 05:30:56,562 - Agent - : torch.Size([3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 05:30:56,562 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 05:30:56,607 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:30:56,608 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:30:56,608 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:32:43,925 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:32:43,925 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:32:43,926 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:32:48,437 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:32:48,438 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:32:48,441 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:32:48,442 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:32:48,442 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:32:48,442 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:32:48,495 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:32:48,496 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:32:48,496 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:33:27,915 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1129	ACC : 46.3740 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:33:31,563 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:33:31,564 - Agent - : VALID EPOCH : 0	LOSS : 0.0227	ACC : 52.5000 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:33:31,564 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:33:33,235 - Agent - : not enough values to unpack (expected 4, got 3) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:33:33,240 - Agent - : not enough values to unpack (expected 4, got 3) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:33:33,285 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:33:33,286 - Agent - : Test Image Prediction : ['dog', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:33:33,286 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:34:43,567 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:34:43,568 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:34:43,568 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:34:48,010 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:34:48,011 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:34:48,011 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:34:48,011 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:34:48,011 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:34:48,012 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:34:48,067 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:34:48,068 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:34:48,068 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:35:28,045 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1124	ACC : 46.6260 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:35:31,291 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:35:31,291 - Agent - : VALID EPOCH : 0	LOSS : 0.0199	ACC : 56.6900 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:35:31,292 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:35:33,020 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:35:33,036 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:35:33,080 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:35:33,081 - Agent - : Test Image Prediction : ['dog', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:35:33,081 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:37:20,493 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:37:20,494 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:37:20,494 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:37:24,935 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:37:24,936 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:37:24,940 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:37:24,940 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:37:24,940 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:37:24,940 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:37:24,994 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:37:24,994 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:37:24,994 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:38:02,815 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1134	ACC : 46.1560 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:38:06,087 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:38:06,088 - Agent - : VALID EPOCH : 0	LOSS : 0.0259	ACC : 52.3100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:38:06,088 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:38:07,828 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:38:07,843 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 05:38:07,886 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:38:07,887 - Agent - : Test Image Prediction : ['truck', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:38:07,887 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:44:51,476 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:44:51,476 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:44:51,476 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:44:55,937 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:44:55,938 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:44:55,942 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:44:55,942 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:44:55,942 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:44:55,943 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:44:55,998 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:44:55,998 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:44:55,999 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:45:35,230 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1123	ACC : 46.7360 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:45:38,281 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:45:38,281 - Agent - : VALID EPOCH : 0	LOSS : 0.0172	ACC : 61.7600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:45:38,282 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:45:39,991 - Agent - : torch.Size([3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 05:45:39,991 - Agent - : torch.Size([32, 32, 3]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:400
+[INFO] - 2020-05-30 05:45:39,992 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:415
+[INFO] - 2020-05-30 05:45:40,007 - Agent - : torch.Size([3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:399
+[INFO] - 2020-05-30 05:45:40,007 - Agent - : torch.Size([32, 32, 3]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:400
+[INFO] - 2020-05-30 05:45:40,008 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:415
+[INFO] - 2020-05-30 05:45:40,051 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:45:40,052 - Agent - : Test Image Prediction : ['truck', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:45:40,052 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:48:37,947 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:48:37,947 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:48:37,947 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:48:42,535 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:48:42,536 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:48:42,540 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:48:42,540 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:48:42,540 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:48:42,541 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:48:42,593 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:48:42,593 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:48:42,594 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:49:21,938 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1138	ACC : 45.7700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:49:25,121 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:49:25,121 - Agent - : VALID EPOCH : 0	LOSS : 0.0191	ACC : 58.1600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:49:25,122 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:49:26,880 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:406
+[INFO] - 2020-05-30 05:49:26,897 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:406
+[INFO] - 2020-05-30 05:49:26,941 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:49:26,942 - Agent - : Test Image Prediction : ['plane', 'horse'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:49:26,942 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:56:09,893 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:56:09,893 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:56:09,893 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:56:14,449 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:56:14,449 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:56:14,450 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:56:14,450 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:56:14,450 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:56:14,450 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:56:14,503 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:56:14,504 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:56:14,504 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:56:51,256 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1137	ACC : 45.9800 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:56:54,388 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:56:54,389 - Agent - : VALID EPOCH : 0	LOSS : 0.0203	ACC : 55.6100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:56:54,390 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:56:56,077 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:56:56,096 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:56:56,135 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:56:56,136 - Agent - : Test Image Prediction : ['cat', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:56:56,136 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:57:26,624 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:57:26,624 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:57:26,624 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:57:31,120 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:57:31,121 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:57:31,121 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:57:31,121 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:57:31,121 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:57:31,122 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:57:31,174 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:57:31,175 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:57:31,175 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:58:07,855 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1141	ACC : 45.8520 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:58:11,234 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:58:11,235 - Agent - : VALID EPOCH : 0	LOSS : 0.0200	ACC : 56.5400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:58:11,236 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:58:12,981 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:58:12,999 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:58:13,042 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:58:13,042 - Agent - : Test Image Prediction : ['plane', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:58:13,042 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 05:59:03,380 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 05:59:03,380 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 05:59:03,380 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 05:59:07,824 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 05:59:07,825 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 05:59:07,828 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 05:59:07,829 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 05:59:07,829 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 05:59:07,829 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 05:59:07,882 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 05:59:07,883 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 05:59:07,883 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 05:59:46,569 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1128	ACC : 46.4840 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 05:59:49,787 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 05:59:49,788 - Agent - : VALID EPOCH : 0	LOSS : 0.0184	ACC : 58.3500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 05:59:49,788 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 05:59:51,535 - Agent - : The size of tensor a (32) must match the size of tensor b (3) at non-singleton dimension 2 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:59:51,561 - Agent - : The size of tensor a (32) must match the size of tensor b (3) at non-singleton dimension 2 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 05:59:51,606 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 05:59:51,606 - Agent - : Test Image Prediction : ['cat', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 05:59:51,606 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:00:46,826 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:00:46,826 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:00:46,826 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:00:51,274 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:00:51,275 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:00:51,275 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:00:51,275 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:00:51,275 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:00:51,275 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:00:51,331 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:00:51,331 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:00:51,331 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:01:28,851 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1129	ACC : 46.5740 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:01:32,067 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:01:32,068 - Agent - : VALID EPOCH : 0	LOSS : 0.0195	ACC : 57.9100 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:01:32,068 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:01:33,742 - Agent - : can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 06:01:33,757 - Agent - : can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 06:01:33,807 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:01:33,808 - Agent - : Test Image Prediction : ['ship', 'horse'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:01:33,808 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:01:49,795 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:01:49,795 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:01:49,795 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:01:54,282 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:01:54,283 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:01:54,283 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:01:54,283 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:01:54,283 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:01:54,284 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:01:54,337 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:01:54,338 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:01:54,339 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:02:33,183 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1130	ACC : 46.3520 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:02:36,537 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:02:36,538 - Agent - : VALID EPOCH : 0	LOSS : 0.0271	ACC : 48.6500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:02:36,538 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:02:38,304 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 06:02:38,322 - Agent - : number of dims don't match in permute in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:407
+[INFO] - 2020-05-30 06:02:38,366 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:02:38,367 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:02:38,367 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:03:25,483 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:03:25,483 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:03:25,483 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:03:29,990 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:03:29,991 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:03:29,993 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:03:29,994 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:03:29,994 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:03:29,994 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:03:30,048 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:03:30,048 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:03:30,048 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:04:10,056 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1120	ACC : 46.8160 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:04:13,324 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:04:13,324 - Agent - : VALID EPOCH : 0	LOSS : 0.0232	ACC : 53.5700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:04:13,325 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:04:15,112 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:04:15,112 - Agent - : Test Image Prediction : ['plane', 'horse'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:04:15,112 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:05:08,186 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:05:08,186 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:05:08,186 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:05:12,619 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:05:12,620 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:05:12,622 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:05:12,623 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:05:12,623 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:05:12,623 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:05:12,677 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:05:12,677 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:05:12,677 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:05:50,439 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1142	ACC : 45.4760 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:05:53,689 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:05:53,689 - Agent - : VALID EPOCH : 0	LOSS : 0.0209	ACC : 56.0400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:05:53,690 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:05:55,383 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:406
+[INFO] - 2020-05-30 06:05:55,398 - Agent - : only integer tensors of a single element can be converted to an index in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:406
+[INFO] - 2020-05-30 06:05:55,454 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:05:55,455 - Agent - : Test Image Prediction : ['dog', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:05:55,455 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:06:38,351 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:06:38,351 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:06:38,351 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:06:42,827 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:06:42,828 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:06:42,831 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:06:42,831 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:06:42,831 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:06:42,831 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:06:42,885 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:06:42,885 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:06:42,885 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:07:19,990 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1111	ACC : 47.6380 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:07:23,016 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:07:23,016 - Agent - : VALID EPOCH : 0	LOSS : 0.0182	ACC : 58.1500 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:07:23,016 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:07:24,704 - Agent - : torch.Size([3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:400
+[INFO] - 2020-05-30 06:07:24,729 - Agent - : torch.Size([3, 32, 32]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:400
+[INFO] - 2020-05-30 06:07:24,776 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:07:24,777 - Agent - : Test Image Prediction : ['plane', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:07:24,777 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:08:29,736 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:08:29,737 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:08:29,737 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:08:34,238 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:08:34,239 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:08:34,239 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:08:34,239 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:08:34,240 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:08:34,240 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:08:34,293 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:08:34,293 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:08:34,293 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:09:12,471 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1128	ACC : 46.2600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:09:15,932 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:09:15,932 - Agent - : VALID EPOCH : 0	LOSS : 0.0272	ACC : 46.4700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:09:15,933 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:09:17,716 - Agent - : torch.Size([32, 32, 3]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:400
+[INFO] - 2020-05-30 06:09:17,741 - Agent - : torch.Size([32, 32, 3]) in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:400
+[INFO] - 2020-05-30 06:09:17,787 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:09:17,788 - Agent - : Test Image Prediction : ['plane', 'horse'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:09:17,788 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:11:01,555 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:11:01,555 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:11:01,555 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:11:06,054 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:11:06,055 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:11:06,055 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:11:06,056 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:11:06,056 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:11:06,056 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:11:06,108 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:11:06,108 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:11:06,109 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:11:44,660 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1120	ACC : 47.0520 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:11:47,999 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:11:48,000 - Agent - : VALID EPOCH : 0	LOSS : 0.0162	ACC : 63.3700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:11:48,001 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:11:49,756 - Agent - : stack expects each tensor to be equal size, but got [32, 32, 3] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:409
+[INFO] - 2020-05-30 06:11:49,776 - Agent - : stack expects each tensor to be equal size, but got [32, 32, 3] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:409
+[INFO] - 2020-05-30 06:11:49,821 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:11:49,822 - Agent - : Test Image Prediction : ['horse', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:11:49,822 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:12:46,587 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:12:46,587 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:12:46,587 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:12:51,082 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:12:51,083 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:12:51,083 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:12:51,083 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:12:51,083 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:12:51,083 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:12:51,139 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:12:51,139 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:12:51,140 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:13:30,833 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1119	ACC : 46.8220 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:13:34,312 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:13:34,312 - Agent - : VALID EPOCH : 0	LOSS : 0.0185	ACC : 58.9400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:13:34,313 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:13:36,017 - Agent - : Expected object of scalar type double but got scalar type float for sequence element 1. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:409
+[INFO] - 2020-05-30 06:13:36,039 - Agent - : Expected object of scalar type double but got scalar type float for sequence element 1. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:409
+[INFO] - 2020-05-30 06:13:36,092 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:13:36,094 - Agent - : Test Image Prediction : ['horse', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:13:36,094 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:15:05,830 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:15:05,830 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:15:05,830 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:15:10,280 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:15:10,280 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:15:10,281 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:15:10,281 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:15:10,281 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:15:10,281 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:15:10,336 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:15:10,338 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:15:10,338 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:15:47,534 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1121	ACC : 46.8880 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:15:51,063 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:15:51,064 - Agent - : VALID EPOCH : 0	LOSS : 0.0237	ACC : 52.5200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:15:51,064 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:15:52,840 - Agent - : stack expects each tensor to be equal size, but got [1, 3, 32, 32] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:410
+[INFO] - 2020-05-30 06:15:52,859 - Agent - : stack expects each tensor to be equal size, but got [1, 3, 32, 32] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:410
+[INFO] - 2020-05-30 06:15:52,903 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:15:52,903 - Agent - : Test Image Prediction : ['plane', 'truck'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:15:52,904 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:16:11,810 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:16:11,810 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:16:11,810 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:16:16,264 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:16:16,265 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:16:16,265 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:16:16,265 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:16:16,265 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:16:16,266 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:16:16,322 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:16:16,323 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:16:16,323 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:16:54,311 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1130	ACC : 46.2180 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:16:57,683 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:16:57,684 - Agent - : VALID EPOCH : 0	LOSS : 0.0198	ACC : 56.7700 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:16:57,684 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:16:59,446 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:16:59,447 - Agent - : Test Image Prediction : ['truck', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:16:59,447 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:18:50,078 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:18:50,079 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:18:50,079 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:18:54,538 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:18:54,539 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:18:54,542 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:18:54,543 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:18:54,543 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:18:54,543 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:18:54,599 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:18:54,599 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:18:54,600 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:19:33,101 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1118	ACC : 47.0580 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:19:36,431 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:19:36,433 - Agent - : VALID EPOCH : 0	LOSS : 0.0232	ACC : 53.1300 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:19:36,433 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:19:38,223 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:19:38,223 - Agent - : Test Image Prediction : ['ship', 'horse'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:19:38,223 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:22:54,161 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:22:54,162 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:22:54,162 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:22:58,688 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:22:58,689 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:22:58,691 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:22:58,691 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:22:58,692 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:22:58,692 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:22:58,745 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:22:58,746 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:22:58,746 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:23:37,636 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1128	ACC : 46.4160 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:23:41,043 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:23:41,044 - Agent - : VALID EPOCH : 0	LOSS : 0.0184	ACC : 59.4200 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:23:41,044 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:23:42,866 - Agent - : stack expects each tensor to be equal size, but got [1, 3, 32, 32] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 06:23:42,885 - Agent - : stack expects each tensor to be equal size, but got [1, 3, 32, 32] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 06:23:42,928 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:23:42,928 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:23:42,929 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:24:03,628 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:24:03,628 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:24:03,628 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:24:08,128 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:24:08,129 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:24:08,132 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:24:08,132 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:24:08,133 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:24:08,133 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:24:08,189 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:24:08,190 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:24:08,191 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:24:47,071 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1116	ACC : 47.1060 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:24:50,407 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:24:50,409 - Agent - : VALID EPOCH : 0	LOSS : 0.0190	ACC : 58.8400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:24:50,409 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:24:52,256 - Agent - : Test Image trueValues : ['bird', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:24:52,256 - Agent - : Test Image Prediction : ['plane', 'dog'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:24:52,256 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:25:45,984 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:25:45,984 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:25:45,984 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:25:50,598 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:25:50,599 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:25:50,600 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:25:50,600 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:25:50,600 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:25:50,600 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:25:50,655 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:25:50,655 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:25:50,655 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:26:24,930 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1134	ACC : 46.4860 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:26:28,071 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:26:28,071 - Agent - : VALID EPOCH : 0	LOSS : 0.0196	ACC : 59.0400 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:26:28,072 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:26:29,806 - Agent - : stack expects each tensor to be equal size, but got [32, 32, 3] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 06:26:29,829 - Agent - : stack expects each tensor to be equal size, but got [32, 32, 3] at entry 0 and [3, 32, 32] at entry 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:411
+[INFO] - 2020-05-30 06:26:29,870 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:26:29,870 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:26:29,870 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:32:14,176 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:32:14,177 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:32:14,177 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:32:18,605 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:32:18,606 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:32:18,609 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:32:18,609 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:32:18,609 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:32:18,609 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:32:18,663 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:32:18,663 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:32:18,663 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:33:01,560 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1118	ACC : 47.1860 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:33:04,704 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:33:04,705 - Agent - : VALID EPOCH : 0	LOSS : 0.0172	ACC : 61.5600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:33:04,705 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:33:06,425 - Agent - : The size of tensor a (32) must match the size of tensor b (3) at non-singleton dimension 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 06:33:06,446 - Agent - : The size of tensor a (32) must match the size of tensor b (3) at non-singleton dimension 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 06:33:06,488 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:33:06,489 - Agent - : Test Image Prediction : ['horse', 'plane'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:33:06,489 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381
+[INFO] - 2020-05-30 06:35:06,479 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:96
+[INFO] - 2020-05-30 06:35:06,479 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-05-30 06:35:06,479 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-05-30 06:35:10,956 - Agent - : Program will RUN on ****GPU-CUDA****
+ in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:101
+[INFO] - 2020-05-30 06:35:10,957 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:25
+[INFO] - 2020-05-30 06:35:10,961 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:26
+[INFO] - 2020-05-30 06:35:10,961 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:29
+[INFO] - 2020-05-30 06:35:10,961 - Cuda Statistics - : __Number CUDA Devices : 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:30
+[INFO] - 2020-05-30 06:35:10,962 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:31
+[INFO] - 2020-05-30 06:35:11,011 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:33
+[INFO] - 2020-05-30 06:35:11,012 - Cuda Statistics - : Available devices 1 in /home/ubuntu/github/ultron-vision/utils/misc.py:34
+[INFO] - 2020-05-30 06:35:11,012 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:35
+[INFO] - 2020-05-30 06:35:45,120 - Agent - : TRAIN EPOCH : 0	LOSS : 0.1132	ACC : 46.4180 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:216
+[INFO] - 2020-05-30 06:35:48,278 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:255
+[INFO] - 2020-05-30 06:35:48,279 - Agent - : VALID EPOCH : 0	LOSS : 0.0218	ACC : 53.2600 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:261
+[INFO] - 2020-05-30 06:35:48,280 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:268
+[INFO] - 2020-05-30 06:35:50,049 - Agent - : The size of tensor a (32) must match the size of tensor b (3) at non-singleton dimension 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 06:35:50,075 - Agent - : The size of tensor a (32) must match the size of tensor b (3) at non-singleton dimension 1 in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:412
+[INFO] - 2020-05-30 06:35:50,119 - Agent - : Test Image trueValues : ['dog', 'bird'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:379
+[INFO] - 2020-05-30 06:35:50,119 - Agent - : Test Image Prediction : ['horse', 'ship'] in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:380
+[INFO] - 2020-05-30 06:35:50,120 - Agent - : GRADCAM images saved successfully. in /home/ubuntu/github/ultron-vision/agents/cifar10_agent.py:381

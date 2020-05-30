@@ -27,11 +27,9 @@
     "checkpoint_file": "checkpoint.pth.tar",
     "model_stats_file" : "stats.json",
 
-    "epochs" : 50,
+    "epochs" : 1,
 
     "num_workers" : 4,
-    "pin_memory" : true,
-
-    "test_image_name" : "water-bird.jpg"
+    "pin_memory" : true
 
 }

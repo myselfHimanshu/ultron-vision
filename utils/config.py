@@ -87,7 +87,7 @@ def process_config(json_file):
     config["stats_dir"] = os.path.join("experiments", config["exp_name"], "stats/")
     config["out_dir"] = os.path.join("experiments", config["exp_name"], "out/")
     config["log_dir"] = os.path.join("experiments", config["exp_name"], "logs/")
-    config["test_images_dir"] = os.path.join("infdata", "test_images/")
+    config["test_images_dir"] = os.path.join("data", "test-images/")
     create_dirs([config["summary_dir"], config["checkpoint_dir"], config["stats_dir"], config["out_dir"], config["log_dir"], config["test_images_dir"]])
 
     # setup logging in the project
