@@ -72,7 +72,7 @@ class QuizDNN(nn.Module):
         )
 
     def forward(self, x):
-        x1 = self.x0_blocl(x)
+        x1 = self.x0_block(x)
         x2 = self.x1_block(x1)
         x3 = self.x2_block(x1+x2)
 
