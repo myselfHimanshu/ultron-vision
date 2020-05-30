@@ -124,10 +124,10 @@ class Cifar10Agent(BaseAgent):
         :return:
         """
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
-        checkpoint = torch.load(file_name)
+        checkpoint = torch.load(file_name, map_location='cpu')
 
-        # self.model = Net()
-        # self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
+        self.model = Net()
+        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
         self.model.load_state_dict(checkpoint['state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer'])
         
@@ -345,10 +345,8 @@ class Cifar10Agent(BaseAgent):
         :return (str): class name
         """
         try:
-            # _, data = self._load_image(image_name)
-            
             self.load_checkpoint(self.config['checkpoint_file'])
-            # self.model.to(self.device)
+            self.model.to(self.device)
             self.model.eval()
             predictions = []
             trues = []

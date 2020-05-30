@@ -18,13 +18,17 @@ def main():
     # Create the agent and pass all the configuration to it and run
     agent_class = globals()[config["agent"]]
     agent = agent_class(config)
-    # agent.run()
-    # agent.finalize()
     
-    # agent.plot_accuracy_graph()
-    # agent.plot_loss_graph()
-    # agent.show_misclassified_images()
+    # train model
+    agent.run()
+    agent.finalize()
+    
+    # visualize plots
+    agent.plot_accuracy_graph()
+    agent.plot_loss_graph()
+    agent.show_misclassified_images()
 
+    # predict and show grad cam images
     agent.predict()
 
 
