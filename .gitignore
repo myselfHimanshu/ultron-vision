@@ -134,7 +134,6 @@ checkpoints/
 out/
 summaries/
 data/cifar*
-data/MNIST*
 .DS_Store
 
 
