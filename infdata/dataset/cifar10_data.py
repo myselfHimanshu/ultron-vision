@@ -8,7 +8,7 @@ import os
 
 curr_dir = os.path.dirname(__file__)
 
-class DownloadDataOld(object):
+class DownloadData(object):
     def __init__(self):
         self.data_path = os.path.join(curr_dir,"../../","data")
 
@@ -24,7 +24,7 @@ class DownloadDataOld(object):
 
         self.testdata_classes = self.cifar10_testdata.class_to_idx
 
-class DownloadData(object):
+class DownloadDataOld(object):
     def __init__(self):
         self.data_path = os.path.join(curr_dir,"../../","data")
 
