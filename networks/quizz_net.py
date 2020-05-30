@@ -14,7 +14,7 @@ class QuizDNN(nn.Module):
             nn.Dropout(0.2),
         )
         self.x1_block = nn.Sequential(
-            nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), padding=1, bias=False),
+            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=(3, 3), padding=1, bias=False),
             nn.ReLU(),
             nn.BatchNorm2d(64),
             nn.Dropout(0.2),
