@@ -69,7 +69,7 @@ $ deactivate
 
 ```java
 .
-├── agents // define training and testing
+├── agents // define training and validation
 │   ├── base.py
 │   ├── mnist_agent.py
 │   └── cifar10_agent.py
@@ -83,13 +83,18 @@ $ deactivate
 ├── experiments // store checkpoints, logs and outputs for experiment
 │   └── cifar_10_exp
 │       ├── logs // train validation score log
-│       └── stats // plots, visualized images
+│       ├── stats // training validation scores data
+│       └── visualization // plots and images visualization
 │
 ├── infdata // initialize and fetch dataset
 │   ├── dataset // defining custom dataset class
 │   ├── transformation // custom transformation class
 │   └── loader // data loader
 │       └── cifar10_dl.py
+│
+├── inference // define inference agent
+│   ├── base.py
+│   └── cifar_iagent.py
 │
 ├── logger.py // define the logger
 ├── losses // custom network losses
