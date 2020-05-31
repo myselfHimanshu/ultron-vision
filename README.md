@@ -6,9 +6,11 @@
 
 </p>
 
-This repo contains deep learning vision models.
+This repo contains deep learning vision models from scratch. This is work in progress!!! 
 
-## BENCHMARKS
+## BENCHMARKS 
+
+I'll be continously updating the scores.
 
 |Model|Data|Best Validation Accuracy|Total Epochs|Parameters|
 |--|--|--|--|--|
@@ -20,6 +22,7 @@ This repo contains deep learning vision models.
 ## HARDWARE CONFIGURATION
 
 - GPUs : NVIDIA® GeForce® GTX 1080Ti
+- GPU count : 1
 - vCPUs : 4
 - Memory : 12 GiB
 - Disk : 80 GiB
@@ -67,37 +70,37 @@ $ deactivate
 ```java
 .
 ├── agents // define training and testing
-│ ├── base.py
-│ ├── mnist_agent.py
-│ └── cifar10_agent.py
+│   ├── base.py
+│   ├── mnist_agent.py
+│   └── cifar10_agent.py
 │
 ├── configs // store networks configuration parameters
-│ ├── mnist_config.json
-│ └── cifar10_config.json
+│   ├── mnist_config.json
+│   └── cifar10_config.json
 │
 ├── data // raw, processed data + test images
 │
 ├── experiments // store checkpoints, logs and outputs for experiment
-│ └── cifar_10_exp
-│   ├── logs // train validation score log
-│   └── stats // plots, visualized images
+│   └── cifar_10_exp
+│       ├── logs // train validation score log
+│       └── stats // plots, visualized images
 │
 ├── infdata // initialize and fetch dataset
-│ ├── dataset // defining custom dataset class
-│ ├── transformation // custom transformation class
-│ └── loader // data loader
-│   └── cifar10_dl.py
+│   ├── dataset // defining custom dataset class
+│   ├── transformation // custom transformation class
+│   └── loader // data loader
+│       └── cifar10_dl.py
 │
 ├── logger.py // define the logger
 ├── losses // custom network losses
 │
 ├── networks // define our network
-│ ├── resnet_net.py
-│ ├── mnist_net.py
-│ └── utils.py
+│   ├── resnet_net.py
+│   ├── mnist_net.py
+│   └── utils.py
 │
 ├── notebooks // jupyter notebooks for experiments
-│ └── cifar10_nb.ipynb
+│   └── cifar10_nb.ipynb
 │
 ├── utils // helper functions
 ├── README.md
