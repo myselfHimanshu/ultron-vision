@@ -1,6 +1,7 @@
 {
-    "exp_name" : "cifar10_exp_05_resnet_album",
+    "exp_name" : "cifar10_exp_06_resnet_album",
     "agent" : "Cifar10Agent",
+    "inference_agent" : "Cifar10IAgent",
 
     "input_size" : [3,32,32],
     "mean" : [0.4914, 0.4822, 0.4465],
@@ -30,6 +31,8 @@
     "epochs" : 50,
 
     "num_workers" : 4,
-    "pin_memory" : true
+    "pin_memory" : true,
+
+    "interpret_image": true
 
 }

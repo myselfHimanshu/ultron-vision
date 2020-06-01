@@ -1,6 +1,7 @@
 import argparse
 
 from agents import *
+from inference import *
 from utils.config import process_config
 
 def main():
@@ -23,13 +24,13 @@ def main():
     agent.run()
     agent.finalize()
     
-    # visualize plots
-    agent.plot_accuracy_graph()
-    agent.plot_loss_graph()
-    agent.show_misclassified_images()
-
-    # predict and show grad cam images
-    agent.predict()
+    # Create inference agent and pass the configuration to it and interpret
+    iagent_class = globals()[config["inference_agent"]]
+    iagent = iagent_class(config)
+    
+    iagent.plot_accuracy_graph()
+    iagent.plot_loss_graph()
+    iagent.show_misclassified_images()
 
 
 if __name__=="__main__":
