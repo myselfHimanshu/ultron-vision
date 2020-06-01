@@ -21,53 +21,36 @@ class BaseAgent:
         """
         raise NotImplementedError
 
-    def save_checkpoint(self, file_name="checkpoint.pth.tar", is_best=0):
+    def predict(self):
         """
-        Checkpoint Saver
-        :param file_name: name of checkpoint file path
-        :param is_best: boolean flag indicating current metrix is best so far
+        Prediction on test dataset
         :return:
         """
         raise NotImplementedError
 
-    def visualize_set(self):
+    def plot_accuracy_graph(self):
         """
-        Visualize train set
+        Plot accuracy graph for train and valid dataset
         :return:
         """
         raise NotImplementedError
 
-    def run(self):
+    def plot_loss_graph(self):
         """
-        The main operator
+        Plot loss graph for train and valid dataset
         :return:
         """
         raise NotImplementedError
 
-    def train(self):
+    def show_misclassified_images(self, n=25):
         """
-        Main training iteration
+        Show misclassified images
         :return:
         """
         raise NotImplementedError
 
-    def train_one_epoch(self):
+    def interpret_images(self, image_data, image_label):
         """
-        One epoch of training
-        :return:
-        """
-        raise NotImplementedError
-
-    def validate(self):
-        """
-        One cycle of model evaluation
-        :return:
-        """
-        raise NotImplementedError
-
-    def finalize(self):
-        """
-        Finalize operations
-        :return:
+        Grad Cam for interpreting and prediting class of image
         """
         raise NotImplementedError
