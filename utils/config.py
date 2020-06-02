@@ -70,9 +70,9 @@ def process_config(json_file):
 
     config, _ = get_config_from_json(json_file)
     print("****************************")
-    print("CONFIGURATION OF THIS EXPERIMENT")
+    self.logger.info("CONFIGURATION OF THIS EXPERIMENT")
     print("****************************")
-    pprint(config)
+    self.logger.info(str(config))
 
     try:
         print("****************************")

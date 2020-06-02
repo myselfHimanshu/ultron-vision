@@ -26,6 +26,7 @@ class Cifar10Agent(BaseAgent):
 
     def __init__(self, config):
         super().__init__(config)
+        self.logger.info("TRAINING MODE ACTIVATED")
         self.config = config
         self.use_cuda = self.config['use_cuda']
 
@@ -97,7 +98,7 @@ class Cifar10Agent(BaseAgent):
         # summary of network
         print("****************************")
         print("**********NETWORK SUMMARY**********")
-        summary(self.model, input_size=tuple(self.config['input_size']))
+        self.logger.info(summary(self.model, input_size=tuple(self.config['input_size'])))
         print("****************************")
 
         self.stats_file_name = os.path.join(self.config["stats_dir"], self.config["model_stats_file"])

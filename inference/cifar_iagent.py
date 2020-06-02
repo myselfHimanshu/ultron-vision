@@ -30,6 +30,7 @@ class Cifar10IAgent(BaseAgent):
 
     def __init__(self, config):
         super().__init__(config)
+        self.logger.info("INFERENCE MODE ACTIVATED")
         self.config = config
         self.use_cuda = self.config['use_cuda']
 
