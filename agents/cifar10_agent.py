@@ -20,6 +20,7 @@ from utils.misc import *
 
 from torchsummary import summary
 import json
+import os
 
 
 class Cifar10Agent(BaseAgent):
@@ -98,7 +99,8 @@ class Cifar10Agent(BaseAgent):
         # summary of network
         print("****************************")
         print("**********NETWORK SUMMARY**********")
-        self.logger.info(summary(self.model, input_size=tuple(self.config['input_size'])))
+        summary(self.model, input_size=tuple(self.config['input_size']))
+        print(self.model, file=open(os.path.join(self.config["summary_dir"],"model_arch.txt"), "w"))
         print("****************************")
 
         self.stats_file_name = os.path.join(self.config["stats_dir"], self.config["model_stats_file"])
@@ -146,8 +148,9 @@ class Cifar10Agent(BaseAgent):
         """
         dataiter = iter(self.dataloader.train_loader)
         images, labels = dataiter.next()
+        path = os.path.join(self.config["stats_dir"], 'training_images.png')
 
-        visualize_data(images, self.config['std'], self.config['mean'], labels, self.classes)
+        visualize_data(images, self.config['std'], self.config['mean'], labels, self.classes, path=path)
 
 
     def run(self):

@@ -1,5 +1,5 @@
 {
-    "exp_name" : "cifar10_exp_06_resnet_album",
+    "exp_name" : "cifar10_exp-05_resnet_album_restructured",
     "agent" : "Cifar10Agent",
     "inference_agent" : "Cifar10IAgent",
 

@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import json
 
-def imshow(img, std, mean):
+def imshow(img, std, mean, clip=False):
     """
     plot image
     :param img: Image tensor
@@ -13,13 +13,17 @@ def imshow(img, std, mean):
     :param mean: global mean
     :retun:
     """
+
+    image = img.detach().cpu().numpy()
+    image = image.transpose((1, 2, 0))
     std = np.array(std)
     mean = np.array(mean)
-    npimg = img.numpy()
-    npimg = std*img + mean
-    plt.imshow(np.transpose(npimg, (1,2,0)))
+    image = std*image + mean
+    if clip:
+        image = np.clip(image, 0, 1)
+    plt.imshow((image*255).astype(np.uint8))
 
-def visualize_data(images, std, mean, target=None, classes=None, n=30):
+def visualize_data(images, std, mean, target=None, classes=None, n=30, path=None):
     """
     Visualize data from train loader
 
@@ -40,6 +44,8 @@ def visualize_data(images, std, mean, target=None, classes=None, n=30):
         plt.title("Actual : {}".format(classes[target[i-1]]))
 
     plt.tight_layout()
+    if path!=None:
+        figure.savefig(path)
 
 def regularize_loss(model, loss, decay, norm_value):
     """
