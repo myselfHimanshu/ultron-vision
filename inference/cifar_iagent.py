@@ -161,7 +161,7 @@ class Cifar10IAgent(BaseAgent):
         :return:
         """
         self.logger.info("Plotting and interpreting misclassified images. Please wait, I'm finalizing images.")
-        fig = plt.figure(figsize=(50,50))
+        fig = plt.figure(figsize=(50,100))
 
         images = self.misclassified[str(self.best_epoch)][:n]
         for i in range(1, n+1):
