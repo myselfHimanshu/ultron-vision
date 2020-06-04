@@ -163,19 +163,23 @@ class Cifar10IAgent(BaseAgent):
         fig = plt.figure(figsize=(100,100))
 
         images = self.misclassified[str(self.best_epoch)][:n]
-        for i in range(1, n+1, 2):
-            plt.subplot(n,2,i)
+        for i in range(0, n):
+            j = i+(2*i)
+            plt.subplot(n,3,j)
             plt.axis('off')
-            imshow(images[i-1]["img"], self.config['std'], self.config['mean'], clip=True)
-            plt.title("Predicted : {} \nActual : {}".format(self.id2classes[int(images[i-1]["pred"].cpu().numpy()[0])], 
-                                                self.id2classes[int(images[i-1]["target"].cpu().numpy())]
+            imshow(images[i]["img"], self.config['std'], self.config['mean'], clip=True)
+            plt.title("Pred : {} True : {}".format(self.id2classes[int(images[i]["pred"].cpu().numpy()[0])], 
+                                                self.id2classes[int(images[i]["target"].cpu().numpy())]
                                             ))
 
             if self.config["interpret_image"]:
-                npimage = self._interpret_images(images[i-1]["img"], self.id2classes[int(images[i-1]["target"].cpu().numpy())])
-                plt.subplot(n, 2, i+1)
+                heatmap, mask = self._interpret_images(images[i]["img"], self.id2classes[int(images[i]["target"].cpu().numpy())])
+                plt.subplot(n, 3, j+1)
                 plt.axis('off')
-                plt.imshow(npimage)
+                plt.imshow(heatmap)
+                plt.subplot(n, 3, j+2)
+                plt.axis('off')
+                plt.imshow(mask)
 
         # plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
@@ -188,25 +192,26 @@ class Cifar10IAgent(BaseAgent):
         """
 
         img = image_data.unsqueeze_(0).clone()
-        heatmaps = []
-        results = []
-        layers = ['layer1','layer2','layer3','layer4']
+        # heatmaps = []
+        # results = []
+        # layers = ['layer1','layer2','layer3','layer4']
+        layer = 'layer4'
 
-        for layer in layers:
-            model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(32, 32))
-            gradcam = GradCam(model_dict)
-            
-            mask, _ = gradcam(img)
-            heatmap, result = visualize_cam(mask, img)
-            
-            heatmaps.append(heatmap)
-            results.append(result)
+        #for layer in layers:
+        model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(32, 32))
+        gradcam = GradCam(model_dict)
+        
+        mask, _ = gradcam(img)
+        heatmap, result = visualize_cam(mask, img)
+        
+        #heatmaps.append(heatmap)
+        #results.append(result)
 
-        grid_image = make_grid(heatmaps+results, nrow=len(layers), pad_value=1)
+        #grid_image = make_grid(heatmaps+results, nrow=len(layers), pad_value=1)
         # npimg = grid_image.numpy()
-        grid_image = grid_image.permute(1, 2, 0)
-        grid_image = (grid_image.cpu().numpy()*255).astype(np.uint8)
-        return grid_image
+        #grid_image = grid_image.permute(1, 2, 0)
+        #grid_image = grid_image.cpu().numpy()
+        return heatmap, result
 
         
 
