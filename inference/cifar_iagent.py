@@ -182,7 +182,7 @@ class Cifar10IAgent(BaseAgent):
                 plt.axis('off')
                 plt.imshow(mask)
 
-        # plt.tight_layout()
+        plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
         self.logger.info("Misclassified Images saved.")
 
