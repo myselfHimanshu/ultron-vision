@@ -11,13 +11,13 @@
     "gpu_device" : 0,
     "seed" : 1,
 
-    "batch_size" : 128,
+    "batch_size" : 64,
 
     "learning_rate" : 0.001,
     "momentum" : 0.9,
 
     "l1_decay" : 1e-6,
-    "l2_decay" : 0.001,
+    "l2_decay" : 0.005,
 
     "use_step_lr" : true,
     "step_size" : 35,
