@@ -27,7 +27,7 @@ class Cifar10Agent(BaseAgent):
 
     def __init__(self, config):
         super().__init__(config)
-        self.logger.info("TRAINING MODE ACTIVATED")
+        self.logger.info("TRAINING MODE ACTIVATED!!!")
         self.config = config
         self.use_cuda = self.config['use_cuda']
 
@@ -89,12 +89,12 @@ class Cifar10Agent(BaseAgent):
             self.model = self.model.to(self.device)
             self.loss = self.loss.to(self.device)
             
-            self.logger.info("Program will RUN on ****GPU-CUDA****\n")
+            self.logger.info("Program will RUN on ****GPU-CUDA****")
             print_cuda_statistics()
         else:
             torch.manual_seed(self.manual_seed)
             self.device = torch.device('cpu')
-            self.logger.info("Program will RUN on ****CPU****\n")
+            self.logger.info("Program will RUN on ****CPU****")
 
         # summary of network
         print("****************************")

@@ -31,7 +31,7 @@ class Cifar10IAgent(BaseAgent):
 
     def __init__(self, config):
         super().__init__(config)
-        self.logger.info("INFERENCE MODE ACTIVATED")
+        self.logger.info("INFERENCE MODE ACTIVATED!!!")
         self.config = config
         self.use_cuda = self.config['use_cuda']
 
@@ -59,11 +59,11 @@ class Cifar10IAgent(BaseAgent):
             torch.cuda.manual_seed(self.manual_seed)
             self.device = torch.device('cuda')
             torch.cuda.set_device(self.config['gpu_device'])
-            self.logger.info("Program will RUN on ****GPU-CUDA****\n")
+            self.logger.info("Program will RUN on ****GPU-CUDA****")
         else:
             torch.manual_seed(self.manual_seed)
             self.device = torch.device('cpu')
-            self.logger.info("Program will RUN on ****CPU****\n")
+            self.logger.info("Program will RUN on ****CPU****")
 
 
         self.load_checkpoint(self.config['checkpoint_file'])
@@ -160,20 +160,21 @@ class Cifar10IAgent(BaseAgent):
         Show misclassified images
         :return:
         """
-        fig = plt.figure(figsize=(100,100))
+        self.logger.info("Plotting and interpreting misclassified images. Please wait, I'm finalizing images.")
+        fig = plt.figure(figsize=(50,50))
 
         images = self.misclassified[str(self.best_epoch)][:n]
-        for i in range(0, n):
-            j = i+(2*i)
+        for i in range(1, n+1):
+            j = 3*i - 2
             plt.subplot(n,3,j)
             plt.axis('off')
-            imshow(images[i]["img"], self.config['std'], self.config['mean'], clip=True)
-            plt.title("Pred : {} True : {}".format(self.id2classes[int(images[i]["pred"].cpu().numpy()[0])], 
-                                                self.id2classes[int(images[i]["target"].cpu().numpy())]
+            imshow(images[i-1]["img"], self.config['std'], self.config['mean'], clip=True)
+            plt.title("Pred : {} True : {}".format(self.id2classes[int(images[i-1]["pred"].cpu().numpy()[0])], 
+                                                self.id2classes[int(images[i-1]["target"].cpu().numpy())]
                                             ))
 
             if self.config["interpret_image"]:
-                heatmap, mask = self._interpret_images(images[i]["img"], self.id2classes[int(images[i]["target"].cpu().numpy())])
+                heatmap, mask = self._interpret_images(images[i-1]["img"], self.id2classes[int(images[i-1]["target"].cpu().numpy())])
                 plt.subplot(n, 3, j+1)
                 plt.axis('off')
                 plt.imshow(heatmap)
@@ -197,21 +198,13 @@ class Cifar10IAgent(BaseAgent):
         # layers = ['layer1','layer2','layer3','layer4']
         layer = 'layer4'
 
-        #for layer in layers:
         model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(32, 32))
         gradcam = GradCam(model_dict)
         
         mask, _ = gradcam(img)
         heatmap, result = visualize_cam(mask, img)
         
-        #heatmaps.append(heatmap)
-        #results.append(result)
-
-        #grid_image = make_grid(heatmaps+results, nrow=len(layers), pad_value=1)
-        # npimg = grid_image.numpy()
-        #grid_image = grid_image.permute(1, 2, 0)
-        #grid_image = grid_image.cpu().numpy()
-        return heatmap, result
+        return np.clip(heatmap.permute(1,2,0).cpu().numpy(),0,1), np.clip(result.permute(1,2,0).cpu().numpy(),0,1)
 
         
 
