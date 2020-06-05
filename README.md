@@ -86,7 +86,7 @@ $ deactivate
 │
 ├── experiments // store checkpoints, logs and outputs for experiment
 │   └── cifar10_exp*
-│       ├── logs // train validation score log
+│       ├── logs // agent logs
 │       ├── stats // training validation scores, plots and images visualization data
 │       └── summaries // experiment config file used and network architecture
 │
