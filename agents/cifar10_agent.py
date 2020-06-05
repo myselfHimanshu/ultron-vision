@@ -17,10 +17,12 @@ from infdata.loader.cifar10_dl import DataLoader as dl
 
 # utils function
 from utils.misc import *
+from utils.lr_finder.lrfinder import LRFinder
 
 from torchsummary import summary
 import json
 import os
+import numpy as np
 
 
 class Cifar10Agent(BaseAgent):
@@ -140,6 +142,20 @@ class Cifar10Agent(BaseAgent):
 
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         torch.save(checkpoint, file_name)
+
+    def find_optim_lr(self):
+        """
+        find optim learning rate to train network
+        :return:
+        """
+        self.logger.info("FINDING OPTIM LEARNING RATE...")
+        self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
+        lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
+        lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=100)
+        history = lr_finder.history
+        self.logger.info("Learning rate with minimum loss : " + str(history["lr"][np.argmax(history["loss"])]))
+        lr_finder.reset()
+
 
     def visualize_set(self):
         """
