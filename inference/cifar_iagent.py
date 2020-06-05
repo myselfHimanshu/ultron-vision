@@ -178,9 +178,11 @@ class Cifar10IAgent(BaseAgent):
                 plt.subplot(n, 3, j+1)
                 plt.axis('off')
                 plt.imshow(heatmap)
+                plt.title("heatmap")
                 plt.subplot(n, 3, j+2)
                 plt.axis('off')
                 plt.imshow(mask)
+                plt.title("gradcam_mask")
 
         plt.tight_layout()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))

@@ -5,7 +5,7 @@ Main Agent for CIFAR10
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.optim.lr_scheduler import StepLR
+from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau
 import torch.nn.functional as F
 
 from tqdm import tqdm
@@ -46,8 +46,11 @@ class Cifar10Agent(BaseAgent):
         # define loss
         self.loss = nn.CrossEntropyLoss()
 
+        #find optim lr and set optimizer
+        self._find_optim_lr()
+
         # define optimizer
-        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
+        # self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
 
         # intialize weight decay
         self.l1_decay = self.config['l1_decay']
@@ -57,9 +60,11 @@ class Cifar10Agent(BaseAgent):
         self.use_step_lr = self.config['use_step_lr']
 
         if self.use_step_lr:
-            self.step_size = self.config['step_size']
-            self.step_gamma = self.config['step_gamma']
-            self.scheduler = StepLR(self.optimizer, step_size=self.step_size, gamma=self.step_gamma)
+            self.factor = self.config['factor']
+            # self.step_size = self.config['step_size']
+            # self.step_gamma = self.config['step_gamma']
+            # self.scheduler = StepLR(self.optimizer, step_size=self.step_size, gamma=self.step_gamma)
+            self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=self.factor, patience=3, verbose=False)
 
         # initialize Counter
         self.current_epoch = 0
@@ -143,7 +148,7 @@ class Cifar10Agent(BaseAgent):
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         torch.save(checkpoint, file_name)
 
-    def find_optim_lr(self):
+    def _find_optim_lr(self):
         """
         find optim learning rate to train network
         :return:
@@ -153,9 +158,14 @@ class Cifar10Agent(BaseAgent):
         lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
         lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=100)
         history = lr_finder.history
-        self.logger.info("Learning rate with minimum loss : " + str(history["lr"][np.argmax(history["loss"])]))
+        optim_lr = history["lr"][np.argmin(history["loss"])] 
+        self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
         lr_finder.reset()
-
+        
+        # set optimizer to optim learning rate
+        self.config["learning_rate"] = round(optim_lr,2)
+        self.logger.info(f"Setting optimizer to optim learning rate : {self.config['learning_rate']}")
+        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config["learning_rate"], momentum=self.config['momentum'])
 
     def visualize_set(self):
         """
@@ -185,10 +195,12 @@ class Cifar10Agent(BaseAgent):
         :return:
         """
         for epoch in range(1, self.config['epochs']+1):
+            for param_group in self.optimizer.param_groups:
+                self.logger.info(f"Current lr value = {param_group['lr']}")
             self.train_one_epoch()
-            if self.use_step_lr:
-                self.scheduler.step()
             self.validate()
+            if self.use_step_lr:
+                self.scheduler.step(self.valid_losses[-1])
 
             self.current_epoch += 1
 

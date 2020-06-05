@@ -44,8 +44,8 @@ class AlbumTransforms(object):
             RandomResizedCrop(height=32, width=32),
             HorizontalFlip(1.0),
             # RandomBrightnessContrast(),
-			Rotate(limit=7),
-			Cutout(num_holes=1, max_h_size=16, max_w_size=16, fill_value=self.mean*255.0),
+			# Rotate(limit=5),
+			Cutout(num_holes=1, max_h_size=8, max_w_size=8, fill_value=self.mean*255.0),
         ]
 
         self.transforms_test = [

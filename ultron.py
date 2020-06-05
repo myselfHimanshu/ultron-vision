@@ -20,21 +20,18 @@ def main():
     agent_class = globals()[config["agent"]]
     agent = agent_class(config)
     
-    # run to find lr then comment out
-    agent.find_optim_lr()
-    
     # train model
-    # agent.run()
-    # agent.visualize_set()
-    # agent.finalize()
+    agent.run()
+    agent.visualize_set()
+    agent.finalize()
     
-    # # Create inference agent and pass the configuration to it and interpret
-    # iagent_class = globals()[config["inference_agent"]]
-    # iagent = iagent_class(config)
+    # Create inference agent and pass the configuration to it and interpret
+    iagent_class = globals()[config["inference_agent"]]
+    iagent = iagent_class(config)
     
-    # iagent.plot_accuracy_graph()
-    # iagent.plot_loss_graph()
-    # iagent.show_misclassified_images()
+    iagent.plot_accuracy_graph()
+    iagent.plot_loss_graph()
+    iagent.show_misclassified_images()
 
 
 if __name__=="__main__":
