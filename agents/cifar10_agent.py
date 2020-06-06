@@ -64,7 +64,7 @@ class Cifar10Agent(BaseAgent):
             # self.step_size = self.config['step_size']
             # self.step_gamma = self.config['step_gamma']
             # self.scheduler = StepLR(self.optimizer, step_size=self.step_size, gamma=self.step_gamma)
-            self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=self.factor, patience=3, verbose=False)
+            self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=self.factor, patience=2, verbose=False)
 
         # initialize Counter
         self.current_epoch = 0
