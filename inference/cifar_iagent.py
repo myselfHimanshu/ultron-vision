@@ -34,6 +34,7 @@ class Cifar10IAgent(BaseAgent):
         self.logger.info("INFERENCE MODE ACTIVATED!!!")
         self.config = config
         self.use_cuda = self.config['use_cuda']
+        self.visualize_inline = self.config['visualize_inline']
 
         # create network instance
         self.model = Net()
@@ -126,7 +127,8 @@ class Cifar10IAgent(BaseAgent):
         plt.legend(["train_acc","valid_acc"])
         plt.xlabel('Epoch')
         plt.ylabel("Accuracy")
-        # plt.show();
+        if self.visualize_inline:
+            plt.show();
 
         fig.savefig(os.path.join(self.config["stats_dir"], 'accuracy.png'))
         self.logger.info("Accuracy Graph saved.")
@@ -150,7 +152,8 @@ class Cifar10IAgent(BaseAgent):
         plt.legend(["train_loss","valid_loss"])
         plt.xlabel('Epoch')
         plt.ylabel("Loss")
-        # plt.show();
+        if self.visualize_inline:
+            plt.show();
 
         fig.savefig(os.path.join(self.config["stats_dir"], 'loss.png'))
         self.logger.info("Loss Graph saved.")
@@ -185,6 +188,8 @@ class Cifar10IAgent(BaseAgent):
                 plt.title("gradcam_mask")
 
         plt.tight_layout()
+        if self.visualize_inline:
+            plt.show()
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
         self.logger.info("Misclassified Images saved.")
 

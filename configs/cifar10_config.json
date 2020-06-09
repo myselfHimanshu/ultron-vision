@@ -1,5 +1,5 @@
 {
-    "exp_name" : "cifar10_exp-07_resnet_album_findlr",
+    "exp_name" : "cifar10_exp-08_resnet_album_findlr",
     "agent" : "Cifar10Agent",
     "inference_agent" : "Cifar10IAgent",
 
@@ -34,6 +34,7 @@
     "num_workers" : 4,
     "pin_memory" : true,
 
-    "interpret_image": true
+    "interpret_image": true,
+    "visualize_inline": true
 
 }

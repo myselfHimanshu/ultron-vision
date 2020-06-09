@@ -23,7 +23,7 @@ def imshow(img, std, mean, clip=False):
         image = np.clip(image, 0, 1)
     plt.imshow((image*255).astype(np.uint8))
 
-def visualize_data(images, std, mean, target=None, classes=None, n=30, path=None):
+def visualize_data(images, std, mean, n=30, visualize_inline=False, target=None, classes=None, path=None):
     """
     Visualize data from train loader
 
@@ -44,6 +44,8 @@ def visualize_data(images, std, mean, target=None, classes=None, n=30, path=None
         plt.title("Actual : {}".format(classes[target[i-1]]))
 
     plt.tight_layout()
+    if visualize_inline:
+        plt.show()
     if path!=None:
         figure.savefig(path)
 

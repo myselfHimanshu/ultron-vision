@@ -32,6 +32,7 @@ class Cifar10Agent(BaseAgent):
         self.logger.info("TRAINING MODE ACTIVATED!!!")
         self.config = config
         self.use_cuda = self.config['use_cuda']
+        self.visualize_inline = self.config['visualize_inline']
 
         # create network instance
         self.model = Net()
@@ -157,6 +158,8 @@ class Cifar10Agent(BaseAgent):
         self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
         lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
         lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=100)
+        if self.visualize_inline:
+            lr_finder.plot()
         history = lr_finder.history
         optim_lr = history["lr"][np.argmin(history["loss"])] 
         self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
@@ -176,7 +179,7 @@ class Cifar10Agent(BaseAgent):
         images, labels = dataiter.next()
         path = os.path.join(self.config["stats_dir"], 'training_images.png')
 
-        visualize_data(images, self.config['std'], self.config['mean'], labels, self.classes, path=path)
+        visualize_data(images, self.config['std'], self.config['mean'], 30, self.visualize_inline, labels, self.classes, path=path)
 
 
     def run(self):
