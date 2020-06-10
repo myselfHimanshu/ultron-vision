@@ -108,6 +108,36 @@ class Cifar10IAgent(BaseAgent):
             self.logger.info("Test image prediction FAILED!!!")
             self.logger.info(e)
 
+
+    def plot_graphs(self):
+        """
+        Plot accuracy and validation graph for train and valid dataset
+        :return:
+        """
+        with open(self.stats_file_name) as f:
+            data = json.load(f)
+
+        train_acc = data["train_acc"]
+        valid_acc = data["valid_acc"]
+        train_loss = data["train_loss"]
+        valid_loss = data["valid_loss"]
+
+        epoch_count = range(1, self.config["epochs"]+1)
+        fig = plt.figure(figsize=(10,10))
+        
+        plt.plot(epoch_count, train_acc)
+        plt.plot(epoch_count, valid_acc)
+        plt.plot(epoch_count, train_loss)
+        plt.plot(epoch_count, valid_loss)
+        plt.legend(["train_acc", "valid_acc", "train_loss", "valid_loss"])
+        plt.xlabel('Epoch')
+        plt.ylabel("Acc & Loss")
+        if self.visualize_inline:
+            plt.show();
+
+        fig.savefig(os.path.join(self.config["stats_dir"], 'graph.png'))
+        self.logger.info("Graphs saved.")
+
     def plot_accuracy_graph(self):
         """
         Plot accuracy graph for train and valid dataset

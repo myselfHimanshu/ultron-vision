@@ -19,18 +19,20 @@ def main():
     # Create the agent and pass all the configuration to it and run
     agent_class = globals()[config["agent"]]
     agent = agent_class(config)
+
+    # visualize training set
+    agent.visualize_set()
     
     # train model
     agent.run()
-    agent.visualize_set()
     agent.finalize()
     
     # Create inference agent and pass the configuration to it and interpret
     iagent_class = globals()[config["inference_agent"]]
     iagent = iagent_class(config)
     
-    iagent.plot_accuracy_graph()
-    iagent.plot_loss_graph()
+    # plot accuracy, loss graphs and misclassified images with gradcam
+    iagent.plot_graphs()
     iagent.show_misclassified_images()
 
 
