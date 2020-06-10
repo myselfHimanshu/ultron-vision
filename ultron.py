@@ -31,10 +31,10 @@ def main():
     iagent_class = globals()[config["inference_agent"]]
     iagent = iagent_class(config)
     
-    # plot accuracy, loss graphs and misclassified images with gradcam
+    # plot learning rate, accuracy, loss graphs and misclassified images with gradcam
+    iagent.plot_lr_graph()
     iagent.plot_graphs()
     iagent.show_misclassified_images()
-
 
 if __name__=="__main__":
     main()

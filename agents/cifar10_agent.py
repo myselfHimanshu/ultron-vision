@@ -5,7 +5,7 @@ Main Agent for CIFAR10
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau
+from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau, OneCycleLR
 import torch.nn.functional as F
 
 from tqdm import tqdm
@@ -50,28 +50,33 @@ class Cifar10Agent(BaseAgent):
         #find optim lr and set optimizer
         self._find_optim_lr()
 
-        # define optimizer
-        # self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
-
         # intialize weight decay
         self.l1_decay = self.config['l1_decay']
         self.l2_decay = self.config['l2_decay']
 
         # initialize step lr
-        self.use_step_lr = self.config['use_step_lr']
+        self.use_scheduler = self.config['use_scheduler']
 
-        if self.use_step_lr:
-            self.factor = self.config['factor']
-            # self.step_size = self.config['step_size']
-            # self.step_gamma = self.config['step_gamma']
-            # self.scheduler = StepLR(self.optimizer, step_size=self.step_size, gamma=self.step_gamma)
-            self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=self.factor, patience=2, verbose=False)
-
+        if self.use_scheduler:
+            self.scheduler = self.config["scheduler"]["name"]
+            if self.scheduler=="OneCycleLR":
+                self.scheduler = OneCycleLR(self.optimizer, self.config['learning_rate'], 
+                                            epochs = self.config['epochs'],
+                                            steps_per_epoch = len(self.dataloader.train_loader), 
+                                            **self.config["scheduler"]["kwargs"]
+                                            )
+            else:
+                self.logger.info("WARNING : OneCycleLr Scheduler was not setup. Re-initializing use_scheduler to False")
+                self.use_scheduler = False
+            
         # initialize Counter
         self.current_epoch = 0
         self.current_iteration = 0
         self.best_metric = 0
         self.best_epoch = 0
+
+        # intitalize lr values list
+        self.lr_list = []
 
         # initialize loss and accuray arrays
         self.train_losses = []
@@ -199,12 +204,12 @@ class Cifar10Agent(BaseAgent):
         """
         for epoch in range(1, self.config['epochs']+1):
             for param_group in self.optimizer.param_groups:
+                self.lr_list.append(param_group['lr'])
                 self.logger.info(f"Current lr value = {param_group['lr']}")
+            
             self.train_one_epoch()
             self.validate()
-            if self.use_step_lr:
-                self.scheduler.step(self.valid_losses[-1])
-
+            
             self.current_epoch += 1
 
     def train_one_epoch(self):
@@ -231,6 +236,8 @@ class Cifar10Agent(BaseAgent):
             
             loss.backward()
             self.optimizer.step()
+            if self.use_scheduler:
+                self.scheduler.step()
 
             _, preds = torch.max(output.data, 1)
 
@@ -299,7 +306,8 @@ class Cifar10Agent(BaseAgent):
         self.logger.info("Please wait while finalizing the operations.. Thank you")
         
         result = {"train_loss" : self.train_losses, "train_acc" : self.train_acc,
-                    "valid_loss" : self.valid_losses, "valid_acc" : self.valid_acc}
+                    "valid_loss" : self.valid_losses, "valid_acc" : self.valid_acc,
+                    "lr_list" : self.lr_list}
         
         with open(self.stats_file_name, "w") as f:
             json.dump(result, f)

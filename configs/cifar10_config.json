@@ -1,5 +1,5 @@
 {
-    "exp_name" : "cifar10_exp-08_resnet_album_findlr",
+    "exp_name" : "cifar10_exp-009",
     "agent" : "Cifar10Agent",
     "inference_agent" : "Cifar10IAgent",
 
@@ -13,17 +13,27 @@
 
     "batch_size" : 64,
 
-    "learning_rate" : null,
+    "learning_rate" : 0.1,
     "momentum" : 0.9,
 
     "l1_decay" : 1e-6,
     "l2_decay" : 0.005,
 
-    "use_step_lr" : true,
-    "factor" : 0.1,
-    "step_size" :  null,
-    "step_gamma" : null,
-
+    "use_scheduler" : true,
+    "scheduler" : {
+        "name" : "OneCycleLR",
+        "kwargs" : {
+            "pct_cycle" : 0.3,
+            "anneal_strategy" : "cos",
+            "cycle_momentum" : true,
+            "base_momentum" : 0.85,
+            "max_momentum" : 0.95,
+            "div_factor" : 10,
+            "final_div_factor" : 1e4,
+            "last_epoch" : -1
+        }   
+    },
+    
     "save_checkpoint" : true,
     "load_checkpoint" : true,
     "checkpoint_file": "checkpoint.pth.tar",

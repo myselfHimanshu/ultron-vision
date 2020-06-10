@@ -186,6 +186,28 @@ class Cifar10IAgent(BaseAgent):
         fig.savefig(os.path.join(self.config["stats_dir"], 'loss.png'))
         self.logger.info("Loss Graph saved.")
 
+    def plot_lr_graph(self):
+        """
+        Plot lr values graph
+        :return:
+        """
+        with open(self.stats_file_name) as f:
+            data = json.load(f)
+
+        lr_values = data["lr_list"]
+        
+        epoch_count = range(1, self.config["epochs"]+1)
+        fig = plt.figure(figsize=(5,5))
+        
+        plt.plot(epoch_count, lr_values)
+        plt.xlabel('Epoch')
+        plt.ylabel("LearningRate")
+        if self.visualize_inline:
+            plt.show();
+
+        fig.savefig(os.path.join(self.config["stats_dir"], 'lr.png'))
+        self.logger.info("Learning Rate Graph saved.")
+
     def show_misclassified_images(self, n=25):
         """
         Show misclassified images
