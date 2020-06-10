@@ -6,8 +6,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchvision.utils import make_grid
-
-from tqdm import tqdm
+from torchsummary import summary
 
 from agents.base import BaseAgent
 # from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
@@ -16,16 +15,15 @@ from infdata.loader.cifar10_dl import DataLoader as dl
 
 # utils function
 from utils.misc import *
-from utils.gradcam import GradCam
-from utils.grad_misc import visualize_cam
+from utils.gradcam.main import GradCam
+from utils.gradcam.misc import visualize_cam
 
-from torchsummary import summary
 import json
 import matplotlib.pyplot as plt
 import numpy as np
-
 import os
-curr_dir = os.path.dirname(__file__)
+from tqdm import tqdm
+
 
 class Cifar10IAgent(BaseAgent):
 
@@ -123,7 +121,7 @@ class Cifar10IAgent(BaseAgent):
         valid_loss = data["valid_loss"]
 
         epoch_count = range(1, self.config["epochs"]+1)
-        fig = plt.figure(figsize=(10,10))
+        fig = plt.figure(figsize=(5,5))
         
         plt.plot(epoch_count, train_acc)
         plt.plot(epoch_count, valid_acc)
@@ -150,7 +148,7 @@ class Cifar10IAgent(BaseAgent):
         valid_acc = data["valid_acc"]
 
         epoch_count = range(1, self.config["epochs"]+1)
-        fig = plt.figure(figsize=(10,10))
+        fig = plt.figure(figsize=(5,5))
         
         plt.plot(epoch_count, train_acc)
         plt.plot(epoch_count, valid_acc)
@@ -175,7 +173,7 @@ class Cifar10IAgent(BaseAgent):
         valid_loss = data["valid_loss"]
 
         epoch_count = range(1, self.config["epochs"]+1)
-        fig = plt.figure(figsize=(10,10))
+        fig = plt.figure(figsize=(5,5))
         
         plt.plot(epoch_count, train_loss)
         plt.plot(epoch_count, valid_loss)
@@ -194,7 +192,7 @@ class Cifar10IAgent(BaseAgent):
         :return:
         """
         self.logger.info("Plotting and interpreting misclassified images. Please wait, I'm finalizing images.")
-        fig = plt.figure(figsize=(50,100))
+        fig = plt.figure(figsize=(20,10))
 
         images = self.misclassified[str(self.best_epoch)][:n]
         for i in range(1, n+1):
@@ -202,20 +200,20 @@ class Cifar10IAgent(BaseAgent):
             plt.subplot(n,3,j)
             plt.axis('off')
             imshow(images[i-1]["img"], self.config['std'], self.config['mean'], clip=True)
-            plt.title("Pred : {} True : {}".format(self.id2classes[int(images[i-1]["pred"].cpu().numpy()[0])], 
+            plt.title("Pred : {} | True : {}".format(self.id2classes[int(images[i-1]["pred"].cpu().numpy()[0])], 
                                                 self.id2classes[int(images[i-1]["target"].cpu().numpy())]
-                                            ))
+                                            ), fontdict={'fontsize': 8, 'fontweight': 'bold'})
 
             if self.config["interpret_image"]:
                 heatmap, mask = self._interpret_images(images[i-1]["img"], self.id2classes[int(images[i-1]["target"].cpu().numpy())])
                 plt.subplot(n, 3, j+1)
                 plt.axis('off')
                 plt.imshow(heatmap)
-                plt.title("heatmap")
+                plt.title("heatmap", fontdict={'fontsize': 8, 'fontweight': 'bold'})
                 plt.subplot(n, 3, j+2)
                 plt.axis('off')
                 plt.imshow(mask)
-                plt.title("gradcam_mask")
+                plt.title("gradcam_mask", fontdict={'fontsize': 8, 'fontweight': 'bold'})
 
         plt.tight_layout()
         if self.visualize_inline:
@@ -223,18 +221,14 @@ class Cifar10IAgent(BaseAgent):
         fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
         self.logger.info("Misclassified Images saved.")
 
-    def _interpret_images(self, image_data, label):
+    def _interpret_images(self, image_data, label, layer='layer4'):
         """
         Interpret images using Grad Cam
-        :return:
+        :return: heatmap and mask numpy array
         """
 
         img = image_data.unsqueeze_(0).clone()
-        # heatmaps = []
-        # results = []
-        # layers = ['layer1','layer2','layer3','layer4']
-        layer = 'layer4'
-
+        
         model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(32, 32))
         gradcam = GradCam(model_dict)
         
