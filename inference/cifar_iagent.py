@@ -82,6 +82,27 @@ class Cifar10IAgent(BaseAgent):
         self.best_epoch = checkpoint["epoch"]
         self.misclassified = checkpoint['misclassified_data']
 
+    def show_per_class_accuracy(self):
+        """
+        Show per class acurracy for best saved weights
+        :return:
+        """
+        confusion_matrix = torch.zeros(self.config['num_classes'], self.config['num_classes'])
+        with torch.no_grad():
+            for i, (data, target) in enumerate(self.dataloader.valid_loader):
+                data = data.to(self.device)
+                target = target.to(self.device)
+                
+                outputs = self.model(data)
+                _, preds = torch.max(outputs, 1)
+                for t, p in zip(target.view(-1), preds.view(-1)):
+                    confusion_matrix[t.long(), p.long()] += 1
+                    
+        class_acc = (100.*confusion_matrix.diag()/confusion_matrix.sum(1)).cpu().numpy()
+        class_acc = zip(self.classes, class_acc)
+        for class_name, acc_score in class_acc:
+            self.logger.info(f"Accuracy of class : {class_name}\t\t{acc_score:4f}")
+
     def predict(self):
         """
         predict image class

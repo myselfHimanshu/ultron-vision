@@ -32,6 +32,7 @@ def main():
     iagent = iagent_class(config)
     
     # plot learning rate, accuracy, loss graphs and misclassified images with gradcam
+    iagent.show_per_class_accuracy()
     iagent.plot_lr_graph()
     iagent.plot_graphs()
     iagent.show_misclassified_images()
