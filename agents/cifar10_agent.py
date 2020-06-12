@@ -61,7 +61,6 @@ class Cifar10Agent(BaseAgent):
             self.scheduler = self.config["scheduler"]["name"]
             if self.scheduler=="OneCycleLR":
                 self.scheduler = OneCycleLR(self.optimizer, self.config['learning_rate'], 
-                                            epochs = self.config['epochs'],
                                             steps_per_epoch = len(self.dataloader.train_loader), 
                                             **self.config["scheduler"]["kwargs"]
                                             )
@@ -162,9 +161,12 @@ class Cifar10Agent(BaseAgent):
         self.logger.info("FINDING OPTIM LEARNING RATE...")
         self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
         lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
-        lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=100)
+        num_iter = (len(self.dataloader.train_loader.dataset)//self.config["batch_size"])*5
+        lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=num_iter)
+
         if self.visualize_inline:
             lr_finder.plot()
+            
         history = lr_finder.history
         optim_lr = history["lr"][np.argmin(history["loss"])] 
         self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
