@@ -108,7 +108,7 @@ class ThreeLayerNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        prep_x = self.prep_layer(x)
+        x = self.prep_layer(x)
         
         x1 = self.x1(x)
         block1 = self.block1(x1)
