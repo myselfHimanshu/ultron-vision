@@ -86,7 +86,7 @@ class Cifar10IAgent(BaseAgent):
         Show per class acurracy for best saved weights
         :return:
         """
-        confusion_matrix = torch.zeros(self.config['num_classes'], self.config['num_classes'])
+        confusion_matrix = torch.zeros(len(self.classes), len(self.classes))
         with torch.no_grad():
             for i, (data, target) in enumerate(self.dataloader.valid_loader):
                 data = data.to(self.device)

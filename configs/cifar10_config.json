@@ -17,7 +17,7 @@
     "momentum" : 0.9,
 
     "l1_decay" : 1e-6,
-    "l2_decay" : 0.005,
+    "l2_decay" : 0.001,
 
     "use_scheduler" : true,
     "scheduler" : {
@@ -27,7 +27,7 @@
             "pct_start" : 0.2,
             "anneal_strategy" : "linear",
             "cycle_momentum" : true,
-            "base_momentum" : 0.85,
+            "base_momentum" : 0.80,
             "max_momentum" : 0.95,
             "div_factor" : 10,
             "final_div_factor" : 1,
