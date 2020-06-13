@@ -61,7 +61,7 @@ class BasicBlock(nn.Module):
 
 class ThreeLayerNet(nn.Module):
     def __init__(self, block, num_blocks, num_classes=10):
-        super(3LayerNet(), self).__init__()
+        super(ThreeLayerNet, self).__init__()
 
         self.prep_layer = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False), # (32x32x3)(3x3x32x64)(32x32x64)
