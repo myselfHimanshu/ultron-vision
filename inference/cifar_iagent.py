@@ -236,7 +236,7 @@ class Cifar10IAgent(BaseAgent):
         :return:
         """
         self.logger.info("Plotting and interpreting misclassified images. Please wait, I'm finalizing images.")
-        fig = plt.figure(figsize=(20,10))
+        fig = plt.figure(figsize=(10,20))
 
         images = self.misclassified[str(self.best_epoch)][:n]
         for i in range(1, n+1):
@@ -246,18 +246,18 @@ class Cifar10IAgent(BaseAgent):
             imshow(images[i-1]["img"], self.config['std'], self.config['mean'], clip=True)
             plt.title("Pred : {} | True : {}".format(self.id2classes[int(images[i-1]["pred"].cpu().numpy()[0])], 
                                                 self.id2classes[int(images[i-1]["target"].cpu().numpy())]
-                                            ), fontdict={'fontsize': 8, 'fontweight': 'bold'})
+                                            ))
 
             if self.config["interpret_image"]:
                 heatmap, mask = self._interpret_images(images[i-1]["img"], self.id2classes[int(images[i-1]["target"].cpu().numpy())], self.config['interpret_layer'])
                 plt.subplot(n, 3, j+1)
                 plt.axis('off')
                 plt.imshow(heatmap)
-                plt.title("heatmap", fontdict={'fontsize': 8, 'fontweight': 'bold'})
+                plt.title("heatmap")
                 plt.subplot(n, 3, j+2)
                 plt.axis('off')
                 plt.imshow(mask)
-                plt.title("gradcam_mask", fontdict={'fontsize': 8, 'fontweight': 'bold'})
+                plt.title("gradcam_mask")
 
         plt.tight_layout()
         if self.visualize_inline:
