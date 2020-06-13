@@ -11,8 +11,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 
 from agents.base import BaseAgent
-# from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
-from networks.resnet_net import ResNet18 as Net
+from networks.threelayer_net import ThreeLayerNet as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
 
 # utils function
@@ -166,7 +165,7 @@ class Cifar10Agent(BaseAgent):
 
         if self.visualize_inline:
             lr_finder.plot()
-            
+
         history = lr_finder.history
         optim_lr = history["lr"][np.argmin(history["loss"])] 
         self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
