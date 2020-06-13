@@ -48,11 +48,11 @@ class BasicBlock(nn.Module):
 
         self.block = nn.Sequential(
             nn.Conv2d(planes, planes, kernel_size=3, stride=stride, padding=1, bias=False),
-            GhostBatchNorm(planes)
+            GhostBatchNorm(planes),
             nn.ReLU(),
             nn.Conv2d(planes, planes, kernel_size=3, stride=stride, padding=1, bias=False),
-            GhostBatchNorm(planes)
-            nn.ReLU()   
+            GhostBatchNorm(planes),
+            nn.ReLU(),
         )
         
     def forward(self, x):
