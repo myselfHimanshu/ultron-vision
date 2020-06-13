@@ -9,8 +9,7 @@ from torchvision.utils import make_grid
 from torchsummary import summary
 
 from agents.base import BaseAgent
-# from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
-from networks.resnet_net import ResNet18 as Net
+from networks.threelayer_net import main as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
 
 # utils function

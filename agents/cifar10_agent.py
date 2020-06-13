@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 
 from agents.base import BaseAgent
-from networks.threelayer_net import ThreeLayerNet as Net
+from networks.threelayer_net import main as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
 
 # utils function
@@ -172,7 +172,7 @@ class Cifar10Agent(BaseAgent):
         lr_finder.reset()
         
         # set optimizer to optim learning rate
-        self.config["learning_rate"] = round(optim_lr,2)
+        self.config["learning_rate"] = round(optim_lr,3)
         self.logger.info(f"Setting optimizer to optim learning rate : {self.config['learning_rate']}")
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config["learning_rate"], momentum=self.config['momentum'])
 

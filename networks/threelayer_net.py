@@ -6,6 +6,14 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+class BatchNorm(nn.BatchNorm2d):
+    def __init__(self, num_features, eps=1e-05, momentum=0.1, weight=True, bias=True):
+        super().__init__(num_features, eps=eps, momentum=momentum)
+        self.weight.data.fill_(1.0)
+        self.bias.data.fill_(0.0)
+        self.weight.requires_grad = weight
+        self.bias.requires_grad = bias
+
 #define ghost batch Normalization
 class GhostBatchNorm(BatchNorm):
     def __init__(self, num_features, num_splits=1, **kw):
@@ -57,7 +65,7 @@ class ThreeLayerNet(nn.Module):
 
         self.prep_layer = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False), # (32x32x3)(3x3x32x64)(32x32x64)
-            GhostBatchNorm(self.in_planes),
+            GhostBatchNorm(64),
             nn.ReLU(),
         )
 
@@ -116,6 +124,10 @@ class ThreeLayerNet(nn.Module):
         x = x.view(-1, 512)
         x = self.fc_layer(x)
         return F.log_softmax(x, dim=-1)
+
+
+def main():
+    return ThreeLayerNet(BasicBlock, [1,1])
 
 
 

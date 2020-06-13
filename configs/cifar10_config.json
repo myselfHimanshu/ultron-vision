@@ -1,5 +1,5 @@
 {
-    "exp_name" : "cifar10_exp-009",
+    "exp_name" : "cifar10_session11-exp-001",
     "agent" : "Cifar10Agent",
     "inference_agent" : "Cifar10IAgent",
 
@@ -11,7 +11,7 @@
     "gpu_device" : 0,
     "seed" : 1,
 
-    "batch_size" : 64,
+    "batch_size" : 512,
 
     "learning_rate" : 0.1,
     "momentum" : 0.9,
@@ -23,13 +23,14 @@
     "scheduler" : {
         "name" : "OneCycleLR",
         "kwargs" : {
-            "pct_cycle" : 0.3,
-            "anneal_strategy" : "cos",
+            "epochs" : 24,
+            "pct_start" : 0.2,
+            "anneal_strategy" : "linear",
             "cycle_momentum" : true,
             "base_momentum" : 0.85,
             "max_momentum" : 0.95,
             "div_factor" : 10,
-            "final_div_factor" : 1e4,
+            "final_div_factor" : 1,
             "last_epoch" : -1
         }   
     },
@@ -39,7 +40,7 @@
     "checkpoint_file": "checkpoint.pth.tar",
     "model_stats_file" : "stats.json",
 
-    "epochs" : 50,
+    "epochs" : 24,
 
     "num_workers" : 4,
     "pin_memory" : true,

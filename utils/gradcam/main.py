@@ -4,7 +4,7 @@ Gradcam implementation
 
 import torch
 import torch.nn.functional as F
-from .grad_misc import find_resnet_layer
+from .misc import find_resnet_layer
 
 class GradCam(object):
     """

@@ -6,6 +6,8 @@ from albumentations import (
     HorizontalFlip,
     Normalize,
     Resize,
+    PadIfNeeded,
+    RandomCrop,
     Cutout,
     Rotate,
     RandomResizedCrop,
@@ -41,11 +43,12 @@ class AlbumTransforms(object):
         self.std = np.array([0.2023, 0.1994, 0.2010])
 
         self.transforms_elist = [ 
-            RandomResizedCrop(height=32, width=32),
-            HorizontalFlip(p=0.5),
+            PadIfNeeded(min_height=36, min_width=36, value=self.mean*255.0), 
+            RandomCrop(height=32, width=32, p=1.0),
+            HorizontalFlip(p=1.0),
             # RandomBrightnessContrast(),
-			# Rotate(limit=10),
-			Cutout(num_holes=1, max_h_size=8, max_w_size=8, fill_value=self.mean*255.0, p=0.25),
+            # Rotate(limit=7),
+			Cutout(num_holes=1, max_h_size=8, max_w_size=8, fill_value=self.mean*255.0, p=0.75),
         ]
 
         self.transforms_test = [
