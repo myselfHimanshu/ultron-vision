@@ -270,7 +270,7 @@ class Cifar10IAgent(BaseAgent):
         Interpret images using Grad Cam
         :return: heatmap and mask numpy array
         """
-
+        self.model.to(torch.device('cpu'))
         img = image_data.unsqueeze_(0).clone()
         
         model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(32, 32))

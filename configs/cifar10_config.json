@@ -16,18 +16,18 @@
     "learning_rate" : 0.1,
     "momentum" : 0.9,
 
-    "l1_decay" : 0.0,
-    "l2_decay" : 0.01,
+    "l1_decay" : 1e-6,
+    "l2_decay" : 0.005,
 
     "use_scheduler" : true,
     "scheduler" : {
         "name" : "OneCycleLR",
         "kwargs" : {
             "epochs" : 24,
-            "pct_start" : 0.2,
+            "pct_start" : 0.208,
             "anneal_strategy" : "linear",
             "cycle_momentum" : true,
-            "base_momentum" : 0.80,
+            "base_momentum" : 0.85,
             "max_momentum" : 0.95,
             "div_factor" : 10,
             "final_div_factor" : 1,
