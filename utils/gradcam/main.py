@@ -27,8 +27,7 @@ class GradCam(object):
             self.activations['value'] = output
             return None
         
-        if 'resnet' in model_type.lower():
-            target_layer = find_resnet_layer(self.model_arch, layer_name)
+        target_layer = self.model_arch.layer_name
 
         target_layer.register_forward_hook(forward_hook)
         target_layer.register_backward_hook(backward_hook)

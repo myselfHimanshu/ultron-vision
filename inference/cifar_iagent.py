@@ -249,7 +249,7 @@ class Cifar10IAgent(BaseAgent):
                                             ), fontdict={'fontsize': 8, 'fontweight': 'bold'})
 
             if self.config["interpret_image"]:
-                heatmap, mask = self._interpret_images(images[i-1]["img"], self.id2classes[int(images[i-1]["target"].cpu().numpy())])
+                heatmap, mask = self._interpret_images(images[i-1]["img"], self.id2classes[int(images[i-1]["target"].cpu().numpy())], self.config['interpret_layer'])
                 plt.subplot(n, 3, j+1)
                 plt.axis('off')
                 plt.imshow(heatmap)
