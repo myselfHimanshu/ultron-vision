@@ -27,7 +27,7 @@ class GradCam(object):
             self.activations['value'] = output
             return None
         
-        target_layer = self.model_arch.layer_name
+        target_layer = self.model_arch._modules[layer_name]
 
         target_layer.register_forward_hook(forward_hook)
         target_layer.register_backward_hook(backward_hook)
