@@ -10,14 +10,16 @@ This repo contains deep learning vision models from scratch. This is work in pro
 
 ## BENCHMARKS 
 
-I'll be continously updating the scores.
+I'll be continously updating the scores. Experiment results can be found in `experiments` folder (for details see Folder Structure below).
 
-|Model|Data|Best Validation Accuracy|Total Epochs|Parameters|
-|--|--|--|--|--|
-|mnist_custom_model|MNIST|99.49%|20|7,808|
-|custom_atrous_model|CIFAR-10|85.91%|20|220,778|
-|resnet-18|CIFAR-10|93.44%|50|11,173,962|
-|resnet-18(albumentation)|CIFAR-10|92.17%|50|11,173,962|
+|Model|Data|Best Validation Accuracy|Total Epochs|Parameters|Experiment Result|
+|--|--|--|--|--|--|
+|mnist_custom_model|MNIST|99.49%|20|7,808|mnist_exp_01|
+|custom_atrous_model|CIFAR-10|85.91%|20|220,778|cifar10_exp_01_atrous|
+|resnet-18|CIFAR-10|93.44%|50|11,173,962|cifar10_exp_03_resnet|
+|resnet-18(album)|CIFAR-10|92.17%|50|11,173,962|cifar10_exp_04_resnet_album|
+|resnet-18(album/lr-finder)|CIFAR-10|89.80%|50|11,173,962|cifar10_exp_06_resnet_album_findlr|
+
 
 ## HARDWARE CONFIGURATION
 
@@ -37,8 +39,10 @@ I'll be continously updating the scores.
 - [x] training
 - [x] validation
 - [x] predict single image
-- [x] interpret prediction using gradcam on single image
-- [x] logger
+- [x] learning rate finder with reduce-lr-on-plateau
+- [ ] cyclic-lr
+- [x] interpret misclassified images using gradcam
+- [x] logging
 - [x] save model checkpoint
 - [x] load model checkpoint
 - [ ] custom dataset implementation
@@ -69,7 +73,7 @@ $ deactivate
 
 ```java
 .
-├── agents // define training and testing
+├── agents // define training and validation
 │   ├── base.py
 │   ├── mnist_agent.py
 │   └── cifar10_agent.py
@@ -81,15 +85,20 @@ $ deactivate
 ├── data // raw, processed data + test images
 │
 ├── experiments // store checkpoints, logs and outputs for experiment
-│   └── cifar_10_exp
-│       ├── logs // train validation score log
-│       └── stats // plots, visualized images
+│   └── cifar10_exp*
+│       ├── logs // agent logs
+│       ├── stats // training validation scores, plots and images visualization data
+│       └── summaries // experiment config file used and network architecture
 │
 ├── infdata // initialize and fetch dataset
 │   ├── dataset // defining custom dataset class
 │   ├── transformation // custom transformation class
 │   └── loader // data loader
 │       └── cifar10_dl.py
+│
+├── inference // define inference agent
+│   ├── base.py
+│   └── cifar_iagent.py
 │
 ├── logger.py // define the logger
 ├── losses // custom network losses

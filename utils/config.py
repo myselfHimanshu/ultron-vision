@@ -2,6 +2,7 @@ import json
 from pprint import pprint
 import os
 import logging
+import json
 
 from logging import Formatter
 from logging.handlers import RotatingFileHandler
@@ -94,6 +95,9 @@ def process_config(json_file):
     setup_logging(config["log_dir"])
 
     logging.getLogger().info("Hi, This is Ultron. Nice to meet you!!!")
+    logging.getLogger().info("Saving Configuration")
+    with open(os.path.join(config["summary_dir"],"config.txt"), 'w') as f:
+        json.dump(config, f, indent=4)
     logging.getLogger().info("Configurations are successfully processed and dirs are created.")
     logging.getLogger().info("The pipeline of the project will begin now.")
 

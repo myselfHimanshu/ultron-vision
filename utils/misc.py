@@ -1,6 +1,54 @@
 import logging
 import torch
 
+import numpy as np
+import matplotlib.pyplot as plt
+import json
+
+def imshow(img, std, mean, clip=False):
+    """
+    plot image
+    :param img: Image tensor
+    :param std: global standard deviation
+    :param mean: global mean
+    :retun:
+    """
+
+    image = img.detach().cpu().numpy()
+    image = image.transpose((1, 2, 0))
+    std = np.array(std)
+    mean = np.array(mean)
+    image = std*image + mean
+    if clip:
+        image = np.clip(image, 0, 1)
+    plt.imshow((image*255).astype(np.uint8))
+
+def visualize_data(images, std, mean, n=30, visualize_inline=False, target=None, classes=None, path=None):
+    """
+    Visualize data from train loader
+
+    :param images: list of images
+    :param std: global standard deviation
+    :param mean: global mean
+    :param target: labels for respective images
+    :param classes: labels to classes mapping
+    :param n: top-n images to show
+    :return:
+    """
+    figure = plt.figure(figsize=(10,10))
+
+    for i in range(1, n+1):
+        plt.subplot(5,n//5,i)
+        plt.axis('off')
+        imshow(images[i-1], std, mean)
+        plt.title("Actual : {}".format(classes[target[i-1]]))
+
+    plt.tight_layout()
+    if visualize_inline:
+        plt.show()
+    if path!=None:
+        figure.savefig(path)
+
 def regularize_loss(model, loss, decay, norm_value):
     """
     L1/L2 Regularization

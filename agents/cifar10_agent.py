@@ -5,38 +5,33 @@ Main Agent for CIFAR10
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.optim.lr_scheduler import StepLR
+from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau, OneCycleLR
 import torch.nn.functional as F
-from torchvision.utils import make_grid, save_image
-from torchvision import transforms
 
 from tqdm import tqdm
-import PIL
 
 from agents.base import BaseAgent
-# from networks.cifar10_atrous_net import Cifar10AtrousNet as Net
-from networks.resnet_net import ResNet18 as Net
+from networks.threelayer_net import main as Net
 from infdata.loader.cifar10_dl import DataLoader as dl
 
 # utils function
 from utils.misc import *
-from utils.gradcam import GradCam
-from utils.grad_misc import visualize_cam
+from utils.lr_finder.lrfinder import LRFinder
 
 from torchsummary import summary
 import json
-import matplotlib.pyplot as plt
+import os
 import numpy as np
 
-import os
-curr_dir = os.path.dirname(__file__)
 
 class Cifar10Agent(BaseAgent):
 
     def __init__(self, config):
         super().__init__(config)
+        self.logger.info("TRAINING MODE ACTIVATED!!!")
         self.config = config
         self.use_cuda = self.config['use_cuda']
+        self.visualize_inline = self.config['visualize_inline']
 
         # create network instance
         self.model = Net()
@@ -46,33 +41,40 @@ class Cifar10Agent(BaseAgent):
 
         # intitalize classes
         self.classes = self.dataloader.classes
-        self.testclasses = self.dataloader.testclasses
         self.id2classes = {i:y for i,y in enumerate(self.classes)}
-        self.id2tclasses = {i:y for i,y in enumerate(self.testclasses)}
 
         # define loss
         self.loss = nn.CrossEntropyLoss()
 
-        # define optimizer
-        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
+        #find optim lr and set optimizer
+        self._find_optim_lr()
 
         # intialize weight decay
         self.l1_decay = self.config['l1_decay']
         self.l2_decay = self.config['l2_decay']
 
         # initialize step lr
-        self.use_step_lr = self.config['use_step_lr']
+        self.use_scheduler = self.config['use_scheduler']
 
-        if self.use_step_lr:
-            self.step_size = self.config['step_size']
-            self.step_gamma = self.config['step_gamma']
-            self.scheduler = StepLR(self.optimizer, step_size=self.step_size, gamma=self.step_gamma)
-
+        if self.use_scheduler:
+            self.scheduler = self.config["scheduler"]["name"]
+            if self.scheduler=="OneCycleLR":
+                self.scheduler = OneCycleLR(self.optimizer, self.config['learning_rate'], 
+                                            steps_per_epoch = len(self.dataloader.train_loader), 
+                                            **self.config["scheduler"]["kwargs"]
+                                            )
+            else:
+                self.logger.info("WARNING : OneCycleLr Scheduler was not setup. Re-initializing use_scheduler to False")
+                self.use_scheduler = False
+            
         # initialize Counter
         self.current_epoch = 0
         self.current_iteration = 0
         self.best_metric = 0
         self.best_epoch = 0
+
+        # intitalize lr values list
+        self.lr_list = []
 
         # initialize loss and accuray arrays
         self.train_losses = []
@@ -98,22 +100,19 @@ class Cifar10Agent(BaseAgent):
             self.model = self.model.to(self.device)
             self.loss = self.loss.to(self.device)
             
-            self.logger.info("Program will RUN on ****GPU-CUDA****\n")
+            self.logger.info("Program will RUN on ****GPU-CUDA****")
             print_cuda_statistics()
         else:
             torch.manual_seed(self.manual_seed)
             self.device = torch.device('cpu')
-            self.logger.info("Program will RUN on ****CPU****\n")
+            self.logger.info("Program will RUN on ****CPU****")
 
         # summary of network
         print("****************************")
         print("**********NETWORK SUMMARY**********")
         summary(self.model, input_size=tuple(self.config['input_size']))
+        print(self.model, file=open(os.path.join(self.config["summary_dir"],"model_arch.txt"), "w"))
         print("****************************")
-
-
-        # if self.config["load_checkpoint"]:
-        #     self.load_checkpoint(self.config['checkpoint_file'])
 
         self.stats_file_name = os.path.join(self.config["stats_dir"], self.config["model_stats_file"])
 
@@ -153,6 +152,42 @@ class Cifar10Agent(BaseAgent):
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         torch.save(checkpoint, file_name)
 
+    def _find_optim_lr(self):
+        """
+        find optim learning rate to train network
+        :return:
+        """
+        self.logger.info("FINDING OPTIM LEARNING RATE...")
+        self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
+        lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
+        num_iter = (len(self.dataloader.train_loader.dataset)//self.config["batch_size"])*5
+        lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=num_iter)
+
+        if self.visualize_inline:
+            lr_finder.plot()
+
+        history = lr_finder.history
+        optim_lr = history["lr"][np.argmin(history["loss"])] 
+        self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
+        lr_finder.reset()
+        
+        # set optimizer to optim learning rate
+        self.config["learning_rate"] = round(optim_lr,3)
+        self.logger.info(f"Setting optimizer to optim learning rate : {self.config['learning_rate']}")
+        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config["learning_rate"], momentum=self.config['momentum'])
+
+    def visualize_set(self):
+        """
+        Visualize Train set
+        :return:
+        """
+        dataiter = iter(self.dataloader.train_loader)
+        images, labels = dataiter.next()
+        path = os.path.join(self.config["stats_dir"], 'training_images.png')
+
+        visualize_data(images, self.config['std'], self.config['mean'], 30, self.visualize_inline, labels, self.classes, path=path)
+
+
     def run(self):
         """
         The main operator
@@ -169,11 +204,13 @@ class Cifar10Agent(BaseAgent):
         :return:
         """
         for epoch in range(1, self.config['epochs']+1):
+            for param_group in self.optimizer.param_groups:
+                self.lr_list.append(param_group['lr'])
+                self.logger.info(f"Current lr value = {param_group['lr']}")
+            
             self.train_one_epoch()
-            if self.use_step_lr:
-                self.scheduler.step()
             self.validate()
-
+            
             self.current_epoch += 1
 
     def train_one_epoch(self):
@@ -200,6 +237,8 @@ class Cifar10Agent(BaseAgent):
             
             loss.backward()
             self.optimizer.step()
+            if self.use_scheduler:
+                self.scheduler.step()
 
             _, preds = torch.max(output.data, 1)
 
@@ -268,130 +307,11 @@ class Cifar10Agent(BaseAgent):
         self.logger.info("Please wait while finalizing the operations.. Thank you")
         
         result = {"train_loss" : self.train_losses, "train_acc" : self.train_acc,
-                    "valid_loss" : self.valid_losses, "valid_acc" : self.valid_acc}
+                    "valid_loss" : self.valid_losses, "valid_acc" : self.valid_acc,
+                    "lr_list" : self.lr_list}
         
         with open(self.stats_file_name, "w") as f:
             json.dump(result, f)
-
-    def plot_accuracy_graph(self):
-        """
-        Plot accuracy graph for train and valid dataset
-        :return:
-        """
-        with open(self.stats_file_name) as f:
-            data = json.load(f)
-
-        train_acc = data["train_acc"]
-        valid_acc = data["valid_acc"]
-
-        epoch_count = range(1, self.config["epochs"]+1)
-        fig = plt.figure(figsize=(10,10))
-        
-        plt.plot(epoch_count, train_acc)
-        plt.plot(epoch_count, valid_acc)
-        plt.legend(["train_acc","valid_acc"])
-        plt.xlabel('Epoch')
-        plt.ylabel("Accuracy")
-        # plt.show();
-
-        fig.savefig(os.path.join(self.config["stats_dir"], 'accuracy.png'))
-
-    def plot_loss_graph(self):
-        """
-        Plot loss graph for train and valid dataset
-        :return:
-        """
-        with open(self.stats_file_name) as f:
-            data = json.load(f)
-
-        train_loss = data["train_loss"]
-        valid_loss = data["valid_loss"]
-
-        epoch_count = range(1, self.config["epochs"]+1)
-        fig = plt.figure(figsize=(10,10))
-        
-        plt.plot(epoch_count, train_loss)
-        plt.plot(epoch_count, valid_loss)
-        plt.legend(["train_loss","valid_loss"])
-        plt.xlabel('Epoch')
-        plt.ylabel("Loss")
-        # plt.show();
-
-        fig.savefig(os.path.join(self.config["stats_dir"], 'loss.png'))
-
-    def show_misclassified_images(self, n=25):
-        """
-        Show misclassified images
-        :return:
-        """
-        fig = plt.figure(figsize=(10,10))
-
-        images = self.misclassified[str(self.best_epoch)][:n]
-        for i in range(1, n+1):
-            plt.subplot(5,5,i)
-            plt.axis('off')
-            plt.imshow(images[i-1]["img"].cpu().numpy()[0])
-            plt.title("Predicted : {} \nActual : {}".format(self.id2classes[int(images[i-1]["pred"].cpu().numpy()[0])], 
-                                                self.id2classes[int(images[i-1]["target"].cpu().numpy())]
-                                            ))
-
-        plt.tight_layout()
-        fig.savefig(os.path.join(self.config["stats_dir"], 'misclassified_imgs.png'))
-
-    def predict(self):
-        """
-        predict image class
-        :param image_name: image file name
-        :return (str): class name
-        """
-        try:
-            self.load_checkpoint(self.config['checkpoint_file'])
-            self.model.to(self.device)
-            self.model.eval()
-            predictions = []
-            trues = []
-
-            for data, target in self.dataloader.test_loader:
-                data = data.to(self.device)
-                output = self.model(data)
-                predictions.append(int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0]))
-                trues.append(int(target.cpu().numpy()[0]))
-
-                self._interpret_image(data, self.id2tclasses[int(target.cpu().numpy()[0])])
-                
-            self.logger.info("Test Image trueValues : " + str([self.id2tclasses[true] for true in trues]))    
-            self.logger.info("Test Image Prediction : " + str([self.id2classes[pred] for pred in predictions]))
-            self.logger.info("GRADCAM images saved successfully.")
-        except Exception as e:
-            self.logger.info("Test image prediction FAILED!!!")
-            self.logger.info("GradCam visualization FAILED!!!")
-            self.logger.info(e)
-
-    def _interpret_image(self, image_data, image_label):
-        """
-        Grad Cam for interpreting and prediting class of image
-        """
-        
-        model_dict = dict(type='resnet', arch=self.model, layer_name='layer4', input_size=(32, 32))
-        gradcam = GradCam(model_dict)
-
-        std = np.array(self.config['std'])
-        mean = np.array(self.config['mean'])
-
-        mask, _ = gradcam(image_data)
-        
-        denormalize = transforms.Normalize((-1 * mean / std), (1.0 / std))
-        res = image_data.squeeze(0)
-        res = denormalize(res)
-
-        heatmap, result = visualize_cam(mask, res.unsqueeze(0))
-
-        image = [torch.stack([res.cpu(), heatmap, result], 0)]
-        image = make_grid(torch.cat(image, 0), nrow=1)
-
-        grad_output = os.path.join(self.config["stats_dir"], f'grad_output_{image_label}.png')
-        save_image(image, grad_output)
-
 
         
         
