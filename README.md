@@ -127,6 +127,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 - Data Augmentation using Albumentations
 - DNN Interpretability, Class Activation Maps using grad-cam
 - Achieve an accuracy of greater than 87% on CIFAR-10 dataset
+    - architecture ResNet18
     - Move transformations to Albumentations. 
     - Implement GradCam function. 
 - Result
@@ -142,6 +143,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 
 - Advanced Concepts : Optimizers, LR Schedules, LR Finder & Loss Functions
 - Achieve an accuracy of greater than 88% on CIFAR-10 dataset
+    - architecture ResNet18
     - Add CutOut augmentation
     - Implement LR Finder (for SGD, not for ADAM)
     - Implement ReduceLROnPlateau
@@ -159,7 +161,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 - Super Convergence
 - Cyclic Learning Rates, One Cycle Policy
 - Achieve an accuracy of greater than 90% on CIFAR-10 dataset
-    - 3Layer-Network
+    - 3Layer-DenseNet
     - Implement One Cycle Policy
 - Result
     - parameters : 6,573,130
@@ -197,6 +199,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 - [x] custom configuration file for training model
 - [ ] custom loss function
 - [ ] using [weights and biases](https://www.wandb.com/) for logging experiments
+- [ ] torchstat or torchprof, layer-by-layer profiling of Pytorch models
 - [ ] Deployment using Flask, EC2 or AWS-Lambda
 
 
