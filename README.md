@@ -17,7 +17,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 > Codes are available as gist as jupyter notebooks and blogs are for first 3 categories, rest are WIP. Models in these jupter notebooks were trained on Google Colab.
 
 <details>
-    <summary>29th March 2020</summary>
+    <summary>Week-1</summary>
 
 - Machine Learning Intuition, Background & Basics
 - Python 101 for Machine Learning
@@ -26,7 +26,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>5th April 2020</summary>
+    <summary>Week-2</summary>
 
 - Convolutions, Pooling Operations & Channels
 - Pytorch 101 for Vision Machine Learning
@@ -35,7 +35,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>12th April 2020</summary>
+    <summary>Week-3</summary>
 
 - Kernels, Activations and Layers
 - [blog](https://myselfhimanshu.github.io/posts/cnn_03/)
@@ -43,7 +43,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>19th April 2020</summary>
+    <summary>Week-4</summary>
 
 - Architectural Basics. Finding suitable model architecture for the objective
 - MNIST model training 
@@ -55,7 +55,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>26th April 2020</summary>
+    <summary>Week-5</summary>
 
 - Receptive Field : core fundamental concept
 - MNIST model training
@@ -67,7 +67,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>3rd May 2020</summary>
+    <summary>Week-6</summary>
 
 - BN, Kernels & Regularization
 - Mathematics behind Batch Normalization, Kernel Initialization and Regularization
@@ -84,7 +84,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>10th May 2020</summary>
+    <summary>Week-7</summary>
 
 - Advanced Convolution
 - Depthwise, Pixel Shuffle, Dilated, Transpose Convolutions
@@ -105,7 +105,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>17th May 2020</summary>
+    <summary>Week-8</summary>
 
 - Receptive Fields and Network Architectures : Resnet Architecture
 - Achieve an accuracy of greater than 85% on CIFAR-10 dataset
@@ -122,7 +122,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 > From here on, the codes are available in this repo. Models are trained on below given hardware configurations.
 
 <details>
-    <summary>31st May 2020</summary>
+    <summary>Week-9</summary>
 
 - Data Augmentation using Albumentations
 - DNN Interpretability, Class Activation Maps using grad-cam
@@ -139,7 +139,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>7th June 2020</summary>
+    <summary>Week-10</summary>
 
 - Advanced Concepts : Optimizers, LR Schedules, LR Finder & Loss Functions
 - Achieve an accuracy of greater than 88% on CIFAR-10 dataset
@@ -156,7 +156,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 </details>
 
 <details>
-    <summary>14th June 2020</summary>
+    <summary>Week-11</summary>
 
 - Super Convergence
 - Cyclic Learning Rates, One Cycle Policy
