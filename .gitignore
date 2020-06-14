@@ -132,7 +132,7 @@ dmypy.json
 myenv/
 checkpoints/
 out/
-data/cifar*
+data/
 .DS_Store
 
 
