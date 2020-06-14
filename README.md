@@ -119,7 +119,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 
 </details>
 
-> From here on, the codes are available in this repo. Codes are trained on below given hardware configurations.
+> From here on, the codes are available in this repo. Models are trained on below given hardware configurations.
 
 <details>
     <summary>31st May 2020</summary>
