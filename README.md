@@ -8,7 +8,7 @@
 
 ## WHAT IS THIS REPO ABOUT? 
 
-Structured approach to learning and implementing the fundamentals of State of the art vision models. The models from built from scratch. 
+Structured approach to learning and implementing the fundamentals of State of the art vision models. The models are built from scratch. 
 
 Follow below for updates on how it has been built over time. (This repo is work in progress!!!)
 
