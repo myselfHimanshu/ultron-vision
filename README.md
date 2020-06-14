@@ -6,13 +6,13 @@
 
 </p>
 
-## What is this repo about ? 
+## WHAT IS THIS REPO ABOUT? 
 
 Structured approach to learning and implementing the fundamentals of State of the art vision models. The models from built from scratch. 
 
 Follow below for updates on how it has been built over time. (This repo is work in progress!!!)
 
-## Updates and Results
+## UPDATES AND RESULTS
 
 > Codes are available as gist as jupyter notebooks and blogs are for first 3 categories, rest are WIP. Models in these jupter notebooks were trained on Google Colab.
 
@@ -179,7 +179,7 @@ Follow below for updates on how it has been built over time. (This repo is work 
 - [Genesis Cloud](https://gnsiscld.co/496pv5j) offers GPU cloud computing at unbeatable cost efficiency.
 
 
-## FUNCTIONS IMPLEMENTED
+## MODULES IMPLEMENTED
 
 - [x] pytorch-transformation
 - [x] [albumentation-transformation](https://albumentations.readthedocs.io/en/latest/index.html)
@@ -197,7 +197,27 @@ Follow below for updates on how it has been built over time. (This repo is work 
 - [x] custom configuration file for training model
 - [ ] custom loss function
 - [ ] using [weights and biases](https://www.wandb.com/) for logging experiments
+- [ ] Deployment using Flask, EC2 or AWS-Lambda
 
+
+## USE-CASES MODELS IMPLEMENTED FOR
+
+- [x] Image Classification
+- [ ] Object Detection
+- [ ] Object Segmentation
+- [ ] GANs
+
+## NETWORK ARCHITECTURES IMPLEMENTED
+
+- [x] Custom Networks
+- [x] ResNet
+- [x] DenseNet
+
+## DATASETS USED
+
+- [x] MNIST
+- [x] CIFAR10
+- [ ] TinyImageNet
 
 ## INSTALLATION
 
