@@ -132,8 +132,8 @@ dmypy.json
 myenv/
 checkpoints/
 out/
-data/
 .DS_Store
+./data/
 
 
 
