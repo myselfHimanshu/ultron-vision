@@ -133,7 +133,7 @@ myenv/
 checkpoints/
 out/
 .DS_Store
-./data/
+data/
 
 
 
