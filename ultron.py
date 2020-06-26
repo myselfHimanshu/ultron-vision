@@ -24,7 +24,7 @@ def main():
     # agent.visualize_set()
     
     # # train model
-    # agent.run()
+    agent.run()
     # agent.finalize()
     
     # # Create inference agent and pass the configuration to it and interpret

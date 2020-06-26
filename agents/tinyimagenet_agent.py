@@ -226,9 +226,11 @@ class TinyImageNetAgent(BaseAgent):
 
         pbar = tqdm(self.dataloader.train_loader)
         for batch_idx, (data, target) in enumerate(pbar):
+            print(data.shape, target.shape)
             data, target = data.to(self.device), target.to(self.device)
             self.optimizer.zero_grad()
             output = self.model(data)
+            print(output.shape)
             loss = self.loss(output, target)
             
             if self.l1_decay>0.0:
