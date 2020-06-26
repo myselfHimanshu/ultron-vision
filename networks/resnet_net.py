@@ -87,25 +87,12 @@ class ResNet(nn.Module):
     def forward(self, x):
         out = F.relu(self.bn1(self.conv1(x)))
         out = self.layer1(out)
-        print(out.shape)
         out = self.layer2(out)
-        print(out.shape)
-        
         out = self.layer3(out)
-        print(out.shape)
-        
         out = self.layer4(out)
-        print(out.shape)
-        
         out = F.adaptive_avg_pool2d(out, 1)
-        print(out.shape)
-        
         out = out.view(out.size(0), -1)
-        print(out.shape)
-        
         out = self.linear(out)
-        print(out.shape)
-        
         return F.log_softmax(out, dim=-1)
 
 

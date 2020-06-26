@@ -34,7 +34,7 @@ class TinyImageNetAgent(BaseAgent):
         self.visualize_inline = self.config['visualize_inline']
 
         # create network instance
-        self.model = Net(200)
+        self.model = Net(self.config["num_classes"])
 
         # define data loader
         self.dataloader = dl(config=self.config)
@@ -125,7 +125,7 @@ class TinyImageNetAgent(BaseAgent):
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         checkpoint = torch.load(file_name, map_location='cpu')
 
-        self.model = Net(200)
+        self.model = Net(self.config["num_classes"])
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
         self.model.load_state_dict(checkpoint['state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer'])
@@ -157,23 +157,22 @@ class TinyImageNetAgent(BaseAgent):
         find optim learning rate to train network
         :return:
         """
-        # self.logger.info("FINDING OPTIM LEARNING RATE...")
-        # self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
-        # lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
-        # num_iter = (len(self.dataloader.train_loader.dataset)//self.config["batch_size"])*5
-        # lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=num_iter)
+        self.logger.info("FINDING OPTIM LEARNING RATE...")
+        self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
+        lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
+        num_iter = (len(self.dataloader.train_loader.dataset)//self.config["batch_size"])*5
+        lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=num_iter)
 
-        # if self.visualize_inline:
-        #     lr_finder.plot()
+        if self.visualize_inline:
+            lr_finder.plot()
 
-        # history = lr_finder.history
-        # optim_lr = history["lr"][np.argmin(history["loss"])] 
-        # self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
-        # lr_finder.reset()
+        history = lr_finder.history
+        optim_lr = history["lr"][np.argmin(history["loss"])] 
+        self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
+        lr_finder.reset()
         
         # set optimizer to optim learning rate
-        # self.config["learning_rate"] = round(optim_lr,3)
-        self.config["learning_rate"] = 0.007
+        self.config["learning_rate"] = round(optim_lr,3)
         self.logger.info(f"Setting optimizer to optim learning rate : {self.config['learning_rate']}")
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config["learning_rate"], momentum=self.config['momentum'])
 
@@ -226,11 +225,9 @@ class TinyImageNetAgent(BaseAgent):
 
         pbar = tqdm(self.dataloader.train_loader)
         for batch_idx, (data, target) in enumerate(pbar):
-            print(data.shape, target.shape)
             data, target = data.to(self.device), target.to(self.device)
             self.optimizer.zero_grad()
             output = self.model(data)
-            print(output.shape)
             loss = self.loss(output, target)
             
             if self.l1_decay>0.0:
