@@ -160,6 +160,7 @@ class TinyImageNetAgent(BaseAgent):
         self.logger.info("FINDING OPTIM LEARNING RATE...")
         self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
         lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
+        print(len(self.dataloader.train_loader.dataset))
         num_iter = (len(self.dataloader.train_loader.dataset)//self.config["batch_size"])*5
         lr_finder.range_test(self.dataloader.train_loader, end_lr=100, num_iter=num_iter)
 
