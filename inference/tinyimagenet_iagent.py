@@ -45,8 +45,8 @@ class TinyImageNetIAgent(BaseAgent):
         self.classes = list({k: v for k, v in sorted(self.classes_dict.items(), key=lambda item: item[1])}.keys())
         self.id2classes = {y:i for i,y in self.classes_dict.items()}
         
-        self.testclasses = self.dataloader.testclasses
-        self.id2tclasses = {i:y for i,y in enumerate(self.testclasses)}
+        # self.testclasses = self.dataloader.testclasses
+        # self.id2tclasses = {i:y for i,y in enumerate(self.testclasses)}
 
         # define optimizer
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
@@ -107,29 +107,29 @@ class TinyImageNetIAgent(BaseAgent):
         for class_name, acc_score in class_acc:
             self.logger.info(f"Accuracy of class : {class_name}\t\t{acc_score:4f}")
 
-    def predict(self):
-        """
-        predict image class
-        :param image_name: image file name
-        :return (str): class name
-        """
-        try:
-            self.model.to(self.device)
-            self.model.eval()
-            predictions = []
-            trues = []
+    # def predict(self):
+    #     """
+    #     predict image class
+    #     :param image_name: image file name
+    #     :return (str): class name
+    #     """
+    #     try:
+    #         self.model.to(self.device)
+    #         self.model.eval()
+    #         predictions = []
+    #         trues = []
 
-            for data, target in self.dataloader.test_loader:
-                data = data.to(self.device)
-                output = self.model(data)
-                predictions.append(int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0]))
-                trues.append(int(target.cpu().numpy()[0]))
+    #         for data, target in self.dataloader.test_loader:
+    #             data = data.to(self.device)
+    #             output = self.model(data)
+    #             predictions.append(int(output.argmax(dim=1, keepdim=True).cpu().numpy()[0][0]))
+    #             trues.append(int(target.cpu().numpy()[0]))
                 
-            self.logger.info("Test Image trueValues : " + str([self.id2tclasses[true] for true in trues]))    
-            self.logger.info("Test Image Prediction : " + str([self.id2classes[pred] for pred in predictions]))
-        except Exception as e:
-            self.logger.info("Test image prediction FAILED!!!")
-            self.logger.info(e)
+    #         self.logger.info("Test Image trueValues : " + str([self.id2tclasses[true] for true in trues]))    
+    #         self.logger.info("Test Image Prediction : " + str([self.id2classes[pred] for pred in predictions]))
+    #     except Exception as e:
+    #         self.logger.info("Test image prediction FAILED!!!")
+    #         self.logger.info(e)
 
 
     def plot_graphs(self):
