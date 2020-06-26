@@ -10,6 +10,7 @@ import glob
 import zipfile
 import pandas as pd
 import numpy as np
+import cv2
 
 from infdata.transformation.tinyimagenet_tf import AlbumTransforms
 from torch.utils.data import Dataset
