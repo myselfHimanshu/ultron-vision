@@ -105,7 +105,8 @@ class TinyImageNetDataset(Dataset):
         self.root_dir = root_dir
         self.df = pd.read_csv(os.path.join(self.root_dir, csv_file))
         print(f"Dataframe Size : {self.df.shape[0]}")
-        self.target = torch.tensor(np.asarray(self.df["target"].values))
+        # self.target = torch.tensor(np.asarray(self.df["target"].values))
+        self.target = np.asarray(self.df["target"].values)
         self.transform = transform
         
     def __len__(self):
