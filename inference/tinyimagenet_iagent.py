@@ -60,6 +60,9 @@ class TinyImageNetIAgent(BaseAgent):
             torch.cuda.manual_seed(self.manual_seed)
             self.device = torch.device('cuda')
             torch.cuda.set_device(self.config['gpu_device'])
+            # if torch.cuda.device_count() > 1:
+            #     self.model = nn.DataParallel(self.model)
+            self.model = self.model.to(self.device)
             self.logger.info("Program will RUN on ****GPU-CUDA****")
         else:
             torch.manual_seed(self.manual_seed)
@@ -77,7 +80,7 @@ class TinyImageNetIAgent(BaseAgent):
         :return:
         """
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
-        checkpoint = torch.load(file_name, map_location='cpu')
+        checkpoint = torch.load(file_name)#, map_location='cpu')
 
         self.model.load_state_dict(checkpoint['state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer'])
@@ -172,7 +175,7 @@ class TinyImageNetIAgent(BaseAgent):
         train_acc = data["train_acc"]
         valid_acc = data["valid_acc"]
 
-        epoch_count = range(1, self.config["epochs"]+1)
+        epoch_count = range(1, len(train_acc)+1)
         fig = plt.figure(figsize=(5,5))
         
         plt.plot(epoch_count, train_acc)
@@ -197,7 +200,7 @@ class TinyImageNetIAgent(BaseAgent):
         train_loss = data["train_loss"]
         valid_loss = data["valid_loss"]
 
-        epoch_count = range(1, self.config["epochs"]+1)
+        epoch_count = range(1, len(train_loss)+1)
         fig = plt.figure(figsize=(5,5))
         
         plt.plot(epoch_count, train_loss)
@@ -221,7 +224,7 @@ class TinyImageNetIAgent(BaseAgent):
 
         lr_values = data["lr_list"]
         
-        epoch_count = range(1, self.config["epochs"]+1)
+        epoch_count = range(1, len(lr_values)+1)
         fig = plt.figure(figsize=(5,5))
         
         plt.plot(epoch_count, lr_values)
@@ -273,7 +276,7 @@ class TinyImageNetIAgent(BaseAgent):
         Interpret images using Grad Cam
         :return: heatmap and mask numpy array
         """
-        self.model.to(torch.device('cpu'))
+        # self.model.to(torch.device('cpu'))
         img = image_data.unsqueeze_(0).clone()
         
         model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(64, 64))

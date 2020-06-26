@@ -18,20 +18,20 @@
     "momentum" : 0.9,
 
     "l1_decay" : 1e-6,
-    "l2_decay" : 0.0005,
+    "l2_decay" : 0.005,
 
     "use_scheduler" : true,
     "scheduler" : {
         "name" : "OneCycleLR",
         "kwargs" : {
-            "epochs" : 24,
-            "pct_start" : 0.208,
+            "epochs" : 50,
+            "pct_start" : 0.3,
             "anneal_strategy" : "linear",
             "cycle_momentum" : true,
             "base_momentum" : 0.85,
             "max_momentum" : 0.95,
             "div_factor" : 10,
-            "final_div_factor" : 1,
+            "final_div_factor" : 100,
             "last_epoch" : -1
         }   
     },
@@ -41,7 +41,7 @@
     "checkpoint_file": "checkpoint.pth.tar",
     "model_stats_file" : "stats.json",
 
-    "epochs" : 24,
+    "epochs" : 50,
 
     "num_workers" : 4,
     "pin_memory" : true,

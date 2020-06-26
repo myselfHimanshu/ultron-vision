@@ -146,7 +146,7 @@ class TinyImageNetAgent(BaseAgent):
             'epoch' : self.current_epoch,
             'valid_accuracy' : self.max_accuracy,
             'misclassified_data' : self.misclassified,
-            'state_dict' : self.model.state_dict(),
+            'state_dict' : self.model.module.state_dict(),
             'optimizer' : self.optimizer.state_dict(),
             'is_best' : is_best
         }
@@ -175,7 +175,7 @@ class TinyImageNetAgent(BaseAgent):
         
         # # set optimizer to optim learning rate
         # self.config["learning_rate"] = round(optim_lr,3)
-        self.config["learning_rate"] = 0.01
+        self.config["learning_rate"] = 0.008
         self.logger.info(f"Setting optimizer to optim learning rate : {self.config['learning_rate']}")
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config["learning_rate"], momentum=self.config['momentum'])
 
@@ -266,6 +266,7 @@ class TinyImageNetAgent(BaseAgent):
 
         running_loss = 0.0
         running_correct = 0
+        self.misclassified = []
 
         with torch.no_grad():
             for data, target in self.dataloader.valid_loader:
@@ -292,7 +293,6 @@ class TinyImageNetAgent(BaseAgent):
             self.best_epoch = self.current_epoch
             try:
                 self.save_checkpoint()
-                self.misclassified = []
                 self.logger.info("Saved Best Model")
             except Exception as e:
                 self.logger.info(e)
