@@ -9,7 +9,7 @@ from torchvision.utils import make_grid
 from torchsummary import summary
 
 from agents.base import BaseAgent
-from networks.threelayer_net import main as Net
+from networks.resnet_net import ResNet18 as Net
 from infdata.loader.tinyimagenet_dl import DataLoader as dl
 
 # utils function
