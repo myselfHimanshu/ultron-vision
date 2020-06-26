@@ -34,7 +34,7 @@ class TinyImageNetIAgent(BaseAgent):
         self.visualize_inline = self.config['visualize_inline']
 
         # create network instance
-        self.model = Net()
+        self.model = Net(200)
 
         # define data loader
         self.dataloader = dl(config=self.config)

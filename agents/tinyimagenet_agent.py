@@ -34,7 +34,7 @@ class TinyImageNetAgent(BaseAgent):
         self.visualize_inline = self.config['visualize_inline']
 
         # create network instance
-        self.model = Net()
+        self.model = Net(200)
 
         # define data loader
         self.dataloader = dl(config=self.config)
@@ -125,7 +125,7 @@ class TinyImageNetAgent(BaseAgent):
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         checkpoint = torch.load(file_name, map_location='cpu')
 
-        self.model = Net()
+        self.model = Net(200)
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config['learning_rate'], momentum=self.config['momentum'])
         self.model.load_state_dict(checkpoint['state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer'])
