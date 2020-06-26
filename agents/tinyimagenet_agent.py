@@ -97,6 +97,8 @@ class TinyImageNetAgent(BaseAgent):
             torch.cuda.manual_seed(self.manual_seed)
             self.device = torch.device('cuda')
             torch.cuda.set_device(self.config['gpu_device'])
+            if torch.cuda.device_count() > 1:
+                self.model = nn.DataParallel(self.model)
             self.model = self.model.to(self.device)
             self.loss = self.loss.to(self.device)
             
