@@ -1,0 +1,57 @@
+[INFO] - 2020-06-26 19:31:21,814 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 19:31:21,815 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 19:31:21,815 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 19:31:21,816 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 19:38:24,240 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 19:38:24,240 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 19:38:24,241 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 19:38:24,241 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 19:38:24,241 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:02:13,620 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:02:13,620 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:02:13,621 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:02:13,621 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:02:13,621 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:03:40,458 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:03:40,458 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:03:40,459 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:03:40,459 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:03:40,459 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:04:39,558 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:04:39,558 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:04:39,559 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:04:39,559 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:04:39,559 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:08:48,228 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:08:48,229 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:08:48,229 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:08:48,229 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:08:48,230 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:10:15,693 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:10:15,693 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:10:15,698 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:10:15,698 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:10:15,699 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:12:03,050 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:12:03,050 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:12:03,051 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:12:03,051 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:12:03,051 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:14:14,374 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:14:14,375 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:14:14,375 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:14:14,375 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:14:14,376 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:14:18,296 - Agent - : FINDING OPTIM LEARNING RATE... in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:160
+[INFO] - 2020-06-26 20:16:39,689 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:16:39,689 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:16:39,690 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:16:39,690 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:16:39,690 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:16:43,412 - Agent - : FINDING OPTIM LEARNING RATE... in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:160
+[INFO] - 2020-06-26 20:17:49,138 - root - : Hi, This is Ultron. Nice to meet you!!! in /Users/legend/Work/Github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-26 20:17:49,138 - root - : Saving Configuration in /Users/legend/Work/Github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-26 20:17:49,139 - root - : Configurations are successfully processed and dirs are created. in /Users/legend/Work/Github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-26 20:17:49,139 - root - : The pipeline of the project will begin now. in /Users/legend/Work/Github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-26 20:17:49,139 - Agent - : TRAINING MODE ACTIVATED!!! in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-26 20:17:52,592 - Agent - : FINDING OPTIM LEARNING RATE... in /Users/legend/Work/Github/ultron-vision/agents/tinyimagenet_agent.py:160

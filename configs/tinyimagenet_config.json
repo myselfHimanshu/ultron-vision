@@ -1,0 +1,51 @@
+{
+    "exp_name" : "tinyimagenet-exp-001",
+    "agent" : "TinyImageNetAgent",
+    "inference_agent" : "TinyImageNetIAgent",
+
+    "input_size" : [3,32,32],
+    "mean" : [0.485, 0.456, 0.406],
+    "std" : [0.229, 0.224, 0.225],
+    
+    "use_cuda" : true,
+    "gpu_device" : 0,
+    "seed" : 1,
+
+    "batch_size" : 512,
+
+    "learning_rate" : 0.1,
+    "momentum" : 0.9,
+
+    "l1_decay" : 1e-6,
+    "l2_decay" : 0.0005,
+
+    "use_scheduler" : true,
+    "scheduler" : {
+        "name" : "OneCycleLR",
+        "kwargs" : {
+            "epochs" : 24,
+            "pct_start" : 0.208,
+            "anneal_strategy" : "linear",
+            "cycle_momentum" : true,
+            "base_momentum" : 0.85,
+            "max_momentum" : 0.95,
+            "div_factor" : 10,
+            "final_div_factor" : 1,
+            "last_epoch" : -1
+        }   
+    },
+    
+    "save_checkpoint" : true,
+    "load_checkpoint" : true,
+    "checkpoint_file": "checkpoint.pth.tar",
+    "model_stats_file" : "stats.json",
+
+    "epochs" : 24,
+
+    "num_workers" : 4,
+    "pin_memory" : true,
+
+    "interpret_image": true,
+    "visualize_inline": false,
+    "interpret_layer": "layer4"
+}
