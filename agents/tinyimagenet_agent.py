@@ -98,7 +98,7 @@ class TinyImageNetAgent(BaseAgent):
             self.device = torch.device('cuda')
             torch.cuda.set_device(self.config['gpu_device'])
             if torch.cuda.device_count() > 1:
-                self.model = nn.parallel.DistributedDataParallel(self.model, device_ids=(0,1))
+                self.model = nn.DataParallel(self.model)
             self.model = self.model.to(self.device)
             self.loss = self.loss.to(self.device)
             
