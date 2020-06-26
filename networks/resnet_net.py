@@ -97,7 +97,7 @@ class ResNet(nn.Module):
         out = self.layer4(out)
         print(out.shape)
         
-        out = F.avg_pool2d(out, 4)
+        out = F.adaptive_avg_pool2d(out, 1)
         print(out.shape)
         
         out = out.view(out.size(0), -1)
