@@ -185,7 +185,7 @@ class TinyImageNetAgent(BaseAgent):
         images, labels = dataiter.next()
         path = os.path.join(self.config["stats_dir"], 'training_images.png')
 
-        visualize_data(images, self.config['std'], self.config['mean'], 30, self.visualize_inline, labels, self.id2classes, path=path)
+        visualize_data(images, self.config['std'], self.config['mean'], 30, self.visualize_inline, labels.cpu().numpy(), self.id2classes, path=path)
 
 
     def run(self):
