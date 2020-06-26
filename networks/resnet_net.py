@@ -93,7 +93,8 @@ class ResNet(nn.Module):
         out = F.adaptive_avg_pool2d(out, 1)
         out = out.view(out.size(0), -1)
         out = self.linear(out)
-        return F.log_softmax(out, dim=-1)
+        # return F.log_softmax(out, dim=-1)
+        return out
 
 
 def ResNet18(num_classes=10):
