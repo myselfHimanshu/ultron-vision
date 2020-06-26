@@ -24,7 +24,7 @@ import os
 from tqdm import tqdm
 
 
-class Cifar10IAgent(BaseAgent):
+class TinyImageNetIAgent(BaseAgent):
 
     def __init__(self, config):
         super().__init__(config)
