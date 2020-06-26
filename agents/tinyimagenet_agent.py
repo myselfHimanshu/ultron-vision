@@ -83,7 +83,7 @@ class TinyImageNetAgent(BaseAgent):
         self.valid_acc = []
 
         # initialize misclassified data
-        self.misclassified = {}
+        self.misclassified = []
 
         # initialize maximum accuracy
         self.max_accuracy = 0.0
@@ -278,9 +278,7 @@ class TinyImageNetAgent(BaseAgent):
                 is_correct = pred.eq(target.view_as(pred))
                 misclass_idx = (is_correct==0).nonzero()[:,0]
                 for idx in misclass_idx:
-                    if str(self.current_epoch) not in self.misclassified:
-                        self.misclassified[str(self.current_epoch)] = []
-                    self.misclassified[str(self.current_epoch)].append({
+                    self.misclassified.append({
                         "target" : target[idx],
                         "pred" : pred[idx],
                         "img" : data[idx]
@@ -294,6 +292,7 @@ class TinyImageNetAgent(BaseAgent):
             self.best_epoch = self.current_epoch
             try:
                 self.save_checkpoint()
+                self.misclassified = []
                 self.logger.info("Saved Best Model")
             except Exception as e:
                 self.logger.info(e)

@@ -241,7 +241,7 @@ class TinyImageNetIAgent(BaseAgent):
         self.logger.info("Plotting and interpreting misclassified images. Please wait, I'm finalizing images.")
         fig = plt.figure(figsize=(10,20))
 
-        images = self.misclassified[str(self.best_epoch)][:n]
+        images = self.misclassified[:n]
         for i in range(1, n+1):
             j = 3*i - 2
             plt.subplot(n,3,j)
@@ -276,7 +276,7 @@ class TinyImageNetIAgent(BaseAgent):
         self.model.to(torch.device('cpu'))
         img = image_data.unsqueeze_(0).clone()
         
-        model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(32, 32))
+        model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(64, 64))
         gradcam = GradCam(model_dict)
         
         mask, _ = gradcam(img)
