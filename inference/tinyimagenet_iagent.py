@@ -59,7 +59,7 @@ class TinyImageNetIAgent(BaseAgent):
         if self.use_cuda:
             torch.cuda.manual_seed(self.manual_seed)
             self.device = torch.device('cuda')
-            # torch.cuda.set_device(self.config['gpu_device'])
+            torch.cuda.set_device(self.config['gpu_device'])
             self.logger.info("Program will RUN on ****GPU-CUDA****")
         else:
             torch.manual_seed(self.manual_seed)
