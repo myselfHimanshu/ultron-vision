@@ -56,6 +56,8 @@ class CreateData(object):
 
         self.classes_df["target"] = self.classes_df["class"].apply(addidx)
 
+        self.orgclasstoidx = dict(zip(self.classes_df["class_name"],self.classes_df["target"]))
+
 
     def _read_val_dataframe(self):
         val_annotations = pd.read_table(os.path.join(self.data_folder,"val/val_annotations.txt"), names=["image_name","class","x1","x2","x3","x4"])
@@ -143,7 +145,7 @@ class DownloadData(object):
         self.tinyimagenet_validdata = TinyImageNetDataset("val.csv", self.data_path,
                                                 transform=transf.get_valid_transforms())
 
-        self.classes2idx = createdata.classtoidx
+        self.classes2idx = createdata.orgclasstoidx
 
 
 
