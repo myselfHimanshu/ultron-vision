@@ -1,5 +1,5 @@
 {
-    "exp_name" : "tinyimagenet-exp-001",
+    "exp_name" : "tinyimagenet-exp-002",
     "agent" : "TinyImageNetAgent",
     "inference_agent" : "TinyImageNetIAgent",
 
@@ -24,8 +24,8 @@
     "scheduler" : {
         "name" : "OneCycleLR",
         "kwargs" : {
-            "epochs" : 50,
-            "pct_start" : 0.25,
+            "epochs" : 30,
+            "pct_start" : 0.20,
             "anneal_strategy" : "linear",
             "cycle_momentum" : true,
             "base_momentum" : 0.85,
@@ -41,7 +41,7 @@
     "checkpoint_file": "checkpoint.pth.tar",
     "model_stats_file" : "stats.json",
 
-    "epochs" : 50,
+    "epochs" : 30,
 
     "num_workers" : 4,
     "pin_memory" : true,

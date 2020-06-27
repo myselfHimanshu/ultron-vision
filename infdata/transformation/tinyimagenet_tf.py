@@ -24,7 +24,8 @@ class AlbumTransforms(object):
             PadIfNeeded(min_height=72, min_width=72, value=self.mean*255.0), 
             RandomCrop(height=64, width=64, p=1.0),
             HorizontalFlip(p=0.5),
-            Cutout(num_holes=1, max_h_size=8, max_w_size=8, fill_value=self.mean*255.0, p=0.5),
+            Rotate(7, p=0.5),
+            Cutout(num_holes=2, max_h_size=8, max_w_size=8, fill_value=self.mean*255.0, p=0.5),
         ]
 
         self.transforms_test = [

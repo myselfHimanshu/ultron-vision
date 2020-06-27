@@ -1,0 +1,337 @@
+[INFO] - 2020-06-27 12:17:00,023 - root - : Hi, This is Ultron. Nice to meet you!!! in /home/ubuntu/github/ultron-vision/utils/config.py:97
+[INFO] - 2020-06-27 12:17:00,023 - root - : Saving Configuration in /home/ubuntu/github/ultron-vision/utils/config.py:98
+[INFO] - 2020-06-27 12:17:00,023 - root - : Configurations are successfully processed and dirs are created. in /home/ubuntu/github/ultron-vision/utils/config.py:101
+[INFO] - 2020-06-27 12:17:00,023 - root - : The pipeline of the project will begin now. in /home/ubuntu/github/ultron-vision/utils/config.py:102
+[INFO] - 2020-06-27 12:17:00,024 - Agent - : TRAINING MODE ACTIVATED!!! in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:31
+[INFO] - 2020-06-27 12:17:03,320 - Agent - : Setting optimizer to optim learning rate : 0.01 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:182
+[INFO] - 2020-06-27 12:17:06,244 - Agent - : Program will RUN on ****GPU-CUDA**** in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:105
+[INFO] - 2020-06-27 12:17:06,244 - Cuda Statistics - : __Python VERSION : 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] in /home/ubuntu/github/ultron-vision/utils/misc.py:73
+[INFO] - 2020-06-27 12:17:06,244 - Cuda Statistics - : __pytorch VERSION : 1.5.0 in /home/ubuntu/github/ultron-vision/utils/misc.py:74
+[INFO] - 2020-06-27 12:17:06,245 - Cuda Statistics - : __CUDNN VERSION : 7605 in /home/ubuntu/github/ultron-vision/utils/misc.py:77
+[INFO] - 2020-06-27 12:17:06,245 - Cuda Statistics - : __Number CUDA Devices : 2 in /home/ubuntu/github/ultron-vision/utils/misc.py:78
+[INFO] - 2020-06-27 12:17:06,245 - Cuda Statistics - : __Devices in /home/ubuntu/github/ultron-vision/utils/misc.py:79
+[INFO] - 2020-06-27 12:17:06,306 - Cuda Statistics - : Active CUDA Device : GPU 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:81
+[INFO] - 2020-06-27 12:17:06,307 - Cuda Statistics - : Available devices 2 in /home/ubuntu/github/ultron-vision/utils/misc.py:82
+[INFO] - 2020-06-27 12:17:06,307 - Cuda Statistics - : Current CUDA device 0 in /home/ubuntu/github/ultron-vision/utils/misc.py:83
+[INFO] - 2020-06-27 12:17:10,222 - Agent - : Current lr value = 0.001 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:18:16,542 - Agent - : TRAIN EPOCH : 0	LOSS : 0.0921	ACC : 6.6013 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:18:33,280 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:18:33,281 - Agent - : VALID EPOCH : 0	LOSS : 0.0171	ACC : 9.1697 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:18:33,282 - Agent - : Current lr value = 0.002500831024930748 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:19:40,694 - Agent - : TRAIN EPOCH : 1	LOSS : 0.0793	ACC : 16.0091 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:19:59,761 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:19:59,762 - Agent - : VALID EPOCH : 1	LOSS : 0.0148	ACC : 17.1091 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:19:59,763 - Agent - : Current lr value = 0.0040016620498614965 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:21:06,694 - Agent - : TRAIN EPOCH : 2	LOSS : 0.0725	ACC : 22.9688 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:21:25,672 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:21:25,674 - Agent - : VALID EPOCH : 2	LOSS : 0.0147	ACC : 18.8424 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:21:25,675 - Agent - : Current lr value = 0.005502493074792245 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:22:32,468 - Agent - : TRAIN EPOCH : 3	LOSS : 0.0677	ACC : 28.4597 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:22:50,892 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:22:50,892 - Agent - : VALID EPOCH : 3	LOSS : 0.0131	ACC : 24.6515 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:22:50,893 - Agent - : Current lr value = 0.007003324099722992 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:23:57,716 - Agent - : TRAIN EPOCH : 4	LOSS : 0.0641	ACC : 32.7351 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:24:15,653 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:24:15,654 - Agent - : VALID EPOCH : 4	LOSS : 0.0127	ACC : 26.6667 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:24:15,655 - Agent - : Current lr value = 0.008504155124653742 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:25:22,557 - Agent - : TRAIN EPOCH : 5	LOSS : 0.0610	ACC : 36.7883 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:25:34,197 - Agent - : VALID EPOCH : 5	LOSS : 0.0145	ACC : 23.7030 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:25:34,198 - Agent - : Current lr value = 0.009998617109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:26:41,096 - Agent - : TRAIN EPOCH : 6	LOSS : 0.0585	ACC : 40.2766 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:26:58,804 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:26:58,804 - Agent - : VALID EPOCH : 6	LOSS : 0.0109	ACC : 34.5545 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:26:58,804 - Agent - : Current lr value = 0.009582367109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:28:05,618 - Agent - : TRAIN EPOCH : 7	LOSS : 0.0561	ACC : 43.1818 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:28:16,931 - Agent - : VALID EPOCH : 7	LOSS : 0.0116	ACC : 32.7091 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:28:16,933 - Agent - : Current lr value = 0.009166117109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:29:23,981 - Agent - : TRAIN EPOCH : 8	LOSS : 0.0542	ACC : 45.8610 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:29:41,777 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:29:41,778 - Agent - : VALID EPOCH : 8	LOSS : 0.0105	ACC : 38.0364 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:29:41,778 - Agent - : Current lr value = 0.008749867109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:30:48,914 - Agent - : TRAIN EPOCH : 9	LOSS : 0.0524	ACC : 48.1065 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:31:06,090 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:31:06,091 - Agent - : VALID EPOCH : 9	LOSS : 0.0106	ACC : 38.2879 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:31:06,092 - Agent - : Current lr value = 0.008333617109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:32:13,202 - Agent - : TRAIN EPOCH : 10	LOSS : 0.0507	ACC : 50.2195 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:32:30,727 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:32:30,728 - Agent - : VALID EPOCH : 10	LOSS : 0.0104	ACC : 39.2515 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:32:30,728 - Agent - : Current lr value = 0.007917367109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:33:37,994 - Agent - : TRAIN EPOCH : 11	LOSS : 0.0493	ACC : 52.3857 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:33:55,742 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:33:55,744 - Agent - : VALID EPOCH : 11	LOSS : 0.0092	ACC : 44.1273 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:33:55,744 - Agent - : Current lr value = 0.007501117109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:35:02,765 - Agent - : TRAIN EPOCH : 12	LOSS : 0.0478	ACC : 54.3545 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:35:19,944 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:35:19,945 - Agent - : VALID EPOCH : 12	LOSS : 0.0091	ACC : 44.6364 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:35:19,945 - Agent - : Current lr value = 0.007084867109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:36:26,822 - Agent - : TRAIN EPOCH : 13	LOSS : 0.0465	ACC : 56.0688 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:36:38,205 - Agent - : VALID EPOCH : 13	LOSS : 0.0102	ACC : 41.9030 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:36:38,206 - Agent - : Current lr value = 0.006668617109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:37:44,821 - Agent - : TRAIN EPOCH : 14	LOSS : 0.0451	ACC : 57.9948 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:37:55,959 - Agent - : VALID EPOCH : 14	LOSS : 0.0096	ACC : 42.7121 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:37:55,960 - Agent - : Current lr value = 0.006252367109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:39:03,096 - Agent - : TRAIN EPOCH : 15	LOSS : 0.0439	ACC : 59.9208 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:39:14,346 - Agent - : VALID EPOCH : 15	LOSS : 0.0094	ACC : 44.5667 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:39:14,346 - Agent - : Current lr value = 0.0058361171096345515 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:40:21,351 - Agent - : TRAIN EPOCH : 16	LOSS : 0.0428	ACC : 61.4571 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:40:38,594 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:40:38,595 - Agent - : VALID EPOCH : 16	LOSS : 0.0087	ACC : 47.1424 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:40:38,595 - Agent - : Current lr value = 0.0054198671096345515 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:41:45,476 - Agent - : TRAIN EPOCH : 17	LOSS : 0.0416	ACC : 63.1883 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:41:56,415 - Agent - : VALID EPOCH : 17	LOSS : 0.0088	ACC : 46.8333 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:41:56,416 - Agent - : Current lr value = 0.005003617109634552 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:43:03,306 - Agent - : TRAIN EPOCH : 18	LOSS : 0.0404	ACC : 64.8260 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:43:20,380 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:43:20,381 - Agent - : VALID EPOCH : 18	LOSS : 0.0091	ACC : 47.5030 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:43:20,381 - Agent - : Current lr value = 0.004587367109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:44:27,518 - Agent - : TRAIN EPOCH : 19	LOSS : 0.0391	ACC : 66.8597 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:44:44,116 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:44:44,116 - Agent - : VALID EPOCH : 19	LOSS : 0.0083	ACC : 49.6364 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:44:44,116 - Agent - : Current lr value = 0.004171117109634552 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:45:51,238 - Agent - : TRAIN EPOCH : 20	LOSS : 0.0379	ACC : 68.6974 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:46:08,628 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:46:08,629 - Agent - : VALID EPOCH : 20	LOSS : 0.0083	ACC : 50.3636 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:46:08,629 - Agent - : Current lr value = 0.0037548671096345517 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:47:15,465 - Agent - : TRAIN EPOCH : 21	LOSS : 0.0366	ACC : 70.7000 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:47:26,430 - Agent - : VALID EPOCH : 21	LOSS : 0.0085	ACC : 50.0303 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:47:26,432 - Agent - : Current lr value = 0.003338617109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:48:33,591 - Agent - : TRAIN EPOCH : 22	LOSS : 0.0353	ACC : 72.6247 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:48:51,139 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:48:51,139 - Agent - : VALID EPOCH : 22	LOSS : 0.0083	ACC : 51.5636 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:48:51,139 - Agent - : Current lr value = 0.002922367109634551 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:49:58,230 - Agent - : TRAIN EPOCH : 23	LOSS : 0.0339	ACC : 75.0558 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:50:15,233 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:50:15,235 - Agent - : VALID EPOCH : 23	LOSS : 0.0081	ACC : 52.5152 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:50:15,235 - Agent - : Current lr value = 0.002506117109634552 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:51:22,142 - Agent - : TRAIN EPOCH : 24	LOSS : 0.0326	ACC : 77.2688 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:51:39,265 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:51:39,266 - Agent - : VALID EPOCH : 24	LOSS : 0.0081	ACC : 52.5758 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:51:39,266 - Agent - : Current lr value = 0.00208986710963455 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:52:47,115 - Agent - : TRAIN EPOCH : 25	LOSS : 0.0310	ACC : 79.9390 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:53:04,125 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:53:04,126 - Agent - : VALID EPOCH : 25	LOSS : 0.0077	ACC : 54.5727 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:53:04,127 - Agent - : Current lr value = 0.001673617109634552 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:54:11,197 - Agent - : TRAIN EPOCH : 26	LOSS : 0.0294	ACC : 83.0052 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:54:27,837 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:54:27,837 - Agent - : VALID EPOCH : 26	LOSS : 0.0076	ACC : 55.0576 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:54:27,838 - Agent - : Current lr value = 0.001257367109634552 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:55:34,946 - Agent - : TRAIN EPOCH : 27	LOSS : 0.0277	ACC : 86.1909 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:55:51,664 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:55:51,665 - Agent - : VALID EPOCH : 27	LOSS : 0.0075	ACC : 55.9303 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:55:51,665 - Agent - : Current lr value = 0.0008411171096345503 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:56:58,393 - Agent - : TRAIN EPOCH : 28	LOSS : 0.0262	ACC : 89.4545 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:57:14,972 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:57:14,972 - Agent - : VALID EPOCH : 28	LOSS : 0.0071	ACC : 57.6091 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:57:14,972 - Agent - : Current lr value = 0.00042486710963455035 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:215
+[INFO] - 2020-06-27 12:58:21,711 - Agent - : TRAIN EPOCH : 29	LOSS : 0.0248	ACC : 92.4351 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:261
+[INFO] - 2020-06-27 12:58:37,939 - Agent - : Saved Best Model in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:299
+[INFO] - 2020-06-27 12:58:37,939 - Agent - : VALID EPOCH : 29	LOSS : 0.0070	ACC : 58.3545 in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:305
+[INFO] - 2020-06-27 12:58:37,940 - Agent - : Please wait while finalizing the operations.. Thank you in /home/ubuntu/github/ultron-vision/agents/tinyimagenet_agent.py:312
+[INFO] - 2020-06-27 12:58:37,941 - Agent - : INFERENCE MODE ACTIVATED!!! in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:31
+[INFO] - 2020-06-27 12:58:40,879 - Agent - : Program will RUN on ****GPU-CUDA**** in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:64
+[INFO] - 2020-06-27 12:59:04,850 - Agent - : Accuracy of class : goldfish, Carassius auratus		94.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,851 - Agent - : Accuracy of class : European fire salamander, Salamandra salamandra		94.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,851 - Agent - : Accuracy of class : bullfrog, Rana catesbeiana		88.484848 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,851 - Agent - : Accuracy of class : tailed frog, bell toad, ribbed toad, tailed toad, Ascaphus trui		78.181816 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,852 - Agent - : Accuracy of class : American alligator, Alligator mississipiensis		80.000000 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,852 - Agent - : Accuracy of class : boa constrictor, Constrictor constrictor		81.212120 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,852 - Agent - : Accuracy of class : trilobite		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,852 - Agent - : Accuracy of class : scorpion		82.424240 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,852 - Agent - : Accuracy of class : black widow, Latrodectus mactans		90.303032 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,853 - Agent - : Accuracy of class : tarantula		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,853 - Agent - : Accuracy of class : centipede		78.181816 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,853 - Agent - : Accuracy of class : goose		85.454544 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,853 - Agent - : Accuracy of class : koala, koala bear, kangaroo bear, native bear, Phascolarctos cinereus		92.121216 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,853 - Agent - : Accuracy of class : jellyfish		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,853 - Agent - : Accuracy of class : brain coral		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,854 - Agent - : Accuracy of class : snail		81.818184 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,854 - Agent - : Accuracy of class : slug		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,854 - Agent - : Accuracy of class : sea slug, nudibranch		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,854 - Agent - : Accuracy of class : American lobster, Northern lobster, Maine lobster, Homarus americanus		90.909088 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,854 - Agent - : Accuracy of class : spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish		89.696968 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,854 - Agent - : Accuracy of class : black stork, Ciconia nigra		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : king penguin, Aptenodytes patagonica		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : albatross, mollymawk		93.333336 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : dugong, Dugong dugon		93.939392 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : Chihuahua		83.030304 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : Yorkshire terrier		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : golden retriever		79.393936 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : Labrador retriever		75.151512 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,855 - Agent - : Accuracy of class : German shepherd, German shepherd dog, German police dog, alsatian		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,856 - Agent - : Accuracy of class : standard poodle		78.181816 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,856 - Agent - : Accuracy of class : tabby, tabby cat		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,856 - Agent - : Accuracy of class : Persian cat		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,856 - Agent - : Accuracy of class : Egyptian cat		78.787880 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,856 - Agent - : Accuracy of class : cougar, puma, catamount, mountain lion, painter, panther, Felis concolor		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,856 - Agent - : Accuracy of class : lion, king of beasts, Panthera leo		89.696968 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,856 - Agent - : Accuracy of class : brown bear, bruin, Ursus arctos		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : fly		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : bee		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : grasshopper, hopper		78.181816 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : walking stick, walkingstick, stick insect		85.454544 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : cockroach, roach		79.393936 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : mantis, mantid		76.363640 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : dragonfly, darning needle, devil's darning needle, sewing needle, snake feeder, snake doctor, mosquito hawk, skeeter hawk		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,857 - Agent - : Accuracy of class : monarch, monarch butterfly, milkweed butterfly, Danaus plexippus		96.969696 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : sulphur butterfly, sulfur butterfly		94.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : sea cucumber, holothurian		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : guinea pig, Cavia cobaya		90.909088 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : hog, pig, grunter, squealer, Sus scrofa		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : ox		81.212120 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : bison		92.121216 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : bighorn, bighorn sheep, cimarron, Rocky Mountain bighorn, Rocky Mountain sheep, Ovis canadensis		88.484848 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : gazelle		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : Arabian camel, dromedary, Camelus dromedarius		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : orangutan, orang, orangutang, Pongo pygmaeus		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : chimpanzee, chimp, Pan troglodytes		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,858 - Agent - : Accuracy of class : baboon		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : African elephant, Loxodonta africana		92.121216 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : lesser panda, red panda, panda, bear cat, cat bear, Ailurus fulgens		95.151512 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : abacus		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : academic gown, academic robe, judge's robe		89.696968 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : altar		90.303032 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : apron		82.424240 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : backpack, back pack, knapsack, packsack, rucksack, haversack		74.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : bannister, banister, balustrade, balusters, handrail		74.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : barbershop		76.363640 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : barn		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : barrel, cask		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : basketball		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : bathtub, bathing tub, bath, tub		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : beach wagon, station wagon, wagon, estate car, beach waggon, station waggon, waggon		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,859 - Agent - : Accuracy of class : beacon, lighthouse, beacon light, pharos		89.090912 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : beaker		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : beer bottle		79.393936 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : bikini, two-piece		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : binoculars, field glasses, opera glasses		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : birdhouse		82.424240 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : bow tie, bow-tie, bowtie		78.787880 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : brass, memorial tablet, plaque		90.909088 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : broom		79.393936 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : bucket, pail		75.151512 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : bullet train, bullet		93.939392 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : butcher shop, meat market		89.696968 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : candle, taper, wax light		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : cannon		81.212120 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : cardigan		83.030304 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,860 - Agent - : Accuracy of class : cash machine, cash dispenser, automated teller machine, automatic teller machine, automated teller, automatic teller, ATM		83.030304 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : CD player		86.060608 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : chain		78.181816 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : chest		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : Christmas stocking		78.787880 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : cliff dwelling		93.333336 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : computer keyboard, keypad		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : confectionery, confectionary, candy store		82.424240 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : convertible		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : crane		83.030304 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : dam, dike, dyke		89.090912 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : desk		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : dining table, board		90.909088 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : drumstick		72.727272 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : dumbbell		73.333336 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,861 - Agent - : Accuracy of class : flagpole, flagstaff		89.696968 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : fountain		81.818184 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : freight car		92.121216 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : frying pan, frypan, skillet		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : fur coat		80.000000 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : gasmask, respirator, gas helmet		75.757576 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : go-kart		93.939392 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : gondola		90.303032 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : hourglass		83.636360 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : iPod		86.060608 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : jinrikisha, ricksha, rickshaw		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : kimono		80.000000 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : lampshade, lamp shade		81.212120 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : lawn mower, mower		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,862 - Agent - : Accuracy of class : lifeboat		96.363640 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : limousine, limo		85.454544 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : magnetic compass		89.090912 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : maypole		85.454544 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : military uniform		88.484848 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : miniskirt, mini		81.212120 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : moving van		90.909088 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : nail		74.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : neck brace		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : obelisk		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : oboe, hautboy, hautbois		80.000000 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : organ, pipe organ		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : parking meter		82.424240 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : pay-phone, pay-station		82.424240 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,863 - Agent - : Accuracy of class : picket fence, paling		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : pill bottle		81.818184 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : plunger, plumber's helper		66.060608 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : pole		66.060608 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : poncho		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : pop bottle, soda bottle		78.181816 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : potter's wheel		89.696968 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : projectile, missile		86.060608 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : punching bag, punch bag, punching ball, punchball		75.151512 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : reel		76.969696 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : refrigerator, icebox		88.484848 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : remote control, remote		81.818184 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : rocking chair, rocker		90.909088 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,864 - Agent - : Accuracy of class : rugby ball		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : sandal		83.636360 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : school bus		93.333336 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : scoreboard		94.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : sewing machine		85.454544 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : snorkel		81.212120 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : sock		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : sombrero		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : space heater		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : spider web, spider's web		86.060608 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : sports car, sport car		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : steel arch bridge		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : stopwatch, stop watch		85.454544 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : sunglasses, dark glasses, shades		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : suspension bridge		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : swimming trunks, bathing trunks		81.818184 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,865 - Agent - : Accuracy of class : syringe		58.181820 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : teapot		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : teddy, teddy bear		86.666664 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : thatch, thatched roof		88.484848 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : torch		86.060608 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : tractor		84.848488 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : triumphal arch		94.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : trolleybus, trolley coach, trackless trolley		96.363640 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : turnstile		85.454544 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : umbrella		75.151512 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : vestment		82.424240 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : viaduct		93.939392 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : volleyball		92.121216 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : water jug		69.696968 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : water tower		90.909088 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,866 - Agent - : Accuracy of class : wok		81.818184 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : wooden spoon		67.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : comic book		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : plate		80.000000 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : guacamole		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : ice cream, icecream		80.000000 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : ice lolly, lolly, lollipop, popsicle		74.545456 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : pretzel		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : mashed potato		77.575760 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : cauliflower		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : bell pepper		89.090912 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : mushroom		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : orange		89.090912 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,867 - Agent - : Accuracy of class : lemon		88.484848 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : banana		80.000000 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : pomegranate		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : meat loaf, meatloaf		84.242424 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : pizza, pizza pie		90.303032 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : potpie		88.484848 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : espresso		92.727272 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : alp		91.515152 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : cliff, drop, drop-off		80.606064 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : coral reef		87.878784 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : lakeside, lakeshore		76.969696 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : seashore, coast, seacoast, sea-coast		87.272728 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,868 - Agent - : Accuracy of class : acorn		83.636360 in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:109
+[INFO] - 2020-06-27 12:59:04,959 - Agent - : Learning Rate Graph saved. in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:235
+[INFO] - 2020-06-27 12:59:05,052 - Agent - : Accuracy Graph saved. in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:188
+[INFO] - 2020-06-27 12:59:05,142 - Agent - : Loss Graph saved. in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:213
+[INFO] - 2020-06-27 12:59:05,143 - Agent - : Plotting and interpreting misclassified images. Please wait, I'm finalizing images. in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:242
+[INFO] - 2020-06-27 12:59:07,640 - Agent - : Misclassified Images saved. in /home/ubuntu/github/ultron-vision/inference/tinyimagenet_iagent.py:270
