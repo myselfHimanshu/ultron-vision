@@ -25,7 +25,7 @@
         "name" : "OneCycleLR",
         "kwargs" : {
             "epochs" : 50,
-            "pct_start" : 0.3,
+            "pct_start" : 0.25,
             "anneal_strategy" : "linear",
             "cycle_momentum" : true,
             "base_momentum" : 0.85,

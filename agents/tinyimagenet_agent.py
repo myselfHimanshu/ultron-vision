@@ -146,10 +146,13 @@ class TinyImageNetAgent(BaseAgent):
             'epoch' : self.current_epoch,
             'valid_accuracy' : self.max_accuracy,
             'misclassified_data' : self.misclassified,
-            'state_dict' : self.model.module.state_dict(),
+            'state_dict' : self.model.state_dict(),
             'optimizer' : self.optimizer.state_dict(),
             'is_best' : is_best
         }
+
+        if torch.cuda.device_count() > 1:
+            checkpoint["state_dict"] = self.model.module.state_dict()
 
         file_name = os.path.join(self.config["checkpoint_dir"], file_name)
         torch.save(checkpoint, file_name)
@@ -175,7 +178,7 @@ class TinyImageNetAgent(BaseAgent):
         
         # # set optimizer to optim learning rate
         # self.config["learning_rate"] = round(optim_lr,3)
-        self.config["learning_rate"] = 0.008
+        self.config["learning_rate"] = 0.01
         self.logger.info(f"Setting optimizer to optim learning rate : {self.config['learning_rate']}")
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config["learning_rate"], momentum=self.config['momentum'])
 

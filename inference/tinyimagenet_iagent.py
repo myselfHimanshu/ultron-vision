@@ -60,8 +60,6 @@ class TinyImageNetIAgent(BaseAgent):
             torch.cuda.manual_seed(self.manual_seed)
             self.device = torch.device('cuda')
             torch.cuda.set_device(self.config['gpu_device'])
-            # if torch.cuda.device_count() > 1:
-            #     self.model = nn.DataParallel(self.model)
             self.model = self.model.to(self.device)
             self.logger.info("Program will RUN on ****GPU-CUDA****")
         else:
@@ -276,7 +274,6 @@ class TinyImageNetIAgent(BaseAgent):
         Interpret images using Grad Cam
         :return: heatmap and mask numpy array
         """
-        # self.model.to(torch.device('cpu'))
         img = image_data.unsqueeze_(0).clone()
         
         model_dict = dict(type='resnet', arch=self.model, layer_name=layer, input_size=(64, 64))
