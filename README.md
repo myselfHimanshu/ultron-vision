@@ -8,13 +8,15 @@
 
 ## WHAT IS THIS REPO ABOUT? 
 
-Structured approach to learning and implementing the fundamentals of State of the art vision models. The models are built from scratch. 
+This repository is my personal research code for exploration of Convolutional Neural Networks. Structured approach to learning and implementing the fundamentals of State of the art vision models. **Models are built from scratch**.
 
-Follow below for updates on how it has been built over time. (This repo is work in progress!!!)
+Follow below for updates on how it has been built over time. (*This repo is work in progress!!!*)
 
 ## UPDATES AND RESULTS
 
-> Codes are available as gist as jupyter notebooks and blogs are for first 3 categories, rest are WIP. Models in these jupter notebooks were trained on Google Colab.
+> Some codes are available as gist in the form of jupyter notebooks, first few sections have blog posts. Models in these jupter notebooks were trained using Google Colab.
+> From Week-9 you will find the work in this repository. 
+> A Pytorch Project Template has been setup for training and inference mode separately. 
 
 <details>
     <summary>Week-1</summary>
@@ -171,13 +173,31 @@ Follow below for updates on how it has been built over time. (This repo is work 
 
 </details>
 
+<details>
+    <summary>Week-12</summary>
+
+- Object Localization : YOLO
+- Use TinyImageNet dataset, create custom data loader with 70/30 split.
+- Achieve an accuracy of greater than 50% on TinyImageNet dataset
+    - ResNet18
+    - One Cycle Policy
+- Result
+    - parameters : 11,173,962
+    - epoch : 30
+    - testing acc : 58.35%
+    - [work link](https://github.com/myselfHimanshu/ultron-vision/tree/master/experiments/tinyimagenet-exp-002)
+
+</details>
+
+
+
 ## HARDWARE CONFIGURATION
 
 - GPUs : NVIDIA® GeForce® GTX 1080Ti
-- GPU count : 1
-- vCPUs : 4
-- Memory : 12 GiB
-- Disk : 80 GiB
+- GPU count : 1,2
+- vCPUs : 4,8
+- Memory : 12 GiB, 24 GiB
+- Disk : 80 GiB, 80 GiB
 - [Genesis Cloud](https://gnsiscld.co/496pv5j) offers GPU cloud computing at unbeatable cost efficiency.
 
 
@@ -185,18 +205,20 @@ Follow below for updates on how it has been built over time. (This repo is work 
 
 - [x] pytorch-transformation
 - [x] [albumentation-transformation](https://albumentations.readthedocs.io/en/latest/index.html)
-- [x] data loader
-- [x] training
-- [x] validation
-- [x] predict single image
-- [ ] reduce-lr-on-plateau
-- [x] lr-range test, optim lr finder
-- [x] one-cycle-policy
+- [x] data loader using pytorch in-built Datasets class
+- [x] custom data loader class
+- [x] training class
+- [x] inference class
+- [x] prediction on single image
+- [x] lr-range test, optim lerning rate value finder
+- [ ] default scheduler implementation
+- [x] one-cycle-policy (current default)
 - [x] interpret misclassified images using grad-cam
 - [x] plots of accuracy, loss, learning_rate graphs wrt iterations
 - [x] logging functionality
 - [x] loading and saving model checkpoints
 - [x] custom configuration file for training model
+- [x] data-parallel mode for training on more than 1 GPUs. 
 - [ ] custom loss function
 - [ ] using [weights and biases](https://www.wandb.com/) for logging experiments
 - [ ] torchstat or torchprof, layer-by-layer profiling of Pytorch models
@@ -218,9 +240,9 @@ Follow below for updates on how it has been built over time. (This repo is work 
 
 ## DATASETS USED
 
-- [x] MNIST
-- [x] CIFAR10
-- [ ] TinyImageNet
+- [x] MNIST : 70,000 28x28 grayscale images in 10 classes; train set : 60,000; test set : 10,000.
+- [x] CIFAR10 : 60000 32x32 colour images in 10 classes, with 6000 images per class. 50000 training images and 10000 test images.
+- [x] TinyImageNet : 1,10,000 64x64 color images in 200 classes. (70/30) split for train and test data set respectively.
 
 ## INSTALLATION
 
@@ -239,6 +261,18 @@ $ pip install -r requirements.txt
 
 // deactivate environment
 $ deactivate
+```
+
+## TRAINING ULTRON
+
+In `ultron.sh` provide `ultron.py` and `path-to-config-file`.
+
+```bash
+// make ultron.sh executable file
+$ chmod +x ultron.sh
+
+// train ultron
+$ ./ultron.sh
 ```
 
 ## FOLDER STRUCTURE
@@ -293,14 +327,4 @@ $ deactivate
 └── ultron.sh
 ```
 
-## TRAINING ULTRON
 
-In `ultron.sh` provide `ultron.py` and `path-to-config-file`.
-
-```bash
-// make ultron.sh executable file
-$ chmod +x ultron.sh
-
-// train ultron
-$ ./ultron.sh
-```
