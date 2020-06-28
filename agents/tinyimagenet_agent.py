@@ -162,23 +162,23 @@ class TinyImageNetAgent(BaseAgent):
         find optim learning rate to train network
         :return:
         """
-        # self.logger.info("FINDING OPTIM LEARNING RATE...")
-        # self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
-        # lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
-        # num_iter = (len(self.dataloader.train_loader.dataset)//self.config["batch_size"])*3
-        # lr_finder.range_test(self.dataloader.train_loader, end_lr=1000, num_iter=num_iter)
+        self.logger.info("FINDING OPTIM LEARNING RATE...")
+        self.optimizer = optim.SGD(self.model.parameters(), lr=1e-7, momentum=self.config['momentum'])
+        lr_finder = LRFinder(self.model, self.optimizer, self.loss, device='cuda')
+        num_iter = (len(self.dataloader.train_loader.dataset)//self.config["batch_size"])*3
+        lr_finder.range_test(self.dataloader.train_loader, end_lr=1000, num_iter=num_iter)
 
-        # if self.visualize_inline:
-        #     lr_finder.plot()
+        if self.visualize_inline:
+            lr_finder.plot()
 
-        # history = lr_finder.history
-        # optim_lr = history["lr"][np.argmin(history["loss"])] 
-        # self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
-        # lr_finder.reset()
+        history = lr_finder.history
+        optim_lr = history["lr"][np.argmin(history["loss"])] 
+        self.logger.info("Learning rate with minimum loss : " + str(optim_lr))
+        lr_finder.reset()
         
-        # # set optimizer to optim learning rate
-        # self.config["learning_rate"] = round(optim_lr,3)
-        self.config["learning_rate"] = 0.01
+        # set optimizer to optim learning rate
+        self.config["learning_rate"] = round(optim_lr,3)
+        # self.config["learning_rate"] = 0.01
         self.logger.info(f"Setting optimizer to optim learning rate : {self.config['learning_rate']}")
         self.optimizer = optim.SGD(self.model.parameters(), lr=self.config["learning_rate"], momentum=self.config['momentum'])
 
