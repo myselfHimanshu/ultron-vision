@@ -8,14 +8,18 @@
 
 ## WHAT IS THIS REPO ABOUT? 
 
-This repository is my personal research code for exploration of Convolutional Neural Networks. Structured approach to learning and implementing the fundamentals of State of the art vision models. **Models are built from scratch**.
+This repository is my personal research code for exploration of Convolutional Neural Networks. Structured approach to learning and implementing the fundamentals of State of the art vision models. 
+
+#### Models are built from scratch. No pretrained network used.
 
 Follow below for updates on how it has been built over time. (*This repo is work in progress!!!*)
 
 ## UPDATES AND RESULTS
 
 > Some codes are available as gist in the form of jupyter notebooks, first few sections have blog posts. Models in these jupter notebooks were trained using Google Colab.
+
 > From Week-9 you will find the work in this repository. 
+
 > A Pytorch Project Template has been setup for training and inference mode separately. 
 
 <details>
