@@ -22,7 +22,7 @@ Follow below for updates on how it has been built over time. (*This repo is work
 
 > A Pytorch Project Template has been setup for training and inference mode separately. 
 
-**r"Week-[0-9]*" are clickable**
+> **r"Week-[0-9]*" are clickable**
 
 <details>
     <summary>Week-1</summary>
@@ -126,8 +126,6 @@ Follow below for updates on how it has been built over time. (*This repo is work
     - [notebook link](https://gist.github.com/myselfHimanshu/7969fe685b507286657fdea74e449d91)
 
 </details>
-
-> From here on, the codes are available in this repo. Models are trained on below given hardware configurations.
 
 <details>
     <summary>Week-9</summary>
