@@ -23,7 +23,7 @@ def main():
     # visualize training set
     agent.visualize_set()
     
-    # train model
+    # # train model
     agent.run()
     agent.finalize()
     
