@@ -22,6 +22,8 @@ Follow below for updates on how it has been built over time. (*This repo is work
 
 > A Pytorch Project Template has been setup for training and inference mode separately. 
 
+**r"Week-[0-9]*" are clickable**
+
 <details>
     <summary>Week-1</summary>
 
