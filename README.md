@@ -246,9 +246,9 @@ Follow below for updates on how it has been built over time. (*This repo is work
 
 ## DATASETS USED
 
-- [x] MNIST : 70,000 28x28 grayscale images in 10 classes; train set : 60,000; test set : 10,000.
-- [x] CIFAR10 : 60000 32x32 colour images in 10 classes, with 6000 images per class. 50000 training images and 10000 test images.
-- [x] TinyImageNet : 1,10,000 64x64 color images in 200 classes. (70/30) split for train and test data set respectively.
+- [x] **MNIST** : 70,000 28x28 grayscale images in 10 classes; train set : 60,000; test set : 10,000.
+- [x] **CIFAR10** : 60000 32x32 colour images in 10 classes, with 6000 images per class. 50000 training images and 10000 test images.
+- [x] **TinyImageNet** : 1,10,000 64x64 color images in 200 classes. (70/30) split for train and test data set respectively.
 
 ## INSTALLATION
 
