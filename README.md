@@ -10,7 +10,7 @@
 
 This repository is my personal research code for exploration of Convolutional Neural Networks. Structured approach to learning and implementing the fundamentals of State of the art vision models. 
 
-#### Models are built from scratch. No pretrained network used.
+### Models are built from scratch. No pretrained network used.
 
 Follow below for updates on how it has been built over time. (*This repo is work in progress!!!*)
 
