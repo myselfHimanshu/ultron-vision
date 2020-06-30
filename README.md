@@ -6,6 +6,8 @@
 
 </p>
 
+:star: Star us on GitHub — it helps!
+
 ## WHAT IS THIS REPO ABOUT? 
 
 This repository is my personal research code for exploration of Convolutional Neural Networks. Structured approach to learning and implementing the fundamentals of State of the art vision models. 
