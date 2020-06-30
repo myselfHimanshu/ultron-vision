@@ -2,7 +2,7 @@
 
 <p align="center">
 
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)&nbsp;&nbsp;&nbsp;[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)&nbsp;&nbsp;&nbsp;[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)&nbsp;&nbsp;&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)&nbsp;&nbsp;&nbsp;[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)&nbsp;&nbsp;&nbsp;[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)&nbsp;&nbsp;&nbsp;[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)&nbsp;&nbsp;&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 </p>
 
@@ -12,19 +12,19 @@
 
 This repository is my personal research code for exploration of Convolutional Neural Networks. Structured approach to learning and implementing the fundamentals of State of the art vision models. 
 
+A Scalable template for **PyTorch projects**. 
+
 ### Models are built from scratch. No pretrained network used.
 
 Follow below for updates on how it has been built over time. (*This repo is work in progress!!!*)
 
 ## UPDATES AND RESULTS
 
-> Some codes are available as gist in the form of jupyter notebooks, first few sections have blog posts. Models in these jupter notebooks were trained using Google Colab.
+Some codes are available as gist in the form of jupyter notebooks, first few sections have blog posts. Models in these jupter notebooks were trained using Google Colab. From Week-9 you will find the work in this repository. 
 
-> From Week-9 you will find the work in this repository. 
+> r"Week-[0-9]*" are clickable
 
-> A Pytorch Project Template has been setup for training and inference mode separately. 
-
-> **r"Week-[0-9]*" are clickable**
+#### Summary of experiments.
 
 <details>
     <summary>Week-1</summary>
@@ -333,4 +333,16 @@ $ ./ultron.sh
 └── ultron.sh
 ```
 
+<!-- LICENSE -->
+## License
+
+Distributed under the GNU GPLv3 License. See `LICENSE` for more information.
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@047himanshu](https://twitter.com/047himanshu) - 047himanshu@gmail.com
+
+Project Link: [https://github.com/myselfHimanshu/ultron-vision](https://github.com/myselfHimanshu/ultron-vision)
 
